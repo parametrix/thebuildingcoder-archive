@@ -33,8 +33,13 @@ twitter:
 
  #RevitAPI @AutodeskAPS @AutodeskRevit #BIM @DynamoBIM
 
-
-&ndash; ...
+A lot of my attention is on family matters; a couple of Revit API solutions also caught my attention
+&ndash; Preface to the Orchid Pavilion poems
+&ndash; Access UIApplication anywhere
+&ndash; Determine element bounding box on sheet
+&ndash; AI and human coding
+&ndash; XOR
+&ndash; Three horizons...
 
 linkedin:
 
@@ -50,11 +55,11 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 -->
 
-### UIApplication and Bounding Box on Sheet
+### Access UIApplication and Bounding Box on Sheet
 
 A lot of my attention is on family matters, and a couple of Revit API solutions and other items also caught my attention:
 
-- [Feeling with Nick](#2)
+- [Preface to the Orchid Pavilion poems](#2)
 - [Access UIApplication anywhere](#3)
 - [Determine element bounding box on sheet](#4)
 - [AI and human coding](#5)
