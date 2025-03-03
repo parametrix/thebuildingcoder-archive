@@ -15,45 +15,6 @@ https://prismjs.com
 
 <!--
 
-- still feeling with nick:
-  Reading the news today, I explored further an item on Chinese calligraphy and stumbled over a poem from the year (ca.) 350 AD, the [Lantingji Xu, Preface to the Poems Collected from the Orchid Pavilion](https://en.wikipedia.org/wiki/Lantingji_Xu). I found it touching and fitting to be shared here, and maybe you will enjoy it too:
-  In the ninth year of Yonghe, at the onset of late spring,
-  we have gathered at the Orchid Pavilion in the North of Kuaiji Mountain for the purification ritual.
-  All the literati, the young and the aged, have congregated.
-  This location has high mountains and steep hills, dense woods, and tall bamboo,
-  as well as a clear, limpid stream reflecting the surroundings.
-  We sit by a redirected stream, allowing the wine goblets to float beside us on its winding course.
-  Although without the accompaniment of music,
-  the wine and poem reciting are sufficient for us to exchange our feelings.
-  On this day, the sky is clear, the air is fresh, and a gentle breeze is blowing.
-  Looking up, we admire the vastness of the universe;
-  looking down, we see the myriad works of poetry.
-  Letting the gaze wander and the mind roam, one can fully enjoy the pleasures of sight and sound, truly a delight.
-  People's interactions with each other quickly pass through a lifetime.
-  Some would share their ambitions in a chamber;
-  others may freely indulge in diverse interests and pursuits.
-  The choices are plenty and our temperaments vary.
-  We enjoy the momentary satisfaction of pleasures that regale us,
-  yet we hardly realize how swiftly we age.
-  As desires fade and circumstances change, grief arises.
-  What previously gratified us will soon be a relic,
-  we cannot help but mourn.
-  Whether life is long or short, there is always an end.
-  As the ancients said,
-  "Death and birth are momentous."
-  How agonizing!
-  Reading the past compositions reveals a consistent melancholy from the ancients.
-  One may find themselves lamenting in response to their words, unable to articulate their feelings.
-  It is absurd to equate life with death,
-  and it is equally foolish to think that longevity is the same as the short-lived.
-  The future generations will look upon us,
-  just like we look upon our past.
-  How sad!
-  Hence, we record the people presented here today and their works;
-  Even though time and circumstances will be different,
-  the feelings expressed will remain unchanged.
-  Future readers shall find the same empathy through this collection of poems.
-
 - get bounding box of element on sheet
   Chuong Ho shared a more reliable method GetBboxElementOnSheet
   Getting element coordiantes on sheet
@@ -91,11 +52,20 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 ### UIApplication and Bounding Box on Sheet
 
-####<a name="2"></a> Feeling with Nick
+A lot of my energy is focused on family matters, but a couple of Revit API solutions and other items also caught my attention:
+
+- [Feeling with Nick](#2)
+- [Access UIApplication anywhere](#3)
+- [Determine element bounding box on sheet](#4)
+- [AI and human coding](#5)
+- [XOR](#6)
+- [Three horizons](#7)
+
+####<a name="2"></a> Preface to the Orchid Pavilion Poems
 
 My daughter's baby was born, and my brother is still alive, though extremely weak.
 
-Reading the news today, I explored further an item on Chinese calligraphy and stumbled over a poem from the year 353 AD,
+Moved by that and reading a news item coincided let me stumble across a Chinese calligraphy and poem from the year 353 AD,
 the [Lantingji Xu, Preface to the Poems Collected from the Orchid Pavilion](https://en.wikipedia.org/wiki/Lantingji_Xu).
 I found it touching and fitting to be shared here, and maybe you will enjoy it too:
 
@@ -136,9 +106,12 @@ I found it touching and fitting to be shared here, and maybe you will enjoy it t
 <br/>the feelings expressed will remain unchanged.
 <br/>Future readers shall find the same empathy through this collection of poems.
 
+As Jean-Marc noted, it is paradox how we humans tend to consider beginnings as happy and perceive endings as something to be avoided.
+We all know all along that life has a beginning and an end.
+
 ####<a name="3"></a> Access UIApplication Anywhere
 
-Continuing with Revit API re4lated topics,
+Moving on to the Revit API related topics,
 Luiz Henrique [@ricaun](https://ricaun.com/) Cassettari shares yet another new discovery,
 how to [get `UIApplication` anywhere](https://forums.autodesk.com/t5/revit-api-forum/get-uiapplication-anywhere/td-p/13341551):
 
@@ -168,6 +141,8 @@ It would be better still if Autodesk would create a static class like RevitAppli
 That concludes my post, I hope you like it.
 
 See yaa!
+
+Many thanks, ricaun, for sharing this!
 
 ####<a name="4"></a> Determine Element Bounding Box on Sheet
 
@@ -222,21 +197,27 @@ for [getting element coordiantes on sheet](https://forums.autodesk.com/t5/revit-
 <img src="img/element_coordinates_on_sheet.png" alt="GetBboxElementOnSheet" title="GetBboxElementOnSheet" width="600"/> <!-- Pixel Height: 624 Pixel Width: 1013 -->
 </center>
 
+Many thanks to Chuong Ho for this solution!
+
 ####<a name="5"></a> AI and Human Coding
 
 A nice little essay on the topic of using AI for speedy coding versus in-depth learning comes to the conclusion
-that [new junior developers can’t actually code](https://nmn.gl/blog/ai-and-learning)
+that [new junior developers can’t actually code](https://nmn.gl/blog/ai-and-learning).
 
 ####<a name="6"></a> XOR
 
-For a purely technical in-depth analysis of a topic that turn out to have a surprisingly large scope, check out Simon Tatham's thoughts
+For a purely technical in-depth analysis of a topic that turns out to have a surprisingly large scope, check out Simon Tatham's thoughts
 on [XOR](https://www.chiark.greenend.org.uk/~sgtatham/quasiblog/xor/).
-He made a good stab at summarising everything one might possibly want to know about XOR.
+He made a good stab at summarising everything one might possibly want to know about that.
 
 ####<a name="7"></a> Three Horizons
 
-Pondering all the personal and global turmoil of our times, I chanced upon another point of view on some aspects,
+Pondering the personal and global turmoil of our times, I chanced upon another way of looking, based on
 the [Three Horizons](https://www.h3uni.org/tutorial/three-horizons/):
 
 > We stand for a vision of a different kind of relationship between humans, life and the planet that we explore in the creative space of the future that we call the third horizon.
+
+Can't say I understand it, but it looks interesting...
+
+... and there is much I don't understand, and it seems to be growing.
 
