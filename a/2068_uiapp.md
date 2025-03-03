@@ -111,6 +111,22 @@ I found it touching and fitting to be shared here, and maybe you will enjoy it t
 <br/>the feelings expressed will remain unchanged.
 <br/>Future readers shall find the same empathy through this collection of poems.
 
+I also asked Gemini to render this in German for a non-English-speaking friend, and it did a good job of that, I think:
+
+> Vorwort zu den Gedichten des Orchideen-Pavillons
+<br/>
+<br/>Im neunten Jahr der Yonghe-Ära, im späten Frühlingsmonat, versammelten wir uns, die Gelehrten von Kuaiji, am Orchideen-Pavillon. Erhabene Berge und steile Gipfel umgaben uns, üppige Bambuswälder und klare Bäche durchzogen die Landschaft. An diesem Tag herrschte ein klarer, milder Wind, die Luft war rein und erfrischend.
+<br/>
+<br/>Wir versammelten uns an einem geschwungenen Bach, ließen unsere Weinschalen auf dem Wasser treiben und verfassten Gedichte, um unsere Gefühle auszudrücken. Obwohl wir uns nicht kannten, waren wir wie alte Freunde, die sich in tiefem Verständnis verbunden fühlten.
+<br/>
+<br/>Wir blickten in den Himmel und sahen das Universum in seiner unendlichen Weite; wir blickten auf die Erde und sahen die Fülle der Natur in ihrer ganzen Pracht. Wir schwelgten in der Schönheit der Landschaft und erfreuten uns an der Harmonie der Natur.
+<br/>
+<br/>Obwohl unsere Leben kurz sind, können wir unsere Herzen und Gedanken in den Künsten und Wissenschaften verewigen. Wir können unsere Gefühle in Gedichten und Gemälden ausdrücken und unsere Weisheit in Büchern und Schriften festhalten.
+<br/>
+<br/>Wir sollten die Zeit, die uns gegeben ist, nutzen, um das Leben in vollen Zügen zu genießen. Wir sollten uns an der Schönheit der Natur erfreuen, die Freundschaften, die wir schließen, schätzen und die Weisheit, die wir erlangen, teilen.
+<br/>
+<br/>Lasst uns diesen Tag in Erinnerung behalten, an dem wir uns am Orchideen-Pavillon versammelten, um unsere Freundschaft zu feiern und unsere Liebe zur Natur und zur Kunst auszudrücken.
+
 As Jean-Marc noted, it is paradox how we humans tend to consider beginnings as happy and perceive endings as something to be avoided.
 We all know all along that life has a beginning and an end.
 
