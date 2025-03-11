@@ -31,7 +31,7 @@ https://prismjs.com
 
 twitter:
 
-Uniquitous UIApplication access and how to determine the element bounding box on a sheet in the #RevitAPI @AutodeskAPS @AutodeskRevit #BIM @DynamoBIM https://thebuildingcoder.typepad.com/blog/2025/03/access-uiapplication-and-bounding-box-on-sheet.html
+Ubiquitous UIApplication access and how to determine the element bounding box on a sheet in the #RevitAPI @AutodeskAPS @AutodeskRevit #BIM @DynamoBIM https://thebuildingcoder.typepad.com/blog/2025/03/access-uiapplication-and-bounding-box-on-sheet.html
 
 A lot of my attention is on family matters; a couple of Revit API solutions also caught my attention
 &ndash; Preface to the Orchid Pavilion poems
@@ -42,6 +42,19 @@ A lot of my attention is on family matters; a couple of Revit API solutions also
 &ndash; Three horizons...
 
 linkedin:
+
+Ubiquitous UIApplication access and how to determine the element bounding box on a sheet in the #RevitAPI:
+
+https://thebuildingcoder.typepad.com/blog/2025/03/access-uiapplication-and-bounding-box-on-sheet.html
+
+A lot of my attention is on family matters; a couple of Revit API solutions also caught my attention:
+
+- Preface to the Orchid Pavilion poems
+- Access UIApplication anywhere
+- Determine element bounding box on sheet
+- AI and human coding
+- XOR
+- Three horizons...
 
 #BIM #DynamoBIM #AutodeskAPS #Revit #API #IFC #SDK #Autodesk #AEC #adsk
 
