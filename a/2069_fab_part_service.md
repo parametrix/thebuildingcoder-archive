@@ -59,12 +59,10 @@ My last Autodesk conference nears, new and updated API documentation online, and
 ####<a name="2"></a> DevCon in Amsterdam
 
 I will be attending [DevCon in Amsterdam](https://aps.autodesk.com/blog/register-today-autodesk-devcon-returns-2025-amsterdam)!
-
-I mentioned the [call for papers](https://thebuildingcoder.typepad.com/blog/2024/11/devcon-ai-for-revit-api-modeless-add-ins-leave.html#2) in November.
-
 It is taking place on May 20-21 2025 in
 the famous old [Beurs van Berlage](https://en.wikipedia.org/wiki/Beurs_van_Berlage) stock market
 constructed 1896-1903.
+I mentioned the [call for papers](https://thebuildingcoder.typepad.com/blog/2024/11/devcon-ai-for-revit-api-modeless-add-ins-leave.html#2) in November.
 
 May will also be the last month of my life as an Autodesk employee.
 
@@ -72,10 +70,12 @@ May will also be the last month of my life as an Autodesk employee.
 
 Jaime Alonso Candau of the Revit API consulting company [Nonica.io](https://nonica.io/) published
 
-[Civ API Docs](https://civapidocs.com/).
+<center>
+  <a href="https://civapidocs.com/">Civ API Docs</a>
+</center>
 
-The new webstie provides online Civil3D API documentation for the releases 2022, 2023, 2024 and 2025,
-following the `RevApiDocs` Revit API documentation](https://revapidocs.com/) supporting
+The new website provides online Civil3D API documentation for the releases 2022, 2023, 2024 and 2025, in the same style as
+the [`RevApiDocs` Revit API documentation](https://revapidocs.com/) supporting
 Revit 2025 as well as preceding versions that
 I [mentioned in February](https://thebuildingcoder.typepad.com/blog/2025/02/unit-testing-and-more-serious-matters.html#4).
 
@@ -92,12 +92,12 @@ updated the [apidocs](https://apidocs.co) web site for both Revit 2025 and Revit
 
 [Apidocs](https://apidocs.co) also includes API documentation for Grasshopper, Navisworks, Rhino and previous Revit releases all the way back to Revit 2015.
 
-Thank you, Gui, for maintenance of this invaluable resource!
+Thank you, Gui, for maintaining this invaluable resource!
 
 ####<a name="5"></a> Fabrication Part &ndash; Show Service
 
-[Steven Williams](https://forums.autodesk.com/t5/user/viewprofilepage/user-id/11800801) shares
-a very nice tutorial-style explanation ho to replicate
+[Steven Williams](https://forums.autodesk.com/t5/user/viewprofilepage/user-id/11800801) shared
+a very nice tutorial-style explanation of how to replicate
 [Fabrication Part &ndash; Show Service](https://forums.autodesk.com/t5/revit-api-forum/fabrication-part-show-service/td-p/13354945):
 
 This post started as a question, but I figured it out and thought someone might be interested. I couldn't find any examples of this in the API samples or through web searches, and ChatGPT failed miserably.
@@ -105,7 +105,7 @@ This post started as a question, but I figured it out and thought someone might 
 My goal is to replicate the Show Service button that appears in the Modify tab when you select a Fabrication Part.
 
 <center>
-<img src="img/sw_fab_part_service_1.png" alt="Fabrication Part - Show Service" title="Fabrication Part - Show Service" width="100"/> <!-- Pixel Height: 76 Pixel Width: 49 -->
+<img src="img/sw_fab_part_service_1.png" alt="Fabrication Part - Show Service" title="Fabrication Part - Show Service" width="98"/> <!-- Pixel Height: 76 Pixel Width: 49 -->
 </center>
 
 Clicking this button opens the MEP Fabrication Parts panel to the matching service and palette that generated that part, and highlights the button that was used.
@@ -115,7 +115,7 @@ I snooped through the attributes and parameters of several fabrication parts but
 Example: I have a button named "Pipe":
 
 <center>
-<img src="img/sw_fab_part_service_2.png" alt="Pipe" title="Pipe" width="200"/> <!-- Pixel Height: 107 Pixel Width: 93 -->
+<img src="img/sw_fab_part_service_2.png" alt="Pipe" title="Pipe" width="120"/> <!-- Pixel Height: 107 Pixel Width: 93 -->
 </center>
 
 These are the relevant properties of the button object, which I obtained like this:
@@ -160,7 +160,10 @@ print(element.LookupParameter('Product Long Description').AsValueString()) # == 
 print(element.LookupParameter('OEM').AsValueString()) # == Cerro, also BuiltInParameter.FABRICATION_PRODUCT_DATA_OEM
 print(element.LookupParameter('Product Specification Description').AsValueString()) # == Type L, also BuiltInParameter.FABRICATION_PRODUCT_DATA_SPECIFICATION</code></pre>
 
-Then I discovered the FabricationPartType class, which you can get from a fabrication part's GetTypeId() method like this: doc.GetElement(element.GetTypeId()).
+Then I discovered the `FabricationPartType` class that can be retrieved using the fabrication part `GetTypeId` method:
+
+<pre><code class="language-cs">doc.GetElement(element.GetTypeId())</code></pre>
+
 The API documentation says "For the product-based MAP parts, every size is a new part type in Revit.
 For others, one part type can have many sizes."
 
@@ -195,12 +198,14 @@ for palette_index in range(service.PaletteCount):
         button = service.GetButton(palette_index, button_index)
         for condition in range(button.ConditionCount):
             part_type_element = FabricationPartType.Lookup(doc, button, condition)
-            # the GUI always picks the first button and condition that matches -- the efficiency of this would be improved by making this into a a function that yields the first match
+            # the GUI always picks the first button and condition that matches
+            # -- the efficiency of this would be improved by making this into
+            # a a function that yields the first match
             if part_type_element != ElementId.InvalidElementId and matching_button is None:
                 matching_button = button
                 matching_condition = condition</code></pre>
 
- I think you can now use this matching button, for example, to replicate Create Similar command for fabrication parts, using the second overload with matching_button and matching_condition from above.
+ I think you can now use this matching button, for example, to replicate the 'Create Similar' command for fabrication parts, using the second overload with matching_button and matching_condition from above.
 
 <pre><code class="language-cs">public static FabricationPart Create(
   Document document,
@@ -209,4 +214,4 @@ for palette_index in range(service.PaletteCount):
   ElementId levelId
 )</code></pre>
 
-Many thanks to Steven for his very nice, clear explanation and overview.
+Many thanks to Steven for his nice clear explanation and overview.
