@@ -31,7 +31,11 @@ twitter:
 
  #RevitAPI @AutodeskAPS @AutodeskRevit #BIM @DynamoBIM
 
-&ndash; ...
+My last Autodesk conference nears, new and updated API documentation online, and a tutorial-style exloration fabrication parts
+&ndash; DevCon in Amsterdam
+&ndash; CivApiDocs Civil3D API documentation
+&ndash; ApiDocs Revit 2025 API docs
+&ndash; Fabrication part show service...
 
 linkedin:
 
