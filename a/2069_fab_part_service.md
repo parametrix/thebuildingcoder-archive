@@ -52,6 +52,9 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 ####<a name="4"></a> Civil3D API Documentation
 
+I will be attending DevCon!
+
+
 In February,
 I [mentioned](https://thebuildingcoder.typepad.com/blog/2025/02/unit-testing-and-more-serious-matters.html#4) the
 new [`RevApiDocs` Revit API documentation](https://revapidocs.com/)
