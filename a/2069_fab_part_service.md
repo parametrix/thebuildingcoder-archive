@@ -47,7 +47,7 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 -->
 
-### DevCon, API Docs and Fabrication Part Show Service
+### DevCon, API Docs and Fabrication Part Service
 
 My last Autodesk conference nears, new and updated API documentation online, and a tutorial-style exloration of implementing fabrication part &ndash; show service:
 
@@ -65,6 +65,10 @@ constructed 1896-1903.
 I mentioned the [call for papers](https://thebuildingcoder.typepad.com/blog/2024/11/devcon-ai-for-revit-api-modeless-add-ins-leave.html#2) in November.
 
 May will also be the last month of my life as an Autodesk employee.
+
+<center>
+<img src="img/devcon_in_boers_berlage_by_gemini.jpg" alt="DevCon in Beurs van Berlage" title="DevCon in Beurs van Berlage" width="400"/> <!-- Pixel Width: 800 -->
+</center>
 
 ####<a name="3"></a> CivApiDocs Civil3D API Documentation
 
