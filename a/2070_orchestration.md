@@ -71,6 +71,27 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 ###
 
+####<a name="2"></a> RvtDocs Revit API Documentation
+
+Competition is heating up.
+
+Erik Frits of [LearnRevitAPI](https://learnrevitapi.com/) launched yet another Revit API Documentation website:
+
+<center>
+  <a href="https://rvtdocs.com/">RvtDocs</a>
+</center>
+
+Welcome to the pack!
+
+RevitApiDocs
+CivApiDocs 2069#3
+
+2069_fab_part_service.md:[Apidocs](https://apidocs.co) also includes API documentation for Grasshopper, Navisworks, Rhino and previous Revit releases all the way back to Revit 2015.
+
+<!-- grep -i apidoc 2*d -->
+
+
+
 ####<a name="2"></a> Revit Parallel Task Orchestration on the Server
 
 [Erik Gette](https://github.com/erikgett) of [ГК Страна Девелопмент](https://strana.com)

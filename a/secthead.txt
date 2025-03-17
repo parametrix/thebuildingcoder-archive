@@ -9839,3 +9839,26 @@
 2066:<"#5"> Docling Markdown Generator
 2066:<"#6"> MacOS Copy Paste Sans Formatting
 2066:<"#7"> DIY Open Source Redox Flow Battery
+2067:Unit Testing and More Serious Matters
+2067:<"#2"> Life, Death, Turmoil
+2067:<"#3"> Retirement, Recruiting, Job Offer
+2067:<"#4"> New Rev API Docs
+2067:<"#5"> Ricaun.RevitTest Unit Testing Framework
+2067:<"#6"> ForgeTypeId for Other Parameter Group
+2067:<"#7"> Exporting IFC Using DA4R
+2067:<"#8"> Using Revit API from a Web App
+2067:<"#9"> GenAI Impacts Critical Thinking
+2067:<"#10"> New AI AGI Test Suites
+2067:<"#11"> uv Python Package and Project Manager
+2068:Access UIApplication and Bounding Box on Sheet
+2068:<"#2"> Preface to the Orchid Pavilion Poems
+2068:<"#3"> Access UIApplication Anywhere
+2068:<"#4"> Determine Element Bounding Box on Sheet
+2068:<"#5"> AI and Human Coding
+2068:<"#6"> XOR
+2068:<"#7"> Three Horizons
+2069:DevCon, API Docs and Fabrication Part Service
+2069:<"#2"> DevCon in Amsterdam
+2069:<"#3"> CivApiDocs Civil3D API Documentation
+2069:<"#4"> ApiDocs Revit 2025 API Docs
+2069:<"#5"> Fabrication Part &ndash; Show Service
