@@ -73,9 +73,9 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 ####<a name="2"></a> RvtDocs Revit API Documentation
 
-API documentation competition is heating up.
+After a long lack of online API documentatiojn for Revit 2025, we suddenly have a whole collection of choices, and competition is increasing.
 
-Erik Frits of [LearnRevitAPI](https://learnrevitapi.com/) launched yet another Revit API documentation website:
+The newest candidate is from Erik Frits of [LearnRevitAPI](https://learnrevitapi.com/), who launched yet another Revit API documentation website:
 
 <center>
   <a href="https://rvtdocs.com/">RvtDocs</a>
@@ -83,14 +83,12 @@ Erik Frits of [LearnRevitAPI](https://learnrevitapi.com/) launched yet another R
 
 Welcome to the pack!
 
-Current overview afaik:
+Here is an overview of the choices to date that I am aware of:
 
-- [apidocs.co](https://apidocs.co) &ndash; Revit API documentation for 2025, 2016, 2017, 2017.1, 2018, 2018.1, 2018.2, 2019, 2019.1, 2019.2, 2020, 2020.1, 2021, 2021.1, 2022, 2022.1, 2023, 2024, 2025 and 2025.3, plus API documentation for Grasshopper, Navisworks and Rhino
-- [Civ API Docs](https://civapidocs.com/) &ndash; Civil 3D API documentation for 2022, 2023, 2024 and 2025
-- [Rev API Docs](https://revapidocs.com/) &ndash; Revit API documentation for 2020, 2021, 2022, 2023, 2024 and 2025
+- [apidocs.co](https://apidocs.co) &ndash; Revit API documentation for 2015, 2016, 2017, 2017.1, 2018, 2018.1, 2018.2, 2019, 2019.1, 2019.2, 2020, 2020.1, 2021, 2021.1, 2022, 2022.1, 2023, 2024, 2025 and 2025.3, plus API documentation for Grasshopper, Navisworks and Rhino
+- [Rev API Docs](https://revapidocs.com/) &ndash; Revit API documentation for 2020, 2021, 2022, 2023, 2024 and 2025, sister website of [Civ API Docs](https://civapidocs.com/), Civil 3D API documentation for 2022, 2023, 2024 and 2025
 - [Revit API Docs](https://www.revitapidocs.com/) &ndash; Revit API documentation for 2021.1, 2022, 2023, 2024, 2025 and 2025.3
-- [RVTDocs](https://rvtdocs.com/) &ndash; Revit API 2021, 2022, 2023, 2024 and 2025
-
+- [RVTDocs](https://rvtdocs.com/) &ndash; Revit API documentation for 2021, 2022, 2023, 2024 and 2025
 
 ####<a name="3"></a> Revit Parallel Task Orchestration on the Server
 
