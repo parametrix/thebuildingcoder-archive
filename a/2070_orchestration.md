@@ -73,9 +73,9 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 ####<a name="2"></a> RvtDocs Revit API Documentation
 
-Competition is heating up.
+API documentation competition is heating up.
 
-Erik Frits of [LearnRevitAPI](https://learnrevitapi.com/) launched yet another Revit API Documentation website:
+Erik Frits of [LearnRevitAPI](https://learnrevitapi.com/) launched yet another Revit API documentation website:
 
 <center>
   <a href="https://rvtdocs.com/">RvtDocs</a>
@@ -83,16 +83,16 @@ Erik Frits of [LearnRevitAPI](https://learnrevitapi.com/) launched yet another R
 
 Welcome to the pack!
 
-RevitApiDocs
-CivApiDocs 2069#3
+Current overview afaik:
 
-2069_fab_part_service.md:[Apidocs](https://apidocs.co) also includes API documentation for Grasshopper, Navisworks, Rhino and previous Revit releases all the way back to Revit 2015.
+- [apidocs.co](https://apidocs.co) &ndash; Revit API documentation for 2025, 2016, 2017, 2017.1, 2018, 2018.1, 2018.2, 2019, 2019.1, 2019.2, 2020, 2020.1, 2021, 2021.1, 2022, 2022.1, 2023, 2024, 2025 and 2025.3, plus API documentation for Grasshopper, Navisworks and Rhino
+- [Civ API Docs](https://civapidocs.com/) &ndash; Civil 3D API documentation for 2022, 2023, 2024 and 2025
+- [Rev API Docs](https://revapidocs.com/) &ndash; Revit API documentation for 2020, 2021, 2022, 2023, 2024 and 2025
+- [Revit API Docs](https://www.revitapidocs.com/) &ndash; Revit API documentation for 2021.1, 2022, 2023, 2024, 2025 and 2025.3
+- [RVTDocs](https://rvtdocs.com/) &ndash; Revit API 2021, 2022, 2023, 2024 and 2025
 
-<!-- grep -i apidoc 2*d -->
 
-
-
-####<a name="2"></a> Revit Parallel Task Orchestration on the Server
+####<a name="3"></a> Revit Parallel Task Orchestration on the Server
 
 [Erik Gette](https://github.com/erikgett) of [ГК Страна Девелопмент](https://strana.com)
 How to Debug Revit Plugins: Speeding Up Development
@@ -111,31 +111,39 @@ February 20, 2025
 
 Thank you, Erik, for your valuable research and documentation.
 
-####<a name="3"></a> Local Ollama LLM APS Metadata Querying
+####<a name="4"></a> Local Ollama LLM APS Metadata Querying
 
-Chuong Ho
-Ollma3 LLM Agent APS WSL System (Autodesk Platform Services)
-https://youtu.be/-Nr-_ZgK8qI
-Exploring Open Source & Local LLM Ollama for Design Metadata Querying in Autodesk Platform Services! 🤖
-I'm excited to share my recent experiment with an open-source project that brings Local LLM AI and Autodesk Platform Services (APS) together! You can choose any model from your localhost with free AI open source model, and use this chatbot for a wide range of purposes!
-This is just the first version of my hackathon project, and I’m excited about how it turned out. A huge thanks to Petr Broz for the repository and inspiration!
-Check out the video below to see the real-time speed response using LLM on a local machine with WSL. It’s fascinating how fast and efficient the response time is!
-Make a comment if you want me to make a tutorials 🤖
-Open Source : https://lnkd.in/gkBw5ggV
-hashtag#OpenSource hashtag#LLM hashtag#Autodesk hashtag#BIM hashtag#Hackathon hashtag#AI hashtag#Chatbot hashtag#APIS hashtag#Technology hashtag#Innovation
+[Chuong Ho](https://chuongmep.com/) published a one-minute video
+on [Ollma3 LLM Agent APS WSL System (Autodesk Platform Services)](https://youtu.be/-Nr-_ZgK8qI):
+
+> Exploring Open Source & Local LLM Ollama for Design Metadata Querying in Autodesk Platform Services!
+
+> I'm excited to share my recent experiment with an open-source project that brings Local LLM AI and Autodesk Platform Services (APS) together!
+You can choose any model from your localhost with free AI open source model, and use this chatbot for a wide range of purposes!
+This is just the first version of my hackathon project, and I’m excited about how it turned out.
+A huge thanks to Petr Broz for the repository and inspiration!
+
+> Check out the video below to see the real-time speed response using LLM on a local machine with WSL.
+Its fascinating how fast and efficient the response time is!
+
+> [aps-local-chatbot GitHub repository](https://github.com/chuongmep/aps-ollma-chatbot)
+
+> Simple chatbot for querying metadata of designs in Autodesk Platform Services using Ollama for chat completion.
+This projects connects a powerful local LLM with zero cost into Autodesk Platform Services.
 
 Many thanks to Chuong Ho for implementing and sharing this exciting innovative project.
 
-####<a name="4"></a> Conversational Voice Generation
-
-conversational voice generation and simulation demo
-https://www.sesame.com/research/crossing_the_uncanny_valley_of_voice#demo
-Sesame &ndash; Crossing the uncanny valley of conversational voice
-At Sesame, our goal is to achieve “voice presence”—the magical quality that makes spoken interactions feel real, understood, and valued.
-
 <center>
-<img src="img/" alt="" title="" width="100"/> <!-- Pixel Width: 800 -->
+<img src="img/ch_acc_ollama.png" alt="Ollama LLM with APS and ACC" title="Ollama LLM with APS and ACC" width="600"/> <!-- Pixel Width: 900 -->
 </center>
+
+####<a name="5"></a> Conversational Voice Generation
+
+Non-Revit-related, this conversational voice generation and simulation demo highlights
+[Sesame &ndash; Crossing the uncanny valley of conversational voice](https://www.sesame.com/research/crossing_the_uncanny_valley_of_voice#demo):
+
+> At Sesame, our goal is to achieve “voice presence”—the magical quality that makes spoken interactions feel real, understood, and valued.
+
 
 <pre><code class="language-cs"></code></pre>
 
