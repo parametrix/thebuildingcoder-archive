@@ -89,6 +89,22 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 ### Docs, Local APS LLM and Parallel Task Orchestration
 
+- [RvtDocs Revit API documentation](#2)
+- [Erik Gette on debugging and parallel task orchestration](#3)
+    - [Revit parallel task orchestration on the server](#3.1)
+    - [Task queue controller &ndash; server API layer](#3.2)
+    - [RevitRunner class overview](#3.3)
+    - [Step 1: creating the manifest file](#3.4)
+    - [Step 2: updating the journal file](#3.5)
+    - [Step 3: implementing the command](#3.6)
+    - [Step 4: setting up the development environment](#3.7)
+    - [Convenient API access with scalar](#3.7)
+    - [Step 5: parallel execution on multiple revit instances](#3.8)
+    - [Step 6: creating a class for managing Revit instances](#3.9)
+    - [Conclusion](#3.10)
+- [Local Ollama LLM APS metadata querying](#4)
+- [Moore's law for agent autonomy: 7 months](#5)
+- [Conversational voice generation](#6)
 
 By the way, The Building Coder was selected by feedspot as one of
 the [Top 25 Revit Blogs](https://bloggers.feedspot.com/revit_blogs/).
