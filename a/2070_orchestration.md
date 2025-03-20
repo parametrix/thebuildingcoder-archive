@@ -101,12 +101,12 @@ After a long lack of online API documentatiojn for Revit 2025, we suddenly have 
 The newest candidate is from Erik Frits of [LearnRevitAPI](https://learnrevitapi.com/), who launched yet another Revit API documentation website:
 
 <center>
-  <a href="https://rvtdocs.com/">RvtDocs</a>
+  <p style="font-size: 120%"><a href="https://rvtdocs.com/">RvtDocs</a></p>
 </center>
 
 Welcome to the pack!
 
-Here is an overview of the choices to date that I am aware of:
+Here is an overview of the choices that I am aware of to date:
 
 - [apidocs.co](https://apidocs.co) &ndash; Revit API documentation for 2015, 2016, 2017, 2017.1, 2018, 2018.1, 2018.2, 2019, 2019.1, 2019.2, 2020, 2020.1, 2021, 2021.1, 2022, 2022.1, 2023, 2024, 2025 and 2025.3, plus API documentation for Grasshopper, Navisworks and Rhino
 - [Rev API Docs](https://revapidocs.com/) &ndash; Revit API documentation for 2020, 2021, 2022, 2023, 2024 and 2025, sister website of [Civ API Docs](https://civapidocs.com/), Civil 3D API documentation for 2022, 2023, 2024 and 2025
@@ -115,14 +115,14 @@ Here is an overview of the choices to date that I am aware of:
 
 ####<a name="3"></a> Erik Gette on Debugging and Parallel Task Orchestration
 
-[Erik Gette](https://github.com/erikgett) of [ГК Страна Девелопмент](https://strana.com)
-shared several in-depth tutorials on Revit and Navisworks debugging and parallel task orchestration:
+[Erik Gette](https://github.com/erikgett) of [Strana Development, ГК Страна Девелопмент](https://strana.com)
+kindly shared several in-depth tutorials on Revit and Navisworks debugging and parallel task orchestration:
 
 - [Navisworks orchestration on the server: how to execute typical tasks in parallel within the Navisworks environment](https://www.linkedin.com/pulse/navisworks-orchestration-server-how-execute-typical-tasks-erik-gette-pmjjf/), March 5, 2025
 - [Revit Orchestration on the Server: How to Execute Typical Tasks in Parallel in the Revit Context](https://www.linkedin.com/pulse/revit-orchestration-server-how-execute-typical-tasks-parallel-gette-ct1wc/), February 20, 2025
 - [How to Debug Revit Plugins: Speeding Up Development](https://www.linkedin.com/pulse/how-debug-revit-plugins-speeding-up-development-gette-erik-8usef/) January 29, 2025
 
-The debugging suggests a novel approach using the journal file to launch Revit in the debugger:
+The debugging suggests an interesting approach using the journal file to launch Revit in the debugger:
 
 > The Runner.txt file is a VBA script (Revit journal) that allows executing specific commands in Revit upon startup.
 Essentially, it can be used to trigger any sequence of actions automatically.
@@ -236,6 +236,10 @@ The `RevitCommand` class implements the `IExternalCommand` interface, which allo
 It runs in an infinite loop, constantly checking the server for new tasks.
 When a task is found, it is processed accordingly.
 
+<center>
+<img src="img/eg_rvt_orchestration_05.png" alt="Revit Parallel Task Orchestration on the Server" title="Revit Parallel Task Orchestration on the Server" width="600"/>
+</center>
+
 How the Command Works:
 
 - `Execute` Method:
@@ -253,72 +257,95 @@ How the Command Works:
     - Data validation
     - Uploading information to a database
     - Other automated workflows
-
-####<a name="3.7"></a> Final Thoughts
-
-This solution enables automated task execution within Revit.
-The command continuously monitors the server and processes tasks without manual intervention.
-This approach is ideal for:
-
-
- Automated model exports (IFC, NWC)
- Data validation
- Other repetitive BIM workflows requiring execution inside Revit
+- Final Thoughts
+  &ndash; This solution enables automated task execution within Revit.
+  The command continuously monitors the server and processes tasks without manual intervention.
+  This approach is ideal for:
+    - Automated model exports (IFC, NWC)
+    - Data validation
+    - Other repetitive BIM workflows requiring execution inside Revit
 
 By implementing this method, you can significantly reduce manual effort, improve efficiency, and ensure consistency in your BIM processes.
 
-Step 4: Setting Up the Development Environment
+####<a name="3.7"></a> Step 4: Setting Up the Development Environment
 
-To streamline development and debugging, a profile has been created that allows you to run both the server and the client simultaneously. This setup makes it easier to:
+To streamline development and debugging, a profile has been created that allows you to run both the server and the client simultaneously.
+This setup makes it easier to:
 
-
- Debug both the Revit application and the server in parallel
- Test the orchestration system efficiently
- Ensure smooth communication between Revit and the task queue
+- Debug both the Revit application and the server in parallel
+- Test the orchestration system efficiently
+- Ensure smooth communication between Revit and the task queue
 
 With this configuration, you can fine-tune your Revit automation workflow and optimize task execution seamlessly. 🚀
 
-Convenient API Access with Scalar
+<center>
+<img src="img/eg_rvt_orchestration_06.png" alt="Revit Parallel Task Orchestration on the Server" title="Revit Parallel Task Orchestration on the Server" width="600"/>
+</center>
 
-In this test project, Scalar is used to simplify API interactions. It provides a clean and efficient way to work with the task queue.
+####<a name="3.7"></a> Convenient API Access with Scalar
 
+In this test project, Scalar is used to simplify API interactions.
+It provides a clean and efficient way to work with the task queue.
 With Scalar, you can easily:
- Add new tasks to the queue
- Retrieve tasks for processing
- Improve API usability with a structured approach
+
+- Add new tasks to the queue
+- Retrieve tasks for processing
+- Improve API usability with a structured approach
 
 This makes the orchestration process more manageable and scalable, ensuring a seamless workflow for handling Revit tasks on the server. 🚀
 
-Step 5: Parallel Execution on Multiple Revit Instances
-Now, let’s move on to the most exciting part—running our tasks in parallel on multiple instances of Revit.
+<center>
+<img src="img/eg_rvt_orchestration_07.png" alt="Revit Parallel Task Orchestration on the Server" title="Revit Parallel Task Orchestration on the Server" width="600"/>
+</center>
 
-To make the server configuration more flexible, we first need to update the appsettings.json file by adding fields that will allow us to:
- Specify the number of Revit instances to run
- Define paths to Revit executables
- Configure task queue settings
+####<a name="3.8"></a> Step 5: Parallel Execution on Multiple Revit Instances
+
+Now, let’s move on to the most exciting part—running our tasks in parallel on multiple instances of Revit.
+To make the server configuration more flexible, we first need to update
+the [appsettings.json file](https://github.com/erikgett/Bim.Examples/blob/master/OrchestrationExample/Bim.Orchestrator.Server/appsettings.json) by
+adding fields that will allow us to:
+
+- Specify the number of Revit instances to run
+- Define paths to Revit executables
+- Configure task queue settings
 
 This approach ensures that tasks are distributed efficiently across multiple Revit processes, significantly reducing execution time and improving overall performance. 🚀
 
-Step 6: Creating a Class for Managing Revit Instances
+<center>
+<img src="img/eg_rvt_orchestration_08.png" alt="Revit Parallel Task Orchestration on the Server" title="Revit Parallel Task Orchestration on the Server" width="600"/>
+</center>
 
-Now that we've set up the configuration, the next step is to create a class that will launch Revit instances on the server side. This class will be responsible for:
+####<a name="3.9"></a> Step 6: Creating a Class for Managing Revit Instances
 
-🔹 Automatically starting multiple Revit processes 🔹 Distributing tasks across running instances 🔹 Ensuring continuous execution in an infinite loop
+Now that we've set up the configuration, the next step is to create
+a [class that will launch Revit instances on the server side](https://github.com/erikgett/Bim.Examples/blob/master/OrchestrationExample/Bim.Orchestrator.Server/RevitBackgroundService.cs).
+This class will be responsible for:
+
+- Automatically starting multiple Revit processes
+- Distributing tasks across running instances
+- Ensuring continuous execution in an infinite loop
 
 With this setup, we can now use our API to enqueue an unlimited number of tasks, and they will be processed in parallel by three Revit instances. This approach ensures efficient workload distribution, minimizing idle time and optimizing execution speed. 🚀
 
-We should also remember to register our service: builder.Services.AddHostedService<RevitBackgroundService>();
+<center>
+<img src="img/eg_rvt_orchestration_09.png" alt="Revit Parallel Task Orchestration on the Server" title="Revit Parallel Task Orchestration on the Server" width="600"/>
+</center>
 
-Conclusion
+We should also remember to register our service:
 
-Now we have the ability to batch-run tasks that can only be executed in the context of Revit. This can significantly increase the productivity of the BIM department, as it allows us to integrate existing plugins into this logic and batch process large volumes of models on the server machine.
+<pre><code class="language-cs">builder.Services.AddHostedService&lt;RevitBackgroundService&gt;();</code></pre>
+
+####<a name="3.10"></a> Conclusion
+
+Now we have the ability to batch-run tasks that can only be executed in the context of Revit.
+This can significantly increase the productivity of the BIM department, as it allows us to integrate existing plugins into this logic and batch process large volumes of models on the server machine.
 
 In the following articles, I will elaborate on how to implement a similar approach with Navisworks, which will expand our capabilities in automation and integration with other tools.
 
-If you have any questions about collaboration or would like to discuss potential opportunities, feel free to reach out to me on Telegram. I look forward to connecting with you!
-
+If you have any questions about collaboration or would like to discuss potential opportunities, feel free to reach out to me
+on [Telegram](https://t.me/erikgette).
+I look forward to connecting with you!
 Let me know if you need any adjustments!
-
 
 ####<a name="4"></a> Local Ollama LLM APS Metadata Querying
 
