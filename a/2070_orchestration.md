@@ -15,7 +15,6 @@ https://prismjs.com
 
 <!--
 
-
 - feedspot
   From: Anuj Agarwal <dev@f1.feedspot.com>
   Date: Thursday, 20 March 2025 at 09:44
@@ -34,19 +33,19 @@ https://prismjs.com
   Anuj
 
 - [Erik Gette](https://github.com/erikgett) of [ГК Страна Девелопмент](https://strana.com)
-How to Debug Revit Plugins: Speeding Up Development
-https://www.linkedin.com/pulse/how-debug-revit-plugins-speeding-up-development-gette-erik-8usef/
-January 29, 2025
-> The Runner.txt file is a VBA script (Revit journal) that allows executing specific commands in Revit upon startup. Essentially, it can be used to trigger any sequence of actions automatically.
-In the context of my article, this file is used to launch Revit without any third-party plugins, ensuring a clean environment for testing and debugging.
-Interestingly, Revit generates similar log files for each session. These files can be read and analyzed, which opens up a range of automation possibilities. For example, in our workflow, we use these logs to orchestrate 10 running instances of Revit to export over 5,000 files into NWC format efficiently.
-The use cases for this approach are vast, and I plan to explore them in more detail in future articles. Stay tuned! 😊
-Navisworks orchestration on the server: how to execute typical tasks in parallel within the Navisworks environment
-https://www.linkedin.com/pulse/navisworks-orchestration-server-how-execute-typical-tasks-erik-gette-pmjjf/
-March 5, 2025
-Revit Orchestration on the Server: How to Execute Typical Tasks in Parallel in the Revit Context
-https://www.linkedin.com/pulse/revit-orchestration-server-how-execute-typical-tasks-parallel-gette-ct1wc/
-February 20, 2025
+  How to Debug Revit Plugins: Speeding Up Development
+  https://www.linkedin.com/pulse/how-debug-revit-plugins-speeding-up-development-gette-erik-8usef/
+  January 29, 2025
+  > The Runner.txt file is a VBA script (Revit journal) that allows executing specific commands in Revit upon startup. Essentially, it can be used to trigger any sequence of actions automatically.
+  In the context of my article, this file is used to launch Revit without any third-party plugins, ensuring a clean environment for testing and debugging.
+  Interestingly, Revit generates similar log files for each session. These files can be read and analyzed, which opens up a range of automation possibilities. For example, in our workflow, we use these logs to orchestrate 10 running instances of Revit to export over 5,000 files into NWC format efficiently.
+  The use cases for this approach are vast, and I plan to explore them in more detail in future articles. Stay tuned! 😊
+  Navisworks orchestration on the server: how to execute typical tasks in parallel within the Navisworks environment
+  https://www.linkedin.com/pulse/navisworks-orchestration-server-how-execute-typical-tasks-erik-gette-pmjjf/
+  March 5, 2025
+  Revit Orchestration on the Server: How to Execute Typical Tasks in Parallel in the Revit Context
+  https://www.linkedin.com/pulse/revit-orchestration-server-how-execute-typical-tasks-parallel-gette-ct1wc/
+  February 20, 2025
 
 - Chuong HoChuong Ho
   Ollma3 LLM Agent APS WSL System (Autodesk Platform Services)
@@ -66,12 +65,20 @@ February 20, 2025
 
 twitter:
 
- @AutodeskAPS
- @AutodeskRevit #RevitAPI
- #BIM @DynamoBIM
+More online #RevitAPI docs, parallel add-in task orchestration on multiple @AutodeskRevit servers and local Ollama LLM @AutodeskAPS #BIM metadata queryies @DynamoBIM
 
-
-&ndash; ...
+RvtDocs online Revit API docs, run free local open-source LLM queries on your BIM, and orchestrate add-in tasks in parallel on multiple servers
+&ndash; Revit parallel task orchestration on the server
+&ndash; Task queue controller
+&ndash; RevitRunner class overview
+&ndash; Creating the manifest
+&ndash; Updating the journal
+&ndash; Implementing the command
+&ndash; Setting up the development environment
+&ndash; Parallel execution on multiple Revit instances
+&ndash; Managing Revit instances
+&ndash; Moore's law for agent autonomy: 7 months
+&ndash; Conversational voice generation...
 
 linkedin:
 
@@ -89,6 +96,8 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 ### Docs, Local APS LLM and Parallel Task Orchestration
 
+More API online docs, run free local open-source LLM queries on your BIM, and orchestrate add-ins in parallel on multiple servers:
+
 - [RvtDocs Revit API documentation](#2)
 - [Erik Gette on debugging and parallel task orchestration](#3)
     - [Revit parallel task orchestration on the server](#3.1)
@@ -98,7 +107,7 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
     - [Step 2: updating the journal file](#3.5)
     - [Step 3: implementing the command](#3.6)
     - [Step 4: setting up the development environment](#3.7)
-    - [Step 5: parallel execution on multiple revit instances](#3.8)
+    - [Step 5: parallel execution on multiple Revit instances](#3.8)
     - [Step 6: creating a class for managing Revit instances](#3.9)
     - [Conclusion](#3.10)
 - [Local Ollama LLM APS metadata querying](#4)
@@ -111,7 +120,7 @@ Thank you for the recognition, even if the list does look rather arbitrary to me
 
 ####<a name="2"></a> RvtDocs Revit API Documentation
 
-After a long lack of online API documentatiojn for Revit 2025, we suddenly have a whole collection of choices, and competition is increasing.
+After a long lack of online API documentation for Revit 2025, we suddenly have a whole collection of choices, and competition is increasing.
 
 The newest candidate is from Erik Frits of [LearnRevitAPI](https://learnrevitapi.com/), who launched yet another Revit API documentation website:
 
@@ -154,7 +163,7 @@ I'll share the Revit orchestration article here in full; please refer to Erik's 
 
 In large-scale BIM projects, it is often necessary to perform the same operations on multiple models. This could include exporting models to various formats (NWC, IFC), extracting data for further analysis, or even more complex tasks related to automated model processing.
 
-When the number of models grows too large, performing these operations manually becomes inefficient and, in the case of working with Revit and Navisworks, also resource-intensive. The optimal solution is to organize server-side orchestration of these processes, where tasks are executed automatically based on a predefined scenario.
+When the number of models grows too large, performing these operations manually becomes inefficient and, in the case of working with Revit and Navisworks, also resource intensive. The optimal solution is to organize server-side orchestration of these processes, where tasks are executed automatically based on a predefined scenario.
 
 In this article, we will explore how to set up process management for Revit on a server to execute BIM tasks in batch mode. This approach allows you to:
 
@@ -375,12 +384,12 @@ This is just the first version of my hackathon project, and I’m excited about 
 A huge thanks to Petr Broz for the repository and inspiration!
 
 > Check out the video below to see the real-time speed response using LLM on a local machine with WSL.
-Its fascinating how fast and efficient the response time is!
+It's fascinating how fast and efficient the response time is!
 
 > [aps-local-chatbot GitHub repository](https://github.com/chuongmep/aps-ollma-chatbot)
 
 > Simple chatbot for querying metadata of designs in Autodesk Platform Services using Ollama for chat completion.
-This projects connects a powerful local LLM with zero cost into Autodesk Platform Services.
+This project connects a powerful local LLM with zero cost into Autodesk Platform Services.
 
 Many thanks to Chuong Ho for implementing and sharing this exciting innovative project.
 
@@ -399,17 +408,14 @@ Many thanks to Chuong Ho for implementing and sharing this exciting innovative p
 > Figure 1: The length of tasks (measured by how long they take human professionals) that generalist autonomous frontier model agents can complete with 50% reliability has been doubling approximately every 7 months for the last 6 years. The shaded region represents 95% CI calculated by hierarchical bootstrap over task families, tasks, and task attempts. Even if the absolute measurements are off by a factor of 10, the trend predicts that in under a decade we will see AI agents that can independently complete a large fraction of software tasks that currently take humans days or weeks.
 
 > At current rates, we will have:
-> * 1 (human work-) day autonomy in (5 exponentials * 7 months) = 3 years (2028)
-* 1 (human work-) month autonomy in "late 2029" (+/- 2 years, only going for human working hours)
+
+> - 1 (human work-) day autonomy in (5 exponentials * 7 months) = 3 years (2028)
+- 1 (human work-) month autonomy in "late 2029" (+/- 2 years, only going for human working hours)
 
 ####<a name="6"></a> Conversational Voice Generation
 
-Non-Revit-related, this conversational voice generation and simulation demo highlights
-[Sesame &ndash; Crossing the uncanny valley of conversational voice](https://www.sesame.com/research/crossing_the_uncanny_valley_of_voice#demo):
+Non-Revit-related yet interesting to try out yourself, this conversational voice generation and simulation demo highlights
+[Sesame &ndash; crossing the uncanny valley of conversational voice](https://www.sesame.com/research/crossing_the_uncanny_valley_of_voice#demo):
 
-> At Sesame, our goal is to achieve “voice presence”—the magical quality that makes spoken interactions feel real, understood, and valued.
-
-
-<pre><code class="language-cs"></code></pre>
-
+> At Sesame, our goal is to achieve 'voice presence' &ndash; the magical quality that makes spoken interactions feel real, understood, and valued.
 
