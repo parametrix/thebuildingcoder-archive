@@ -15,6 +15,24 @@ https://prismjs.com
 
 <!--
 
+
+- feedspot
+  From: Anuj Agarwal <dev@f1.feedspot.com>
+  Date: Thursday, 20 March 2025 at 09:44
+  To: Jeremy Tammik <jeremy.tammik@autodesk.com>
+  Subject: The Building Coder featured in FeedSpot Top 25 Revit Blogs
+  Hi Jeremy,
+  My name is Anuj Agarwal, I'm the Founder of FeedSpot.
+  I would like to personally congratulate you as your blog The Building Coder has been selected by our panelist as one of the Top 25 Revit Blogs on the web.
+  https://bloggers.feedspot.com/revit_blogs/
+  This is the most comprehensive list of Top 25 Revit Blogs on the internet and I'm honored to have you as part of this!
+  You can also add your website link and other social media handles to get more visibility in our list and get discovered by brands for collaboration.
+  We've created a badge for you to share with your audience. You can display it on your website or post it on social media to showcase this amazing milestone.
+  We'd be grateful if you can help us spread the word by briefly mentioning about the Top 25 Revit Blogs list in any of your upcoming post.
+  Please feel free to reach out with any questions.
+  Best,
+  Anuj
+
 - [Erik Gette](https://github.com/erikgett) of [ГК Страна Девелопмент](https://strana.com)
 How to Debug Revit Plugins: Speeding Up Development
 https://www.linkedin.com/pulse/how-debug-revit-plugins-speeding-up-development-gette-erik-8usef/
@@ -70,6 +88,11 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 -->
 
 ### Docs, Local APS LLM and Parallel Task Orchestration
+
+
+By the way, The Building Coder was selected by feedspot as one of
+the [Top 25 Revit Blogs](https://bloggers.feedspot.com/revit_blogs/).
+Thank you for the recognition, even if the list does look rather arbitrary to me...
 
 ####<a name="2"></a> RvtDocs Revit API Documentation
 
@@ -135,7 +158,17 @@ Many thanks to Chuong Ho for implementing and sharing this exciting innovative p
 <img src="img/ch_acc_ollama.png" alt="Ollama LLM with APS and ACC" title="Ollama LLM with APS and ACC" width="600"/> <!-- Pixel Width: 900 -->
 </center>
 
-####<a name="5"></a> Conversational Voice Generation
+####<a name="5"></a> Moore's Law for Agent Autonomy: 7 Months
+
+[Moore's law for agents: autonomy doubles every 7 months](https://buttondown.com/ainews/archive/ainews-every-7-months-the-moores-law-for-agent/), cf. the paper on [Measuring AI Ability to Complete Long Tasks](https://arxiv.org/pdf/2503.14499).
+
+<center>
+<img src="img/moores_law_agent.png" alt="Moore's law for agents: autonomy doubles every 7 months" title="Moore's law for agents: autonomy doubles every 7 months" width="600"/> <!-- Pixel Width: 1200 -->
+</center>
+
+> Figure 1: The length of tasks (measured by how long they take human professionals) that generalist autonomous frontier model agents can complete with 50% reliability has been doubling approximately every 7 months for the last 6 years. The shaded region represents 95% CI calculated by hierarchical bootstrap over task families, tasks, and task attempts. Even if the absolute measurements are off by a factor of 10, the trend predicts that in under a decade we will see AI agents that can independently complete a large fraction of software tasks that currently take humans days or weeks.
+
+####<a name="6"></a> Conversational Voice Generation
 
 Non-Revit-related, this conversational voice generation and simulation demo highlights
 [Sesame &ndash; Crossing the uncanny valley of conversational voice](https://www.sesame.com/research/crossing_the_uncanny_valley_of_voice#demo):
