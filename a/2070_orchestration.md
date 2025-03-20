@@ -113,24 +113,212 @@ Here is an overview of the choices to date that I am aware of:
 - [Revit API Docs](https://www.revitapidocs.com/) &ndash; Revit API documentation for 2021.1, 2022, 2023, 2024, 2025 and 2025.3
 - [RVTDocs](https://rvtdocs.com/) &ndash; Revit API documentation for 2021, 2022, 2023, 2024 and 2025
 
-####<a name="3"></a> Revit Parallel Task Orchestration on the Server
+####<a name="3"></a> Erik Gette on Debugging and Parallel Task Orchestration
 
 [Erik Gette](https://github.com/erikgett) of [ГК Страна Девелопмент](https://strana.com)
-How to Debug Revit Plugins: Speeding Up Development
-https://www.linkedin.com/pulse/how-debug-revit-plugins-speeding-up-development-gette-erik-8usef/
-January 29, 2025
-> The Runner.txt file is a VBA script (Revit journal) that allows executing specific commands in Revit upon startup. Essentially, it can be used to trigger any sequence of actions automatically.
+shared several in-depth tutorials on Revit and Navisworks debugging and parallel task orchestration:
+
+- [Navisworks orchestration on the server: how to execute typical tasks in parallel within the Navisworks environment](https://www.linkedin.com/pulse/navisworks-orchestration-server-how-execute-typical-tasks-erik-gette-pmjjf/), March 5, 2025
+- [Revit Orchestration on the Server: How to Execute Typical Tasks in Parallel in the Revit Context](https://www.linkedin.com/pulse/revit-orchestration-server-how-execute-typical-tasks-parallel-gette-ct1wc/), February 20, 2025
+- [How to Debug Revit Plugins: Speeding Up Development](https://www.linkedin.com/pulse/how-debug-revit-plugins-speeding-up-development-gette-erik-8usef/) January 29, 2025
+
+The debugging suggests a novel approach using the journal file to launch Revit in the debugger:
+
+> The Runner.txt file is a VBA script (Revit journal) that allows executing specific commands in Revit upon startup.
+Essentially, it can be used to trigger any sequence of actions automatically.
 In the context of my article, this file is used to launch Revit without any third-party plugins, ensuring a clean environment for testing and debugging.
-Interestingly, Revit generates similar log files for each session. These files can be read and analyzed, which opens up a range of automation possibilities. For example, in our workflow, we use these logs to orchestrate 10 running instances of Revit to export over 5,000 files into NWC format efficiently.
+Interestingly, Revit generates similar log files for each session.
+These files can be read and analyzed, which opens up a range of automation possibilities.
+For example, in our workflow, we use these logs to orchestrate 10 running instances of Revit to export over 5,000 files into NWC format efficiently.
 The use cases for this approach are vast, and I plan to explore them in more detail in future articles. Stay tuned! 😊
-Navisworks orchestration on the server: how to execute typical tasks in parallel within the Navisworks environment
-https://www.linkedin.com/pulse/navisworks-orchestration-server-how-execute-typical-tasks-erik-gette-pmjjf/
-March 5, 2025
-Revit Orchestration on the Server: How to Execute Typical Tasks in Parallel in the Revit Context
-https://www.linkedin.com/pulse/revit-orchestration-server-how-execute-typical-tasks-parallel-gette-ct1wc/
-February 20, 2025
 
 Thank you, Erik, for your valuable research and documentation.
+I'll share the Revit orchestration article here in full; please refer to Erik's LinkedIn publications for the others:
+
+####<a name="3.1"></a> Revit Parallel Task Orchestration on the Server
+
+In large-scale BIM projects, it is often necessary to perform the same operations on multiple models. This could include exporting models to various formats (NWC, IFC), extracting data for further analysis, or even more complex tasks related to automated model processing.
+
+When the number of models grows too large, performing these operations manually becomes inefficient and, in the case of working with Revit and Navisworks, also resource-intensive. The optimal solution is to organize server-side orchestration of these processes, where tasks are executed automatically based on a predefined scenario.
+
+In this article, we will explore how to set up process management for Revit on a server to execute BIM tasks in batch mode. This approach allows you to:
+
+- Automate model exports to NWC and IFC formats.
+- Extract data from models and store it in a database.
+- Perform any other repetitive tasks required for each company model.
+
+Orchestrating these processes on the server significantly reduces processing time, eliminates human errors, and makes working with models more predictable and manageable.
+
+####<a name="3.2"></a> Task Queue Controller &ndash; Server API Layer
+
+This controller is a simplified API example that manages a task queue in the server’s memory. The main goal is to demonstrate how tasks can be added and retrieved using ConcurrentQueue.
+
+<center>
+<img src="img/eg_rvt_orchestration_01.png" alt="Revit Parallel Task Orchestration on the Server" title="Revit Parallel Task Orchestration on the Server" width="600"/>
+</center>
+
+How this controller works:
+
+- Get method &ndash; Retrieves an item from the queue and removes it to ensure that the same task is not processed twice.
+- Post method &ndash; Adds a new task to the queue. In a real-world scenario, this could be a file path or task-related information.
+
+Limitations of this approach:
+
+- The queue is stored in memory (ConcurrentQueue<string>), meaning tasks are lost if the server restarts.
+- This approach is not suitable for a multi-server environment (horizontal scaling).
+- There is no mechanism for retrying failed tasks or tracking their status.
+
+What to use in a real project?
+
+For reliable task processing, message brokers are recommended:
+
+- RabbitMQ &ndash; A popular message broker, well-suited for distributed task processing.
+- Kafka &ndash; Ideal for high-throughput and real-time event processing.
+- Azure Queue Storage or AWS SQS &ndash; Suitable for cloud-deployed applications.
+- Redis (List) &ndash; Can be used as a simple distributed queue with data persistence.
+
+If you need to integrate RabbitMQ or another broker into this project, feel free to reach out
+to [Erik](https://www.linkedin.com/in/erikgette/).
+
+####<a name="3.3"></a> RevitRunner Class Overview
+
+The [RevitRunner](https://github.com/erikgett/Bim.Examples/blob/master/Bim.Library/ProgramsRunner/RevitRunner.cs) class
+is used to launch Revit with a journal file. This journal file can contain commands for automating tasks such as exporting NWC files or performing other operations.
+
+🔹 How It Works?
+
+- Create a RevitRunner object, specifying the path to the journal file (.txt) and the Revit version to be launched.
+- Call the Run() method to start the Revit process with the given arguments.
+- To forcefully close Revit, call the Kill() method.
+- When the RevitRunner object is destroyed (~RevitRunner() destructor), Revit automatically shuts down. However, it's recommended to call Kill() manually when necessary.
+
+<center>
+<img src="img/eg_rvt_orchestration_02.png" alt="Revit Parallel Task Orchestration on the Server" title="Revit Parallel Task Orchestration on the Server" width="600"/>
+</center>
+
+####<a name="3.4"></a> Step 1: Creating the Manifest File
+
+Before we move on to executing Revit processes, we need to configure and develop a Revit plugin.
+
+The first step is to create
+a [manifest file](https://github.com/erikgett/Bim.Examples/blob/master/OrchestrationExample/Bim.CommandForOrchestration/Bim.CommandForOrchestration.addin) for
+our command.
+This file defines the parameters and settings for the plugin.
+It tells Revit how to load and execute our command, ensuring it integrates properly with the Revit environment.
+
+<center>
+<img src="img/eg_rvt_orchestration_03.png" alt="Revit Parallel Task Orchestration on the Server" title="Revit Parallel Task Orchestration on the Server" width="600"/>
+</center>
+
+####<a name="3.5"></a> Step 2: Updating the Journal File
+
+Next, we need to call our command inside
+the journal file ([Runner.txt](https://github.com/erikgett/Bim.Examples/blob/master/Bim.Examples/Runner.txt)).
+This ensures that Revit executes the plugin correctly when launched.
+
+⚠ Key point: The command ID in the manifest file and the journal file must be the same. This consistency is crucial for proper execution and debugging.
+
+By maintaining this synchronization, we ensure that Revit picks up and runs our automation script without issues.
+
+Now, let’s configure the journal file and see how it integrates with our command! 🚀
+
+<center>
+<img src="img/eg_rvt_orchestration_04.png" alt="Revit Parallel Task Orchestration on the Server" title="Revit Parallel Task Orchestration on the Server" width="600"/>
+</center>
+
+####<a name="3.6"></a> Step 3: Implementing the Command
+
+After setting up the manifest and the journal file, the next step is writing
+the [external command](https://github.com/erikgett/Bim.Examples/blob/master/OrchestrationExample/Bim.CommandForOrchestration/RevitCommand.cs) that
+will execute tasks inside Revit.
+
+The `RevitCommand` class implements the `IExternalCommand` interface, which allows it to be executed within Revit.
+It runs in an infinite loop, constantly checking the server for new tasks.
+When a task is found, it is processed accordingly.
+
+How the Command Works:
+
+- `Execute` Method:
+    - This is the entry point for the command inside Revit. It simply calls ProcessQueue(), which runs continuously.
+- `ProcessQueue` Method
+  &ndash; This method handles the task retrieval and processing loop:
+    - Sends a GET request to http://localhost:5140/RevitTask to check for new tasks.
+    - If a task is found (response.IsSuccessStatusCode), it parses the JSON response to extract the task.
+    - If the task is valid, it is passed to ExecuteTask().
+    - If no tasks are available, the loop waits 10 seconds (Thread.Sleep(10000)) before the next request.
+    - Handles exceptions to prevent crashes and keeps the process running.
+- `ExecuteTask` Method
+  &ndash; This method is responsible for executing the task. Here, you can implement various BIM automation processes, such as:
+    - Exporting to IFC/NWC
+    - Data validation
+    - Uploading information to a database
+    - Other automated workflows
+
+####<a name="3.7"></a> Final Thoughts
+
+This solution enables automated task execution within Revit.
+The command continuously monitors the server and processes tasks without manual intervention.
+This approach is ideal for:
+
+
+ Automated model exports (IFC, NWC)
+ Data validation
+ Other repetitive BIM workflows requiring execution inside Revit
+
+By implementing this method, you can significantly reduce manual effort, improve efficiency, and ensure consistency in your BIM processes.
+
+Step 4: Setting Up the Development Environment
+
+To streamline development and debugging, a profile has been created that allows you to run both the server and the client simultaneously. This setup makes it easier to:
+
+
+ Debug both the Revit application and the server in parallel
+ Test the orchestration system efficiently
+ Ensure smooth communication between Revit and the task queue
+
+With this configuration, you can fine-tune your Revit automation workflow and optimize task execution seamlessly. 🚀
+
+Convenient API Access with Scalar
+
+In this test project, Scalar is used to simplify API interactions. It provides a clean and efficient way to work with the task queue.
+
+With Scalar, you can easily:
+ Add new tasks to the queue
+ Retrieve tasks for processing
+ Improve API usability with a structured approach
+
+This makes the orchestration process more manageable and scalable, ensuring a seamless workflow for handling Revit tasks on the server. 🚀
+
+Step 5: Parallel Execution on Multiple Revit Instances
+Now, let’s move on to the most exciting part—running our tasks in parallel on multiple instances of Revit.
+
+To make the server configuration more flexible, we first need to update the appsettings.json file by adding fields that will allow us to:
+ Specify the number of Revit instances to run
+ Define paths to Revit executables
+ Configure task queue settings
+
+This approach ensures that tasks are distributed efficiently across multiple Revit processes, significantly reducing execution time and improving overall performance. 🚀
+
+Step 6: Creating a Class for Managing Revit Instances
+
+Now that we've set up the configuration, the next step is to create a class that will launch Revit instances on the server side. This class will be responsible for:
+
+🔹 Automatically starting multiple Revit processes 🔹 Distributing tasks across running instances 🔹 Ensuring continuous execution in an infinite loop
+
+With this setup, we can now use our API to enqueue an unlimited number of tasks, and they will be processed in parallel by three Revit instances. This approach ensures efficient workload distribution, minimizing idle time and optimizing execution speed. 🚀
+
+We should also remember to register our service: builder.Services.AddHostedService<RevitBackgroundService>();
+
+Conclusion
+
+Now we have the ability to batch-run tasks that can only be executed in the context of Revit. This can significantly increase the productivity of the BIM department, as it allows us to integrate existing plugins into this logic and batch process large volumes of models on the server machine.
+
+In the following articles, I will elaborate on how to implement a similar approach with Navisworks, which will expand our capabilities in automation and integration with other tools.
+
+If you have any questions about collaboration or would like to discuss potential opportunities, feel free to reach out to me on Telegram. I look forward to connecting with you!
+
+Let me know if you need any adjustments!
+
 
 ####<a name="4"></a> Local Ollama LLM APS Metadata Querying
 
@@ -167,6 +355,10 @@ Many thanks to Chuong Ho for implementing and sharing this exciting innovative p
 </center>
 
 > Figure 1: The length of tasks (measured by how long they take human professionals) that generalist autonomous frontier model agents can complete with 50% reliability has been doubling approximately every 7 months for the last 6 years. The shaded region represents 95% CI calculated by hierarchical bootstrap over task families, tasks, and task attempts. Even if the absolute measurements are off by a factor of 10, the trend predicts that in under a decade we will see AI agents that can independently complete a large fraction of software tasks that currently take humans days or weeks.
+
+> At current rates, we will have:
+> * 1 (human work-) day autonomy in (5 exponentials * 7 months) = 3 years (2028)
+* 1 (human work-) month autonomy in "late 2029" (+/- 2 years, only going for human working hours)
 
 ####<a name="6"></a> Conversational Voice Generation
 
