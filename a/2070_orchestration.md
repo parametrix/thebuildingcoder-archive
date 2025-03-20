@@ -98,7 +98,6 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
     - [Step 2: updating the journal file](#3.5)
     - [Step 3: implementing the command](#3.6)
     - [Step 4: setting up the development environment](#3.7)
-    - [Convenient API access with scalar](#3.7)
     - [Step 5: parallel execution on multiple revit instances](#3.8)
     - [Step 6: creating a class for managing Revit instances](#3.9)
     - [Conclusion](#3.10)
@@ -298,7 +297,7 @@ With this configuration, you can fine-tune your Revit automation workflow and op
 <img src="img/eg_rvt_orchestration_06.png" alt="Revit Parallel Task Orchestration on the Server" title="Revit Parallel Task Orchestration on the Server" width="600"/>
 </center>
 
-####<a name="3.7"></a> Convenient API Access with Scalar
+##### Convenient API Access with Scalar
 
 In this test project, Scalar is used to simplify API interactions.
 It provides a clean and efficient way to work with the task queue.
