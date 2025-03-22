@@ -82,6 +82,22 @@ RvtDocs online Revit API docs, run free local open-source LLM queries on your BI
 
 linkedin:
 
+More online #RevitAPI docs, parallel add-in task orchestration on multiple Revit servers and local Ollama LLM APS BIM metadata queries:
+
+https://thebuildingcoder.typepad.com/blog/2025/03/docs-local-aps-llm-and-parallel-task-orchestration.html
+
+-  Revit parallel task orchestration on the server
+-  Task queue controller
+-  RevitRunner class overview
+-  Creating the manifest
+-  Updating the journal
+-  Implementing the command
+-  Setting up the development environment
+-  Parallel execution on multiple Revit instances
+-  Managing Revit instances
+-  Moore's law for agent autonomy: 7 months
+-  Conversational voice generation...
+
 #BIM #DynamoBIM #AutodeskAPS #Revit #API #IFC #SDK #Autodesk #AEC #adsk
 
 the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/bd-p/160) thread
