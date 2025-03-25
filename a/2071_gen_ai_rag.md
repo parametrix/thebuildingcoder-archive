@@ -88,13 +88,14 @@ Chuong Ho new Revit Vibe Revit Gen AI
 
 ####<a name="6"></a> Convert Revit API Help File to RAG for LLM
 
-Cesare Caoduro
-[@CaoduroC](https://forums.autodesk.com/t5/user/viewprofilepage/user-id/6036188)
-Convert Revit SDK documentation for local RAG (aka use it with a LLM)
-https://forums.autodesk.com/t5/revit-api-forum/convert-revit-sdk-documentation-for-local-rag-aka-use-it-with-a/td-p/13384246
+Cesare [@CaoduroC](https://forums.autodesk.com/t5/user/viewprofilepage/user-id/6036188) Caoduro
+shared a Python script
+to [convert Revit SDK documentation for local RAG (aka use it with a LLM)](https://forums.autodesk.com/t5/revit-api-forum/convert-revit-sdk-documentation-for-local-rag-aka-use-it-with-a/td-p/13384246):
+
+<!--
 
 email Re: Agentic RAG tool
-  Caoduro, Cesare <cesare.caoduro@aecom.com>
+Caoduro, Cesare <cesare.caoduro@aecom.com>
   Hi Jeremy hope to find you well.
   I am reaching out as I am thinking to create a tutorial on how to create an agentic RAG that is an expert in Revit APIs. As one of the sources for that RAG, I was hoping I could use your blog as a source.
   Before I go and do that, I wanted to. let you know and get your permission. If that’s ok, I will publish the entire process and cite you of course.
@@ -105,32 +106,37 @@ email Re: Agentic RAG tool
   Development & Integration Director, Enterprise Capabilities
   M +61 483 191 342
   cesare.caoduro@aecom.com
-  Click here to connect with me on LinkedIn
   AECOM
   L21 420, George Street
   Address Line 2
   Sydney, 2000, Australia
   T +61 02 893 40000
-Dear Cesare,
-  I think that is a splendid idea that I wholeheartedly support. You certainly have my permission.
-  In fact, I looked at similar ideas myself already; here are some notes that might come in handy for you:
-  APS Accelerator and Q4R4 Chunking with Claude
-  LLM Prompting, RAG Ingestion and New Projects
-  Docling Markdown Generator
-  Please let me know if I can help you in any way. Looking forward to hearing how it goes.
-  Thank you and good luck!
-  Cheers
-  jeremy
+-->
 
-with all this hypes around LLMs, MCPs, RAG, and everything else you read in your LinkedIn feed, I also wanted to give my 2 cents.
-I was looking at an automated way to pull the SDK documentation into a vector database, in a way that was useful. As you know the documentation comes as a chm file which is basically a zip file with a lot of HTML in it.
-Unfortunately, HTML files are very verbose and full of unwanted tags. Markdown (md) files, on the other hand, are just text files with some unique syntax to apply styles. and they turn to be very good for embeddings.
-So, I started to use out of the box libraries in python to convert html to markdown, but the problem is that the results were absolutely rubbish. One major issue (specifically with the Revit SDK documentation) is that there are JavaScript that will be executed when you click on certain things in the page. An example with the Revit documentation is the availability of multiple examples depending on the programming language of your choice (C#, VB, F#, etc.).
-It took me a bit of sweeting and a good amount of Cursor (if you don't know what it is,
+In fact, I looked at similar ideas myself already, e.g.:
+
+- [Q4R4 with LLM and RAG](https://thebuildingcoder.typepad.com/blog/2024/07/aps-accelerator-and-q4r4-chunking-with-claude.html#3)
+- [Claude.ai helped chunk TBC blog posts](https://thebuildingcoder.typepad.com/blog/2024/07/aps-accelerator-and-q4r4-chunking-with-claude.html#4)
+- [LLM prompting and RAG ingestion](https://thebuildingcoder.typepad.com/blog/2025/01/llm-prompting-rag-ingestion-and-new-projects.html)
+- [Docling Markdown Generator](https://thebuildingcoder.typepad.com/blog/2025/02/tools-for-extensible-storage-and-oauth-auth0.html#5)
+
+Cesare explains:
+
+With all the hype around LLMs, MCPs, RAG, and everything else you read in your LinkedIn feed, I also wanted to give my 2 cents.
+I was looking at an automated way to pull the SDK documentation into a vector database, in a way that was useful.
+As you know, the documentation comes as a `CHM` file that is basically a zip file with a lot of `HTML` in it.
+Unfortunately, HTML files are very verbose and full of unwanted tags.
+Markdown (`md`) files, on the other hand, are just text files with some unique syntax to apply styles.
+They turn to be very good for embeddings.
+So, I started to use out of the box Python libraries to convert HTML to markdown, but the problem is that the results were absolute rubbish.
+One major issue (specifically with the Revit SDK documentation) is that it includes JavaScript that will be executed when you click on certain things in the page.
+An example with the Revit documentation is the availability of multiple examples depending on the programming language of your choice (C#, VB, F#, etc.).
+It took me a bit of sweating and a good amount of Cursor (if you don't know what it is,
 check out [Cursor &ndash; The AI Code Editor](https://www.cursor.com/)),
-to come up with an approach to properly parse the html into md, and maintain a decent format.
-Without further ado, here the code. Test it and let me know!
-If you like it, I can also publish a quick tutorial on how to get this to work with a LLMs locally.
+to come up with an approach to properly parse the `html` into `md` and maintain a decent format.
+Without further ado, here is the code.
+Test it and let me know!
+If you like it, I can also publish a quick tutorial on how to get this to work with an LLM locally.
 
 <pre><code class="language-py">import os
 import re
@@ -380,9 +386,13 @@ p.s.: I have also a version of the script that works in C# is someone is interes
 p.p.s: I have also a script to pulls the entire "The Building Coder" blog into RAG.
 I did ask permission from @jeremytammik for this 🙂
 
-Congratulations to cesare on this nice project, and many thanks for sharing it.
+Congratulations to Cesare on this nice project, and many thanks for sharing it.
 
-Some thoughts and questions that come to mind:
+I would definitely like to take you up on your offer to 'publish a quick tutorial on how to get this to work with an LLM locally'.
+That would be brilliant!
+Thank you!
+
+Some further thoughts and questions that come to mind (most probably automatically answered by such a tutorial):
 
 - Have you tried using the Docling Markdown Generator? Does it handle CHM?
 - https://thebuildingcoder.typepad.com/blog/2025/02/tools-for-extensible-storage-and-oauth-auth0.html#5
