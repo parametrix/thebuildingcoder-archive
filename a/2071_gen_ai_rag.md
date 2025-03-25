@@ -389,7 +389,40 @@ Some thoughts and questions that come to mind:
 - What is you use case for the RAG? How do you feed this in to your processing system? What system are you using it for?
 - LangChain provides several integrated CHM reader libraries, I believe, and can also generate a vector databaase right out of the box, afaik. How does this compare to your approach?
 
+####<a name="7"></a> Revit MCP Connector
 
+The [Model Context Protocol (MCP)](https://en.wikipedia.org/wiki/Model_Context_Protocol) is
+an open framework introduced by Anthropic to standardize the way artificial intelligence (AI) models like large language models LLMs integrate and share data from diverse sources.
+It was announced in November 2024 and provides guidelines and structures for handling the contextual data used in AI-driven applications, e.g., specifications for:
+
+- Data ingestion and transformation
+- Contextual metadata tagging
+- Model interoperability across platforms
+
+Jean-Marc [@jmcouffin](https://github.com/jmcouffin) Couffin, aka [jmco](https://www.youtube.com/@jmco1045), shared a 90-second YouTube video demonstrating
+a [Revit MCP Test](https://youtu.be/mUJGSjQHBm8),
+showing a Revit API enabled MCP connector interactively manipulating the BIM.
+He gives credits for most of the code
+to [revit-mcp-plugin](https://github.com/revit-mcp/revit-mcp-plugin)
+and [revit-mcp](https://github.com/revit-mcp/revit-mcp).
+Jean-Marc added the ColorSplash capability as well as the WallTag.
+
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mUJGSjQHBm8?si=GSDcxLLruEgPwEkK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
+
+> Q: What are your MCP capabilities?
+
+> A: I'm a Revit Al assistant and can help with various modeling. analysis, and documentation tasks within Revit. Here are my key capabilities:
+
+> 1. Element Creation: I can create line-based elements (walls, beams, pipes), point-based elements (doors, windows, furniture), and surface-based elements (floors, ceilings, roofs).
+2. Element Management: I can get information about currently selected elements or elements in the active view, and delete elements by their IDs.
+3. Information Retrieval: I can get details about the current view and available family types in your project.
+4. Visual Analysis: I can color elements based on parameter values to create visual analytics of your model.
+5. Documentation: I can create tags for walls to help with documentation.
+6. Advanced Operations: I can execute custom C# code for specialized operations not covered by the built-in functions.
+
+> Would you like me to help you with any specific modeling or documentation task in your Revit project?
 
 <center>
 <img src="img/.png" alt="" title="" width="100"/>
