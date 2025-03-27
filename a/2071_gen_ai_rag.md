@@ -15,18 +15,6 @@ https://prismjs.com
 
 <!--
 
-- Why is AppearanceAssetElement empty in API?
-  https://forums.autodesk.com/t5/revit-api-forum/why-is-appearanceassetelement-empty-in-api/m-p/13388041#M84456
-  ask llm to summarise this post and q and a sokrates dialogue
-
-- Revit API: Retrieving Room Data for Demolished Family Instances
-  https://adndevblog.typepad.com/aec/2024/10/revit-api-retrieving-room-data-for-demolished-family-instances.html
-
-- RST Results Package Create with Api
-  https://forums.autodesk.com/t5/revit-api-forum/results-package-create-with-api/m-p/13093333
-  Structural Analysis Toolkit, ResultsBuilder, Reviewing Stored Results in Revit
-  https://forums.autodesk.com/t5/revit-api-forum/structural-analysis-toolkit-resultsbuilder-reviewing-stored/m-p/8778306
-
 - Chuong Ho new Revit Vibe Revit Gen AI
 
 - Cesare Caoduro
@@ -60,29 +48,18 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 -->
 
-### Demolished Room, Empty Asset, RST Result, Gen AI and RAG
+### Revit Gen AI: MCP, RAG and Vibe
 
+I originally had some non-AI-related items in my plan for today's post, but AI-related news kept piling in so fast, I took them out again for a future post:
 
+- [Revit Vibe: generative AI in the BIM](#2)
+- [Revit MCP connector](#3)
+- [Convert Revit API help file to RAG for LLM](#4)
+- [AI effect on programming jobs](#5)
+- [Nice Jupyter interactive graph](#6)
+- [Art is theft](#7)
 
-####<a name="2"></a> Empty Appearance Asset Element
-
-Why is AppearanceAssetElement empty in API?
-https://forums.autodesk.com/t5/revit-api-forum/why-is-appearanceassetelement-empty-in-api/m-p/13388041#M84456
-ask llm to summarise this post and q and a sokrates dialogue
-
-####<a name="3"></a> Revit API: Retrieving Room Data for Demolished Family Instances
-
-Revit API: Retrieving Room Data for Demolished Family Instances
-https://adndevblog.typepad.com/aec/2024/10/revit-api-retrieving-room-data-for-demolished-family-instances.html
-
-####<a name="4"></a> RST Results Package Create with Api
-
-RST Results Package Create with Api
-https://forums.autodesk.com/t5/revit-api-forum/results-package-create-with-api/m-p/13093333
-Structural Analysis Toolkit, ResultsBuilder, Reviewing Stored Results in Revit
-https://forums.autodesk.com/t5/revit-api-forum/structural-analysis-toolkit-resultsbuilder-reviewing-stored/m-p/8778306
-
-####<a name="5"></a> Revit Vibe: Generative AI in the BIM
+####<a name="2"></a> Revit Vibe: Generative AI in the BIM
 
 In the last post, I mentioned the
 [Local Ollama LLM APS metadata querying project](https://thebuildingcoder.typepad.com/blog/2025/03/docs-local-aps-llm-and-parallel-task-orchestration.html#4) by
@@ -101,7 +78,7 @@ presents [Revit Gen AI (Alpha)](https://revitai.chuongmep.com) enabling you to t
 - Full Control Over Execution &ndash; Choose exactly what your script runs in your model.
 - Customizable Workflows &ndash; Save and reuse automation scripts tailored to your project.
 
-####<a name="6"></a> Revit MCP Connector
+####<a name="3"></a> Revit MCP Connector
 
 The [Model Context Protocol (MCP)](https://en.wikipedia.org/wiki/Model_Context_Protocol) is
 an open framework introduced by Anthropic to standardize the way artificial intelligence (AI) models like large language models LLMs integrate and share data from diverse sources.
@@ -110,6 +87,13 @@ It was announced in November 2024 and provides guidelines and structures for han
 - Data ingestion and transformation
 - Contextual metadata tagging
 - Model interoperability across platforms
+
+Just now, 2025-03-26,
+also [OpenAI announced MCP support](https://openai.github.io/openai-agents-python/mcp/):
+
+> Sam [@sama](https://x.com/sama) Altman says,
+... people love MCP and we are excited to add support across our products.
+available today in the agents SDK and support for chatgpt desktop app + responses api coming soon!
 
 Jean-Marc [@jmcouffin](https://github.com/jmcouffin) Couffin, aka [jmco](https://www.youtube.com/@jmco1045), shared a 90-second YouTube video demonstrating
 a [Revit MCP Test](https://youtu.be/mUJGSjQHBm8),
@@ -136,7 +120,7 @@ Jean-Marc added the ColorSplash capability as well as the WallTag.
 
 > Would you like me to help you with any specific modeling or documentation task in your Revit project?
 
-####<a name="7"></a> Convert Revit API Help File to RAG for LLM
+####<a name="4"></a> Convert Revit API Help File to RAG for LLM
 
 Superficially less exciting than the Revit Gen AI and MCP project listed above, but possibly similarly important in the long run,
 Cesare [@CaoduroC](https://forums.autodesk.com/t5/user/viewprofilepage/user-id/6036188) Caoduro
@@ -450,11 +434,29 @@ Some further thoughts and questions that come to mind (most probably automatical
 - What is you use case for the RAG? How do you feed this in to your processing system? What system are you using it for?
 - LangChain provides several integrated CHM reader libraries, I believe, and can also generate a vector databaase right out of the box, afaik. How does this compare to your approach?
 
+####<a name="5"></a> AI Effect on Programming Jobs
+
+An interesting question for developers and a pretty convincing answer to it is discussed by the article
+on [AI effect on programming jobs](https://seldo.com/posts/ai-effect-on-programming-jobs),
+discussing addition and consequences of LLM prompts the continuously evolving development stack:
 
 <center>
-<img src="img/.png" alt="" title="" width="100"/>
+<img src="img/full_stack_develop_2025.png" alt="Evolving development stack 2025" title="Evolving development stack 2025" width="500"/>
 </center>
 
+####<a name="6"></a> Jupyter Interactive Graphs
 
-<pre><code class="language-cs"></code></pre>
+Just for my own notes, I like this nice article with interactive graphs explaining
+[how fast the days are getting longer](https://joe-antognini.github.io/astronomy/daylight) showing how to make beautiful use of
+a [Sunrise.ipynb Jupyter notebook](https://github.com/joe-antognini/joe-antognini.github.io/blob/master/assets/posts/daylight/Sunrise.ipynb).
+
+####<a name="7"></a> Art is Theft
+
+Closing words:
+
+Pablo Picasso is widely quoted as having said that good artists borrow, great artists steal.
+
+This quote was also a favorite of Steve Jobs who said he stole the concept of the Macintosh computer from a similar device shown at Xerox’s Palo Alto Research Center.
+
+Just an interesting thought in the current context of AI and LLM training.
 
