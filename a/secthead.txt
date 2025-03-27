@@ -9862,3 +9862,27 @@
 2069:<"#3"> CivApiDocs Civil3D API Documentation
 2069:<"#4"> ApiDocs Revit 2025 API Docs
 2069:<"#5"> Fabrication Part &ndash; Show Service
+2070:Docs, Local APS LLM and Parallel Task Orchestration
+2070:<"#2"> RvtDocs Revit API Documentation
+2070:<"#3"> Erik Gette on Debugging and Parallel Task Orchestration
+2070:<"#3.1"> Revit Parallel Task Orchestration on the Server
+2070:<"#3.2"> Task Queue Controller &ndash; Server API Layer
+2070:<"#3.3"> RevitRunner Class Overview
+2070:<"#3.4"> Step 1: Creating the Manifest File
+2070:<"#3.5"> Step 2: Updating the Journal File
+2070:<"#3.6"> Step 3: Implementing the Command
+2070:<"#3.7"> Step 4: Setting Up the Development Environment
+2070:Convenient API Access with Scalar
+2070:<"#3.8"> Step 5: Parallel Execution on Multiple Revit Instances
+2070:<"#3.9"> Step 6: Creating a Class for Managing Revit Instances
+2070:<"#3.10"> Conclusion
+2070:<"#4"> Local Ollama LLM APS Metadata Querying
+2070:<"#5"> Moore's Law for Agent Autonomy: 7 Months
+2070:<"#6"> Conversational Voice Generation
+2071:Revit Gen AI: MCP, RAG and Vibe
+2071:<"#2"> Revit Vibe: Generative AI in the BIM
+2071:<"#3"> Revit MCP Connector
+2071:<"#4"> Convert Revit API Help File to RAG for LLM
+2071:<"#5"> AI Effect on Programming Jobs
+2071:<"#6"> Jupyter Interactive Graphs
+2071:<"#7"> Art is Theft

@@ -31,7 +31,13 @@ twitter:
    @AutodeskAPS #BIM
     @DynamoBIM
 
-&ndash; ...
+AI-related news keeps piling in fast
+&ndash; Revit Vibe: generative AI in the BIM
+&ndash; Revit MCP connector
+&ndash; Convert Revit API help file to RAG for LLM
+&ndash; AI effect on programming jobs
+&ndash; Nice Jupyter interactive graph
+&ndash; Art is theft...
 
 linkedin:
 
