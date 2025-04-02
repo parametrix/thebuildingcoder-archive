@@ -66,6 +66,22 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 ### Empty Asset and Demoished Room
 
+####<a name="2"></a> RevitLookup and the Lookup Foundation
+
+Roman [@Nice3point](https://t.me/nice3point) Karpovich, aka Роман Карпович,
+has been heroically maintaining and enhancing RevitLookup for several years now.
+
+He would like to expand and generalise it to implement a whole suite of tools for exploring the .NET objects.
+
+For that purpose, we transferred ownership of the RevitLookup repository to
+the new [Lookup Foundation](https://github.com/lookup-foundation):
+
+<center>
+<img src="img/lookup_foundation.png" alt="Lookup Foundation" title="Lookup Foundation" width="1824"/>
+</center>
+
+
+
 ####<a name="2"></a> Revit 2026 Webinar Announcement
 
 Autodesk has announced Revit 2026, and you can register here for an webinar on April 10
@@ -102,98 +118,98 @@ I've tried using renderingAsset.FindByName("Description"), renderingAsset.FindBy
 
 For reference, here is my code:
 
-private (string, string, string) GetMaterialAssets(Document doc, int materialId)
+<pre><code class="language-cs">private (string, string, string) GetMaterialAssets(Document doc, int materialId)
 {
-    string texturePath = "";
-    string description = "";
-    string category = "";
+  string texturePath = "";
+  string description = "";
+  string category = "";
 
-    // Get material element
-    Material material = doc.GetElement(new ElementId(materialId)) as Material;
-    if (material != null)
+  // Get material element
+  Material material = doc.GetElement(new ElementId(materialId)) as Material;
+  if (material != null)
+  {
+    // Get appearance assets
+    ElementId appearanceAssetId = material.AppearanceAssetId;
+    AppearanceAssetElement appearanceAssetElem = doc.GetElement(appearanceAssetId) as AppearanceAssetElement;
+    if (appearanceAssetElem == null) return (texturePath, description, category);
+
+    // Get rendering asset
+    Asset assetRend = appearanceAssetElem.GetRenderingAsset();
+
+    if (assetRend != null)
     {
-        // Get appearance assets
-        ElementId appearanceAssetId = material.AppearanceAssetId;
-        AppearanceAssetElement appearanceAssetElem = doc.GetElement(appearanceAssetId) as AppearanceAssetElement;
-        if (appearanceAssetElem == null) return (texturePath, description, category);
+      if (assetRend.Size == 0)
+      {
+        AssetProperty baseSchema = assetRend.FindByName("BaseSchema");
+        TaskDialog.Show("Base Schema", baseSchema?.ToString());
+      }
 
-        // Get rendering asset
-        Asset assetRend = appearanceAssetElem.GetRenderingAsset();
+      // Go through properties
+      for (int assetIdx = 0; assetIdx < assetRend.Size; assetIdx++)
+      {
+        AssetProperty assetProperty = assetRend[assetIdx];
+        Type type = assetProperty.GetType();
 
-        if (assetRend != null)
+        if (assetProperty.Name.ToLower() == "description")
         {
-            if (assetRend.Size == 0)
-            {
-                AssetProperty baseSchema = assetRend.FindByName("BaseSchema");
-                TaskDialog.Show("Base Schema", baseSchema?.ToString());
-            }
-
-            // Go through properties
-            for (int assetIdx = 0; assetIdx < assetRend.Size; assetIdx++)
-            {
-                AssetProperty assetProperty = assetRend[assetIdx];
-                Type type = assetProperty.GetType();
-
-                if (assetProperty.Name.ToLower() == "description")
-                {
-                    var prop = type.GetProperty("Value");
-                    if (prop != null && prop.GetIndexParameters().Length == 0)
-                    {
-                        description = prop.GetValue(assetProperty).ToString();
-                        continue;
-                    }
-                }
-                else if (assetProperty.Name.ToLower() == "category")
-                {
-                    var prop = type.GetProperty("Value");
-                    if (prop != null && prop.GetIndexParameters().Length == 0)
-                    {
-                        category = prop.GetValue(assetProperty).ToString();
-                        continue;
-                    }
-                }
-
-                if (assetProperty.NumberOfConnectedProperties < 1)
-                    continue;
-
-                Asset connectedAsset = assetProperty.GetConnectedProperty(0) as Asset;
-                if (connectedAsset.Name == "UnifiedBitmapSchema")
-                {
-                    if (assetProperty.Name.Contains("bump") || assetProperty.Name.Contains("pattern_map") ||
-                        assetProperty.Name.Contains("shader") || assetProperty.Name.Contains("opacity"))
-                        continue;
-
-                    // UnifiedBitmap contains file name and path
-                    AssetPropertyString path = connectedAsset.FindByName(UnifiedBitmap.UnifiedbitmapBitmap) as AssetPropertyString;
-                    if (path == null || string.IsNullOrEmpty(path.Value))
-                        continue;
-                    string pathString = path.Value;
-                    if (pathString.Contains("|"))
-                    {
-                        pathString = pathString.Split('|')[0];
-                    }
-                    // remove | this character
-                    if (Path.IsPathRooted(pathString))
-                    {
-                        texturePath = pathString;
-                        continue;
-                    }
-
-                    // return path using default texture
-                    string defaultTexturePath = @"C:\Program Files\Common Files\Autodesk Shared\Materials\Textures\";
-                    string defaultTexturePathx86 = @"C:\Program Files (x86)\Common Files\Autodesk Shared\Materials\Textures\";
-
-                    if (Directory.Exists(defaultTexturePath))
-                        texturePath = defaultTexturePath + pathString;
-                    else if (Directory.Exists(defaultTexturePathx86))
-                        texturePath = defaultTexturePathx86 + pathString;
-                }
-            }
+          var prop = type.GetProperty("Value");
+          if (prop != null && prop.GetIndexParameters().Length == 0)
+          {
+            description = prop.GetValue(assetProperty).ToString();
+            continue;
+          }
         }
-    }
+        else if (assetProperty.Name.ToLower() == "category")
+        {
+          var prop = type.GetProperty("Value");
+          if (prop != null && prop.GetIndexParameters().Length == 0)
+          {
+            category = prop.GetValue(assetProperty).ToString();
+            continue;
+          }
+        }
 
-    return (texturePath, description, category);
-}
+        if (assetProperty.NumberOfConnectedProperties < 1)
+          continue;
+
+        Asset connectedAsset = assetProperty.GetConnectedProperty(0) as Asset;
+        if (connectedAsset.Name == "UnifiedBitmapSchema")
+        {
+          if (assetProperty.Name.Contains("bump") || assetProperty.Name.Contains("pattern_map") ||
+            assetProperty.Name.Contains("shader") || assetProperty.Name.Contains("opacity"))
+            continue;
+
+          // UnifiedBitmap contains file name and path
+          AssetPropertyString path = connectedAsset.FindByName(UnifiedBitmap.UnifiedbitmapBitmap) as AssetPropertyString;
+          if (path == null || string.IsNullOrEmpty(path.Value))
+            continue;
+          string pathString = path.Value;
+          if (pathString.Contains("|"))
+          {
+            pathString = pathString.Split('|')[0];
+          }
+          // remove | this character
+          if (Path.IsPathRooted(pathString))
+          {
+            texturePath = pathString;
+            continue;
+          }
+
+          // return path using default texture
+          string defaultTexturePath = @"C:\Program Files\Common Files\Autodesk Shared\Materials\Textures\";
+          string defaultTexturePathx86 = @"C:\Program Files (x86)\Common Files\Autodesk Shared\Materials\Textures\";
+
+          if (Directory.Exists(defaultTexturePath))
+            texturePath = defaultTexturePath + pathString;
+          else if (Directory.Exists(defaultTexturePathx86))
+            texturePath = defaultTexturePathx86 + pathString;
+        }
+      }
+    }
+  }
+
+  return (texturePath, description, category);
+}</code></pre>
 
 
 **Answer:**
@@ -221,7 +237,8 @@ But thanks for your input!!
 Could be the material original also was created/duplicated by API and no asset was attached, or from a material library.
 Or even a (very) old Revit style material
 
-R
+**Response:**
+
 
 I've been told that the family I'm using (attached in my original post above), that has the material with the empty Appearance Assets (Door - Architrave) is actually one of the default families that comes with Revit 2024 installation. So assuming this is a very old family, recycled between revit versions, it might be a very old material as well.
 
@@ -244,7 +261,7 @@ I haven't tried this via the API yet but, after checking the Appearance Asset El
 I went in and tried my suggestion.
 It does work. here's the code in VB (where RDB = Revit.DB and RDV =Revit.DB.Visual):
 
-  'Forum Issue resolution
+<pre><code class="language-vb">  'Forum Issue resolution
   Public Sub ReplaceEmptyAppearanceAssets(thisDoc As RDB.Document)
     Dim printStr As String = "Invalid Assets: " & vbCrLf
 
@@ -370,6 +387,7 @@ Running this code on your posted file found many materials with no Appearance As
 
 This was a good exercise, thanks for the question and I hope this helps you in some way.
 
+**Response:**
 R
 
 Thank you for your answer and sample code! I tried as you suggested and it does indeed work wonderfully!
@@ -402,7 +420,7 @@ To fix this, the Revit API provides a method called `FamilyInstance.get_Room(Pha
 
 Another option is to use `Document.GetRoomAtPoint(XYZ, Phase)`, which retrieves the room based on the family instance’s exact location during a specific phase. This method is useful for more complex cases, ensuring that you get accurate room data regardless of what happens to the family instances in later phases.
 
-// Get the active document and UIDocument from the commandData
+<pre><code class="language-cs">// Get the active document and UIDocument from the commandData
 Document doc = commandData.Application.ActiveUIDocument.Document;
 UIDocument uidoc = commandData.Application.ActiveUIDocument;
 
@@ -482,7 +500,7 @@ private void CreateViewSchedule(Document doc , Phase phase)
     {
       ScheduleField field = definition.AddField(sf);
     }
-}
+}</code></pre>
 
 ####<a name="4"></a> RST Results Package Create with Api
 
@@ -491,7 +509,7 @@ https://forums.autodesk.com/t5/revit-api-forum/results-package-create-with-api/m
 
 
 Explorer akoukouselis
-‎2024-10-18 05:26 AM
+2024-10-18 05:26 AM
 Not sure if you found it. I am struggling with a similar issue.
 have a look here "C:\Program Files\Autodesk\Revit 2025\AddIns\ResultsManagerExplorer" and reference Autodesk.ResultsBuilder.DBApplication.dll
 Also have a look here https://forums.autodesk.com/t5/revit-api-forum/structural-analysis-toolkit-resultsbuilder-reviewing-...
@@ -502,7 +520,7 @@ In my case the example works (not perfectly) for linear results but for surface 
 Report
  akoukouselis
 Explorer akoukouselis
-‎2024-10-19 02:17 AM
+2024-10-19 02:17 AM
 I had a better look in the ResultsBuilder functionality and decided to summarize and share some information here that other users may find helpful.
 Reference to the relevant Dll "Autodesk.ResultsBuilder.DBApplication.dll" may be found under the revit installation directory \addins\ResultsManagerExplorer e.g. C:\Program Files\Autodesk\Revit 2025\AddIns\ResultsManagerExplorer
  Examples of the SDK are a little old. Thus, code needs some changes as for example using ForgeTypeId. For example AddMeasurement(result.Item1, MeasurementResultType.Surface, UnitType.UT_Area, DisplayUnitType.DUT_SQUARE_METERS, MeasurementDependencyType.LoadCaseIndependent);  Should be changed to AddMeasurement(result.Item1, MeasurementResultType.Surface, SpecTypeId.Area, UnitTypeId.SquareMeters, MeasurementDependencyType.LoadCaseIndependent);
@@ -541,7 +559,7 @@ code2.png
 
 In the case of saving the reinforcement results, it is preferable to create a new package that will contain results for reinforcement.
 
-        /// <summary>
+<pre><code class="language-cs">        /// <summary>
         /// Creates an empty results package to store reinforcement results
         /// </summary>
         /// <param name="doc">Revit document</param>
@@ -653,7 +671,8 @@ But I'm intersected in IntersectionResult.Parameter property (link), and when i 
 Checking this Parameter property in debug reveals that it's not the only one failing. As you can see on the picture the "Distance", "EdgeObject", "EdgeParameter" and "Parameter" all fail with InvalidOperationException.
 Kép.png
 This issue occurred to me in a C# addin in all current version versions (22->25). For testing purposes I've created a python script that you can paste into RevitPytonShell and it results is the same error across all versions.
-results = clr.Reference[DB.IntersectionResultArray]()
+
+<pre><code class="language-py">results = clr.Reference[DB.IntersectionResultArray]()
 
 t = DB.Transaction(doc, "Line Creation")
 t.Start()
@@ -691,17 +710,14 @@ print("XYZPoint: {}".format(intResult.XYZPoint))
 print("Distance: {}".format(intResult.Distance))
 print("EdgeObject: {}".format(intResult.EdgeObject))
 print("EdgeParameter: {}".format(intResult.EdgeParameter))
-print("Parameter: {}".format(intResult.Parameter))
+print("Parameter: {}".format(intResult.Parameter))</code></pre>
 
- Would appreciate any help with this problem!
-Report
- 315 Views
- 7 Replies
-Replies (7)
-Sort by:
+Would appreciate any help with this problem!
+
+
  jeremy_tammik
 Autodesk jeremy_tammik
-‎2025-03-25 08:03 AM
+2025-03-25 08:03 AM
 I would like to pass this on to the development team for analysis, including a complete minimal sample in order for them to be able to reproduce the issue with a single click, if possible. Could you create a simple RVT (that can be empty) including a C# macro to execute to reproduce the problem, please? Thank you!
 
 https://thebuildingcoder.typepad.com/blog/about-the-author.html#1b
@@ -711,7 +727,7 @@ Report
  matyas.csanady3GW48
 Explorer matyas.csanady3GW48
 in reply to jeremy_tammik
-‎2025-03-26 03:16 AM
+2025-03-26 03:16 AM
 Hi Jeremy!
 
 Thank you for your quick reply and for the fact that you forward this issue to the DEV team. As you asked for I've created a macro that is able reproduce the same exception with a single click. I've attached an empty Revit project file that contains this macro, as expected running the macro throws the same exception.
@@ -722,14 +738,14 @@ Report
  jeremy_tammik
 Autodesk jeremy_tammik
 in reply to matyas.csanady3GW48
-‎2025-03-26 04:09 AM
+2025-03-26 04:09 AM
 Thank you for creating the macro. I see that the RVT filename ends in R22. Does that stand for Revit 2022? Could you please try it out in a more recent version? I believe that the next major release is being expected soon, and the development team (and all of Autodesk) refuse to support more than three major versions back, so Revit 2022 is out of scope. Thank you!
 
 Jeremy Tammik  Developer Advocacy and Support + The Building Coder + Autodesk Developer Network + ADN Open
 Report
  matyas.csanady3GW48
 Explorer matyas.csanady3GW48
-‎2025-03-26 04:27 AM
+2025-03-26 04:27 AM
 I've updated it to Revit2025 and attached it.
 
 IntersectionResult_InvalidOperationException_Macro_R25.rvt
@@ -737,24 +753,21 @@ IntersectionResult_InvalidOperationException_Macro_R25.rvt
 Report
  mhannonQ65N2
 Advocate mhannonQ65N2
-‎2025-03-28 12:13 PM
+2025-03-28 12:13 PM
 The Curve.Intersect method does not set the IntersectionResult's Parameter property. Look at the documentation for Curve.Intersect to see which properties are set and what they mean.
 Report
  tamas.deri
 Advocate tamas.deri
-‎2025-03-31 03:01 AM
+2025-03-31 03:01 AM
 Whoever designed this part of the API deserves a raise. /s
 It seems that the Parameter and Distance properties of the IntersectResult object will never get set by any of the methods creating it. So what was the intent?
 Report
  mhannonQ65N2
 Advocate mhannonQ65N2
-‎2025-03-31 01:07 PM
+2025-03-31 01:07 PM
 IntersectionResult's Parameter and Distance properties are both set by the Curve.Project method. The problem with IntersectionResult is that it is used to return results for several different geometric methods.
 
 
 
 
 
-<center>
-<img src="img/.png" alt="" title="" width="100"/>
-</center>
