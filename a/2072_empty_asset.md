@@ -29,9 +29,7 @@ https://prismjs.com
 
 twitter:
 
-
-@AutodeskRevit #RevitAPI @AutodeskAPS #BIM @DynamoBIM https://thebuildingcoder.typepad.com/blog/2025/03/revit-gen-ai-mcp-rag-and-vibe.html
-
+@AutodeskRevit 2026 is out! #RevitAPI solutions for empty appearance asset elements, demolished room data, the RST ResultsBuilder SDK sample and results creation @AutodeskAPS #BIM @DynamoBIM https://thebuildingcoder.typepad.com/blog/2025/04/revit-2026-empty-assets-and-demolished-stuff.html
 
 New major release of Revit and a bunch of API solutions for the existing ones
 &ndash; What's new in Revit 2026
