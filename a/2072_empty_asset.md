@@ -67,18 +67,16 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 ### New Release Webinar, Empty Assets and Demolished Rooms
 
 
-<center>
-<img src="img.png" alt="" title="" width="100"/>
-</center>
 
+####<a name="2"></a> What's New in Revit 2026
 
+Autodesk has released Revit 2026, cf.
+[What's New in Revit 2026](https://help.autodesk.com/view/RVT/2026/ENU/?guid=GUID-C81929D7-02CB-4BF7-A637-9B98EC9EB38B)
 
-####<a name="2"></a> Revit 2026 Webinar Announcement
+You can register for
+the [What’s New in Revit 2026 webinar on April 10](https://www.autodesk.com/webinars/aec/autodesk-whats-new-in-revit-april10).
 
-Autodesk has announced Revit 2026, and you can register here for an webinar on April 10
-on [What’s New in Revit 2026](https://www.autodesk.com/webinars/aec/autodesk-whats-new-in-revit-april10).
-
-Let's look at some recent discussions on working with the existing releases.
+Before going further with that, let's look at some recent discussions on working with the existing releases.
 
 ####<a name="3"></a> Empty Appearance Asset Element
 
@@ -522,120 +520,98 @@ On the other hand, if you want to present more complex data or need more control
 
 ####<a name="6"></a> RST ResultsBuilder SDK Sample
 
-Waldemar [@okapawal](https://forums.autodesk.com/t5/user/viewprofilepage/user-id/1218351) Okapa of the Revit Structural Sr Product Owner answered a question
+Waldemar [@okapawal](https://forums.autodesk.com/t5/user/viewprofilepage/user-id/1218351) Okapa, Revit Structural Sr Product Owner, answered the related question
 on the [structural analysis toolkit `ResultsBuilder` and reviewing stored results in Revit](https://forums.autodesk.com/t5/revit-api-forum/structural-analysis-toolkit-resultsbuilder-reviewing-stored/m-p/8778306):
-
 
 When calling the AddLinearResult function, the result package is set as type of  ResultsPackageTypes.All.
 
-
 The ResultsPackageTypes.Static type package should be used here because the static analysis results are saved in this function
-code1.png
 
+<center>
+<img src="img/wo_rst_results_1.png" alt="RST ResultsBuilder" title="RST ResultsBuilder" width="400"/>
+</center>
 
-Answering the second question:
+Inside the function AddArbitraryResults is calling the method with parameter which saying that  results are not dependent on load cases.
 
-Inside function AddArbitraryResults is calling the method with parameter which saying that  results are not dependent on load cases.
-
-code2.png
+<center>
+<img src="img/wo_rst_results_2.png" alt="RST ResultsBuilder" title="RST ResultsBuilder" width="400"/>
+</center>
 
 In the case of saving the reinforcement results, it is preferable to create a new package that will contain results for reinforcement.
 
-<pre><code class="language-cs">        /// &lt;summary&gt;
-        /// Creates an empty results package to store reinforcement results
-        /// &lt;/summary&gt;
-        /// &lt;param name="doc"&gt;Revit document&lt;/param&gt;
-        /// &lt;returns&gt;Reference to the newly created package&lt;/returns&gt;
-        private ResultsPackageBuilder createReinforcementResultsPackageBuilder( Document doc)
-      {
-         ResultsAccess resultsAccess = ResultsAccess.CreateResultsAccess(doc);
-         ResultsPackageBuilder resultsPackageBuilder = resultsAccess.CreateResultsPackage(reinfPackageGuid, "REINFORCEMENT_ResultsInRevit", UnitsSystem.Metric, ResultsPackageTypes.RequiredReinforcement);
+<pre><code class="language-cs">
+/// &lt;summary&gt;
+/// Creates an empty results package to store reinforcement results
+/// &lt;/summary&gt;
+/// &lt;param name="doc"&gt;Revit document&lt;/param&gt;
+/// &lt;returns&gt;Reference to the newly created package&lt;/returns&gt;
+private ResultsPackageBuilder createReinforcementResultsPackageBuilder( Document doc)
+{
+  ResultsAccess resultsAccess = ResultsAccess.CreateResultsAccess(doc);
+  ResultsPackageBuilder resultsPackageBuilder = resultsAccess.CreateResultsPackage(reinfPackageGuid, "REINFORCEMENT_ResultsInRevit", UnitsSystem.Metric, ResultsPackageTypes.RequiredReinforcement);
 
-         resultsPackageBuilder.SetAnalysisName("Reinforcement__ResultsInRevit_Analysis");
-         resultsPackageBuilder.SetModelName("ResultsInRevit_Model");
-         resultsPackageBuilder.SetDescription("Sample results");
-         resultsPackageBuilder.SetVendorDescription("Autodesk");
-         resultsPackageBuilder.SetVendorId("ADSK");
+  resultsPackageBuilder.SetAnalysisName("Reinforcement__ResultsInRevit_Analysis");
+  resultsPackageBuilder.SetModelName("ResultsInRevit_Model");
+  resultsPackageBuilder.SetDescription("Sample results");
+  resultsPackageBuilder.SetVendorDescription("Autodesk");
+  resultsPackageBuilder.SetVendorId("ADSK");
 
-         return resultsPackageBuilder;
-      }
+  return resultsPackageBuilder;
+}
 
+/// &lt;summary&gt;
+/// Adds reinforcement results to a linear element
+/// &lt;/summary&gt;
+/// &lt;param name="resultsPackageBuilder"&gt;Reference to the results package&lt;/param&gt;
+/// &lt;param name="elementId"&gt;Id of the linear element to which results are to be added&lt;/param&gt;
+private void AddReinforcementLinearResults(ResultsPackageBuilder resultsPackageBuilder, ElementId elementId)
+{
+  // Create list of some results
+  // Each list element contains result type and a list of result values
+  List&lt;Tuple&lt;LinearResultType, List&lt;double&gt;&gt;&gt; valuesForRnf = new List&lt;Tuple&lt;LinearResultType, List&lt;double&gt;&gt;&gt;()
+  {
+    new Tuple&lt;LinearResultType,List&lt;double&gt;&gt; ( LinearResultType.AsBottom, new List&lt;double&gt;() {  45.00,  30.00,  15.00,  60.00,  0.00, 0.00, 10.00, 0.00, 0.00, 90.00 }),
+    new Tuple&lt;LinearResultType,List&lt;double&gt;&gt; ( LinearResultType.AsTop,    new List&lt;double&gt;() {  45.00,  30.00,  15.00,  60.00,  0.00, 0.00, 10.00, 0.00, 0.00, 90.00 }),
+    new Tuple&lt;LinearResultType,List&lt;double&gt;&gt; ( LinearResultType.AsLeft,   new List&lt;double&gt;() {  45.00,  30.00,  15.00,  60.00,  0.00, 0.00, 10.00, 0.00, 0.00, 90.00 }),
+    new Tuple&lt;LinearResultType,List&lt;double&gt;&gt; ( LinearResultType.AsRight,  new List&lt;double&gt;() {  45.00,  30.00,  15.00,  60.00,  0.00, 0.00, 10.00, 0.00, 0.00, 90.00 }),
+  };
 
+  // Add result domain for load independent results
+  List&lt;double&gt; xCoordinateValues = new List&lt;double&gt;() { 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0 };
+  resultsPackageBuilder.SetBarResult(elementId, null, DomainResultType.X, xCoordinateValues);
+  // Add result values
+  foreach (var valueForRnf in valuesForRnf)
+  {
+    resultsPackageBuilder.SetBarResult(elementId, null, valueForRnf.Item1, valueForRnf.Item2);
+  }
+}
 
-        /// &lt;summary&gt;
-        /// Adds reinforcement results to a linear element
-        /// &lt;/summary&gt;
-        /// &lt;param name="resultsPackageBuilder"&gt;Reference to the results package&lt;/param&gt;
-        /// &lt;param name="elementId"&gt;Id of the linear element to which results are to be added&lt;/param&gt;
-        private void AddReinforcementLinearResults(ResultsPackageBuilder resultsPackageBuilder, ElementId elementId)
-        {
-            // Create list of some results
-            // Each list element contains result type and a list of result values
-            List&lt;Tuple&lt;LinearResultType, List&lt;double&gt;&gt;&gt; valuesForRnf = new List&lt;Tuple&lt;LinearResultType, List&lt;double&gt;&gt;&gt;()
-            {
-              new Tuple&lt;LinearResultType,List&lt;double&gt;&gt; ( LinearResultType.AsBottom, new List&lt;double&gt;() {  45.00,  30.00,  15.00,  60.00,  0.00, 0.00, 10.00, 0.00, 0.00, 90.00 }),
-              new Tuple&lt;LinearResultType,List&lt;double&gt;&gt; ( LinearResultType.AsTop,    new List&lt;double&gt;() {  45.00,  30.00,  15.00,  60.00,  0.00, 0.00, 10.00, 0.00, 0.00, 90.00 }),
-              new Tuple&lt;LinearResultType,List&lt;double&gt;&gt; ( LinearResultType.AsLeft,   new List&lt;double&gt;() {  45.00,  30.00,  15.00,  60.00,  0.00, 0.00, 10.00, 0.00, 0.00, 90.00 }),
-              new Tuple&lt;LinearResultType,List&lt;double&gt;&gt; ( LinearResultType.AsRight,  new List&lt;double&gt;() {  45.00,  30.00,  15.00,  60.00,  0.00, 0.00, 10.00, 0.00, 0.00, 90.00 }),
-            };
+/// &lt;summary&gt;
+/// Auxiliary method. Generates a list of sample reinforcement results for points on surface element contour
+/// &lt;/summary&gt;
+/// &lt;param name="points"&gt;List of points for which arbitrary results are to be generated&lt;/param&gt;
+/// &lt;returns&gt;A list containing a number of records with arbitrary surface result type and corresponding result values&lt;/returns&gt;
+private List&lt;Tuple&lt;SurfaceResultType, List&lt;double&gt;&gt;&gt; GenerateSampleReinforcementSurfaceResultsForContour(List&lt;XYZ&gt; points)
+{
+  // Create an array of arbitrary result types.
+  SurfaceResultType[] surfaceResultTypes = { SurfaceResultType.AxxBottom, SurfaceResultType.AyyBottom, SurfaceResultType.AxxTop, SurfaceResultType.AyyTop };
 
-            // Add result domain for load independent results
-            List&lt;double&gt; xCoordinateValues = new List&lt;double&gt;() { 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0 };
-            resultsPackageBuilder.SetBarResult(elementId, null, DomainResultType.X, xCoordinateValues);
-            // Add result values
-            foreach (var valueForRnf in valuesForRnf)
-            {
-                resultsPackageBuilder.SetBarResult(elementId, null, valueForRnf.Item1, valueForRnf.Item2);
-            }
-        }
+  // Create list
+  var sampleResults = new List&lt;Tuple&lt;SurfaceResultType, List&lt;double&gt;&gt;&gt;();
+  double coeff = 1.0e-4;
+  // Iterate over types, create a value for each point and add a record to the list
+  foreach (SurfaceResultType surfaceResultType in surfaceResultTypes)
+  {
+    coeff *= 1.5;
+    List&lt;double&gt; results = points.Select(s =&gt; (s.X * coeff + s.Y * coeff + s.Z * coeff)).ToList();
+    sampleResults.Add(new Tuple&lt;SurfaceResultType, List&lt;double&gt;&gt;(surfaceResultType, results));
+  }
+  return sampleResults;
+}</code></pre>
 
-        /// &lt;summary&gt;
-        /// Auxiliary method. Generates a list of sample reinforcement results for points on surface element contour
-        /// &lt;/summary&gt;
-        /// &lt;param name="points"&gt;List of points for which arbitrary results are to be generated&lt;/param&gt;
-        /// &lt;returns&gt;A list containing a number of records with arbitrary surface result type and corresponding result values&lt;/returns&gt;
-        private List&lt;Tuple&lt;SurfaceResultType, List&lt;double&gt;&gt;&gt; GenerateSampleReinforcementSurfaceResultsForContour(List&lt;XYZ&gt; points)
-        {
-            // Create an array of arbitrary result types.
-            SurfaceResultType[] surfaceResultTypes = { SurfaceResultType.AxxBottom, SurfaceResultType.AyyBottom, SurfaceResultType.AxxTop, SurfaceResultType.AyyTop };
+I am attaching new source code here in [StoreResults.zip](zip/StoreResults.zip).
+Use that, you will see this in Revit:
 
-            // Create list
-            var sampleResults = new List&lt;Tuple&lt;SurfaceResultType, List&lt;double&gt;&gt;&gt;();
-            double coeff = 1.0e-4;
-            // Iterate over types, create a value for each point and add a record to the list
-            foreach (SurfaceResultType surfaceResultType in surfaceResultTypes)
-            {
-                coeff *= 1.5;
-                List&lt;double&gt; results = points.Select(s =&gt; (s.X * coeff + s.Y * coeff + s.Z * coeff)).ToList();
-                sampleResults.Add(new Tuple&lt;SurfaceResultType, List&lt;double&gt;&gt;(surfaceResultType, results));
-            }
-            return sampleResults;
-        }</code></pre>
-
-
-
-
-I am attaching  new source code, if you use it, you will see in Revit
-
-ResBuilder.png
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<center>
+<img src="img/wo_rst_results_3.png" alt="RST ResultsBuilder" title="RST ResultsBuilder" width="400"/>
+</center>
