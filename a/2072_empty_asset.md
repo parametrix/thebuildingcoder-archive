@@ -29,15 +29,16 @@ https://prismjs.com
 
 twitter:
 
-Vibe programming, generative AI, and MCP connector and RAG docs for @AutodeskRevit #RevitAPI @AutodeskAPS #BIM @DynamoBIM https://thebuildingcoder.typepad.com/blog/2025/03/revit-gen-ai-mcp-rag-and-vibe.html
 
-AI-related news keeps piling in fast
-&ndash; Revit Vibe: generative AI in the BIM
-&ndash; Revit MCP connector
-&ndash; Convert Revit API help file to RAG for LLM
-&ndash; AI effect on programming jobs
-&ndash; Nice Jupyter interactive graph
-&ndash; Art is theft...
+@AutodeskRevit #RevitAPI @AutodeskAPS #BIM @DynamoBIM https://thebuildingcoder.typepad.com/blog/2025/03/revit-gen-ai-mcp-rag-and-vibe.html
+
+
+New major release of Revit and a bunch of API solutions for the existing ones
+&ndash; What's new in Revit 2026
+&ndash; Empty appearance asset element
+&ndash; Retrieving demolished room data
+&ndash; RST results package creation
+&ndash; RST ResultsBuilder SDK sample...
 
 linkedin:
 
@@ -66,7 +67,7 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 ### Revit 2026, Empty Assets and Demolished Stuff
 
-The next major release of Revit has arrived, and a bunch of API solutions for the existing ones:
+The new major release of Revit has arrived, and a bunch of API solutions for the existing ones:
 
 - [What's new in Revit 2026](#2)
 - [Empty appearance asset element](#3)
@@ -81,6 +82,10 @@ Autodesk has released Revit 2026, cf.
 
 For an intro to the new features, you can register for
 the [What’s New in Revit 2026 webinar on April 10](https://www.autodesk.com/webinars/aec/autodesk-whats-new-in-revit-april10).
+
+<center>
+<img src="img/revit2026.png" alt="Revit 2026" title="Revit 2026" width="150"/>
+</center>
 
 Before going further with that, let's look at some recent solutions for programming the existing releases.
 
