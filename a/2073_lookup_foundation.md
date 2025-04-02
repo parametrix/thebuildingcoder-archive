@@ -15,7 +15,6 @@ https://prismjs.com
 
 <!--
 
-
 twitter:
 
 Vibe programming, generative AI, and MCP connector and RAG docs for @AutodeskRevit #RevitAPI @AutodeskAPS #BIM @DynamoBIM https://thebuildingcoder.typepad.com/blog/2025/03/revit-gen-ai-mcp-rag-and-vibe.html
@@ -77,14 +76,25 @@ RevitLookup has been actively developed for many years, shaped by the contributi
 
 The repository has moved to its new address:
 
-🔗 https://github.com/lookup-foundation/RevitLookup
+ https://github.com/lookup-foundation/RevitLookup
 
 This transition ensures RevitLookup's continued growth as a community-driven project . RevitLookup is no longer just one person’s project; it belongs to the community that builds, tests, and improves it every day.
 
 The Lookup Foundation will ensure the project remains open, sustainable, and driven by its users. Whether you're a developer, a Revit expert, or simply someone who benefits from the tool, you have a role to play in its evolution.
 
 
+####<a name="4"></a> Design Automation API for Revit 2026
 
+The APS Design Automation API for Revit 2026 has been released, DA4R 2026.
+
+####<a name="4"></a> Vibe Programming in Revit API Launchpad
+
+here is a working sample of the Revit API launchpad using vibe programming to generate from scratch and execute Revit API macros: https://www.linkedin.com/posts/michaelkilkelly_revitapi-vibecoding-archsmarter-ugcPost-7311019788833546240-8Fho?utm_source=share&utm_medium=member_desktop&rcm=ACoAAACogiYBX6lBbCXzDJBU_OWT9MYGMYk5X6g
+
+Michael Kilkelly has been working with the Revit API and macros for a long time, cf. his past contributions here:
+
+* [Getting Started with Revit Macros](https://thebuildingcoder.typepad.com/blog/2015/10/rtc-classes-and-getting-started-with-revit-macros.html#7)
+* [Nina and a VS Revit Add-In Extension](https://thebuildingcoder.typepad.com/blog/2021/08/nina-and-a-vs-revit-add-in-extension.html)
 
 
 ####<a name="4"></a> Direwolf Fast Revit Data Extraction
