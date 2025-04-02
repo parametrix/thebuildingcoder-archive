@@ -64,19 +64,25 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 -->
 
-### New Release Webinar, Empty Assets and Demolished Rooms
+### Revit 2026, Empty Assets and Demolished Stuff
 
+The next major release of Revit has arrived, and a bunch of API solutions for the existing ones:
 
+- [What's new in Revit 2026](#2)
+- [Empty appearance asset element](#3)
+- [Retrieving demolished room data](#4)
+- [RST results package creation](#5)
+- [RST ResultsBuilder SDK sample](#6)
 
 ####<a name="2"></a> What's New in Revit 2026
 
 Autodesk has released Revit 2026, cf.
-[What's New in Revit 2026](https://help.autodesk.com/view/RVT/2026/ENU/?guid=GUID-C81929D7-02CB-4BF7-A637-9B98EC9EB38B)
+[What's New in Revit 2026](https://help.autodesk.com/view/RVT/2026/ENU/?guid=GUID-C81929D7-02CB-4BF7-A637-9B98EC9EB38B).
 
-You can register for
+For an intro to the new features, you can register for
 the [What’s New in Revit 2026 webinar on April 10](https://www.autodesk.com/webinars/aec/autodesk-whats-new-in-revit-april10).
 
-Before going further with that, let's look at some recent discussions on working with the existing releases.
+Before going further with that, let's look at some recent solutions for programming the existing releases.
 
 ####<a name="3"></a> Empty Appearance Asset Element
 
@@ -92,7 +98,7 @@ This is the only material in my entire project with zero `AssetProperties.Size`.
 Is this normal?
 How else can I get my Appearance assets if AssetProperties.Size is zero?
 
-For reference, I'm trying to get specific appearance asset properties from various materials, including appearance description, category and main appearance image filepath.
+I'm trying to get specific appearance asset properties from various materials, including appearance description, category and main appearance image filepath.
 
 I tried using renderingAsset.FindByName("Description"), renderingAsset.FindByName("Category"), renderingAsset.FindByName("UnifiedBitmapSchema") and renderingAsset.FindByName("BaseSchema").
 They all return null since renderingAssets is empty, i.e. AssetProperties.Size = 0.
@@ -195,7 +201,7 @@ For reference, here is my code:
 
 **Answer:**
 I think it's because the AppearanceAsset doesn't really exist.
-I had this when editing materials in a Rvt created by a IFC convertion.
+I had this when editing materials in a Rvt created by a IFC conversion.
 Could also be the material original also was created/duplicated by API and no asset was attached, or from a material library.
 Or even a (very) old Revit style material
 
@@ -203,7 +209,7 @@ When opening the material in the material editor, Revit assigns the AppearanceAs
 Change, for instance, the description field of the asset and save it.
 Now the AppearanceAsset will also be found by the API
 
-In my case, it always was a Generic class material (IFC conversion) and not a Wood Class; maybe that's why a AppearanceAsset is created by Revit with wood settings; likely a copy of the first existing Wood Class Asset?? (or some default).
+In my case, it always was a Generic class material (IFC conversion) and not a Wood Class; maybe that's why an AppearanceAsset is created by Revit with wood settings; likely a copy of the first existing Wood Class Asset?? (or some default).
 
 I solved it in my case by assigning my own AppearanceAsset (copy of a template AppearanceAsset with correct settings), editing some properties and assign it to the material.
 
@@ -211,26 +217,26 @@ I solved it in my case by assigning my own AppearanceAsset (copy of a template A
 It was indeed as you described.
 By changing a property of my Appearance asset and saving the material re-applies the appearance assets in the API.
 
-No solution in my case, other then warning the user to this issue, since I can't programatically re-assign the properties without reading the assigned values first, which I can't since renderingAssets is empty.
+No solution in my case, other then warning the user to this issue, since I can't programmatically re-assign the properties without reading the assigned values first, which I can't since renderingAssets is empty.
 My materials do not come from IFC conversion.
 
 I've been told that the family I'm using with the material with the empty Appearance Assets (Door - Architrave) is actually one of the default families that comes with Revit 2024 installation.
 So assuming this is a very old family, recycled between Revit versions, and it might be a very old material as well.
 
 **Answer:**
-I just checked the 2024 revit project template "Default-Multi-discipline". It seems to have 22 materials without a appearance asset.
-Like "Analytical Spaces", "Metal - Stainless Steel" etc..(others do have a appearance asset.)
+I just checked the 2024 revit project template "Default-Multi-discipline". It seems to have 22 materials without an appearance asset.
+Like "Analytical Spaces", "Metal - Stainless Steel" etc..(others do have an appearance asset.)
 
-Duplicating such material (duplicate incl. asset, shared asset not tried) will result in a material with a appearance asset (size > 0)
-The original wil still miss it as nothing changed to that one.
+Duplicating such material (duplicate incl. asset, shared asset not tried) will result in a material with an appearance asset (size > 0),
+The original will still lack it, as nothing changed to that one.
 
 Duplicating such material in the API will result in a material with no appearance asset, because the UI version adds it internally.
 So that's what then also should be done in the API in you're addin.
-How revit's UI creates the asses....well that's another topic, I think it depends on the material class and what maybe already exists in the project/family and/or some internal default assets.
+How the Revit UI creates the asset is another topic; I think it depends on the material class and what maybe already exists in the project/family and/or some internal default assets.
 
 I haven't tried this via the API yet but, after checking the Appearance Asset Element and finding it to have a size of 0, try duplicating it and see if Revit creates a properly defined version of it, if so then you could assign the newly created Appearance Asset to the material (along with searching for and redefining any other materials that might be using it as well).
 
-I went in and tried my suggestion.
+I went ahead and tried this suggestion.
 It does indeed work.
 Here's the code in VB (where RDB = Revit.DB and RDV = Revit.DB.Visual):
 
@@ -356,7 +362,7 @@ Here's the code in VB (where RDB = Revit.DB and RDV = Revit.DB.Visual):
 
 You will also notice a couple of comments taken from the API help that directly answer your original question of "Why is... empty..." and further to those that do not have a valid AppearanceAssetId.
 
-Running this code on your an materials with no Appearance Asset Element or Assets with size=0 creates valid Assets in both cases.
+Running this code on your materials with no appearance asset element or assets with size=0 creates valid assets in both cases.
 This was a good exercise, thanks for the question and I hope this helps you in some way.
 
 **Response:**
@@ -369,13 +375,13 @@ I haven't tried this via the API yet but, after checking the Appearance Asset El
 It could have been better of course, and it really should have two other additions to it:
 
 - When duplicating a 0 size asset, it should keep a record of which ones it creates a duplicate for and then check the remaining materials to see if they had that same original asset and simply assign the previously created duplicate asset to it as well.
-- When creating an asset for a material whose asset ID is InvalidElementId it could read the color and transparency values from the material properties and modify the created asset to have those values (which, of course, would require adding an AppearanceAssetEditScope to make those edits).
+- When creating an asset for a material whose asset ID is InvalidElementId it could read the colour and transparency values from the material properties and modify the created asset to have those values (which, of course, would require adding an AppearanceAssetEditScope to make those edits).
 
 
 ####<a name="4"></a> Retrieving Demolished Room Data
 
 My colleague Naveen Kumar shared a solution
-for [Retrieving Room Data for Demolished Family Instances](https://adndevblog.typepad.com/aec/2024/10/revit-api-retrieving-room-data-for-demolished-family-instances.html):
+to [retrieve room data for demolished family instances](https://adndevblog.typepad.com/aec/2024/10/revit-api-retrieving-room-data-for-demolished-family-instances.html):
 
 In Revit projects, it is important to track room data for family instances, especially when they are marked as 'Existing' and later demolished during the 'New Construction' phase.
 
@@ -432,8 +438,7 @@ if (familyInstance != null)
   }
 }</code></pre>
 
-**Automating Phase-Based View Schedule Creation for Revit Projects**
-
+**Automating Phase-Based View Schedule Creation for Revit Projects**:
 You can also use the Revit API to automate the creation of view schedules for different project phases.
 Instead of manually creating schedules for each phase, the API can automate this process, linking each schedule to the correct phase and organizing the data properly.
 This saves time and ensures accuracy across all phases of the project.
@@ -483,8 +488,8 @@ Many thanks to Naveen for pointing this out.
 
 ####<a name="5"></a> RST Results Package Creation
 
-A solution
-for [RST Results Package Create with API](https://forums.autodesk.com/t5/revit-api-forum/results-package-create-with-api/m-p/13093333):
+A Revit Structural solution
+for [RST results package creation with API](https://forums.autodesk.com/t5/revit-api-forum/results-package-create-with-api/m-p/13093333):
 
 Look at:
 
@@ -516,28 +521,28 @@ From my understanding, the ResultManager actually uses the AVF so it is up to yo
 - On the other hand, you will “inherit” the limitations of the ResultsBuilder meaning you cannot intervene with how data are stored and sometimes presented. For example, when using AVF directly you can flag which data points are to be tagged with text for diagrams.  Also did not find a way to present results that are not based on an analytical member with ResultsBuilder. AVF supports the presentation of results with references that are not based on actually Revit elements.
 
 Thus, I think that if you want just to show some results in Revit that are typical in the structural discipline go with ResultsBuilder.
-On the other hand, if you want to present more complex data or need more control on the data you are better off with implementing your own datastructure and use AVF directly.
+On the other hand, if you want to present more complex data or need more control on the data you are better off implementing your own data structure and use AVF directly.
 
 ####<a name="6"></a> RST ResultsBuilder SDK Sample
 
 Waldemar [@okapawal](https://forums.autodesk.com/t5/user/viewprofilepage/user-id/1218351) Okapa, Revit Structural Sr Product Owner, answered the related question
 on the [structural analysis toolkit `ResultsBuilder` and reviewing stored results in Revit](https://forums.autodesk.com/t5/revit-api-forum/structural-analysis-toolkit-resultsbuilder-reviewing-stored/m-p/8778306):
 
-When calling the AddLinearResult function, the result package is set as type of  ResultsPackageTypes.All.
+When calling the `AddLinearResult` function, the result package is set as type of  ResultsPackageTypes.All.
 
 The ResultsPackageTypes.Static type package should be used here because the static analysis results are saved in this function
 
 <center>
-<img src="img/wo_rst_results_1.png" alt="RST ResultsBuilder" title="RST ResultsBuilder" width="400"/>
+<img src="img/wo_rst_results_1.png" alt="RST ResultsBuilder" title="RST ResultsBuilder" width="800"/>
 </center>
 
-Inside the function AddArbitraryResults is calling the method with parameter which saying that  results are not dependent on load cases.
+Inside, the function `AddArbitraryResults` is calling the method with a parameter saying that results are not dependent on load cases.
 
 <center>
-<img src="img/wo_rst_results_2.png" alt="RST ResultsBuilder" title="RST ResultsBuilder" width="400"/>
+<img src="img/wo_rst_results_2.png" alt="RST ResultsBuilder" title="RST ResultsBuilder" width="800"/>
 </center>
 
-In the case of saving the reinforcement results, it is preferable to create a new package that will contain results for reinforcement.
+For saving the reinforcement results, it is preferable to create a new package that will contain the reinforcement results.
 
 <pre><code class="language-cs">
 /// &lt;summary&gt;
@@ -613,5 +618,5 @@ I am attaching new source code here in [StoreResults.zip](zip/StoreResults.zip).
 Use that, you will see this in Revit:
 
 <center>
-<img src="img/wo_rst_results_3.png" alt="RST ResultsBuilder" title="RST ResultsBuilder" width="400"/>
+<img src="img/wo_rst_results_3.png" alt="RST ResultsBuilder" title="RST ResultsBuilder" width="800"/>
 </center>
