@@ -64,20 +64,11 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 -->
 
-### Lookup Foundation, Empty Asset, Demoished Room
+### New Release Webinar, Empty Assets and Demolished Rooms
 
-####<a name="2"></a> RevitLookup and the Lookup Foundation
-
-Roman [@Nice3point](https://t.me/nice3point) Karpovich, aka Роман Карпович,
-has been heroically maintaining and enhancing RevitLookup for several years now.
-
-He would like to expand and generalise it to implement a whole suite of tools for exploring the .NET objects.
-
-For that purpose, we transferred ownership of the RevitLookup repository to
-the new [Lookup Foundation](https://github.com/lookup-foundation):
 
 <center>
-<img src="img/lookup_foundation.png" alt="Lookup Foundation" title="Lookup Foundation" width="800"/> <!-- width="1824" -->
+<img src="img.png" alt="" title="" width="100"/>
 </center>
 
 
@@ -765,8 +756,4 @@ Report
 Advocate mhannonQ65N2
 2025-03-31 01:07 PM
 IntersectionResult's Parameter and Distance properties are both set by the Curve.Project method. The problem with IntersectionResult is that it is used to return results for several different geometric methods.
-
-
-
-
 
