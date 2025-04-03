@@ -17,28 +17,11 @@ https://prismjs.com
 
 twitter:
 
-Vibe programming, generative AI, and MCP connector and RAG docs for @AutodeskRevit #RevitAPI @AutodeskAPS #BIM @DynamoBIM https://thebuildingcoder.typepad.com/blog/2025/03/revit-gen-ai-mcp-rag-and-vibe.html
+ @AutodeskRevit #RevitAPI @AutodeskAPS #BIM @DynamoBIM
 
-AI-related news keeps piling in fast
-&ndash; Revit Vibe: generative AI in the BIM
-&ndash; Revit MCP connector
-&ndash; Convert Revit API help file to RAG for LLM
-&ndash; AI effect on programming jobs
-&ndash; Nice Jupyter interactive graph
-&ndash; Art is theft...
+&ndash; ...
 
 linkedin:
-
-Vibe programming, generative AI, and MCP connector and RAG docs for #RevitAPI
-
-https://thebuildingcoder.typepad.com/blog/2025/03/revit-gen-ai-mcp-rag-and-vibe.html
-
-- Revit Vibe: generative AI in the BIM
-- Revit MCP connector
-- Convert Revit API help file to RAG for LLM
-- AI effect on programming jobs
-- Nice Jupyter interactive graph
-- Art is theft...
 
 #BIM #DynamoBIM #AutodeskAPS #Revit #API #IFC #SDK #Autodesk #AEC #adsk
 
@@ -54,7 +37,7 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 ### Lookup Foundation, Empty Asset, Demoished Room
 
-####<a name="2"></a> RevitLookup and the Lookup Foundation
+####<a name="2"></a> The Lookup Foundation
 
 Roman [@Nice3point](https://t.me/nice3point) Karpovich, aka Роман Карпович,
 has been heroically maintaining and enhancing RevitLookup for several years now.
@@ -83,19 +66,175 @@ This transition ensures RevitLookup's continued growth as a community-driven pro
 The Lookup Foundation will ensure the project remains open, sustainable, and driven by its users. Whether you're a developer, a Revit expert, or simply someone who benefits from the tool, you have a role to play in its evolution.
 
 
+####<a name="2"></a> RevitLookup 2026
+
+The Lookup Foundation released [RevitLookup 2026](https://github.com/lookup-foundation/RevitLookup/releases/tag/2026.0.0).
+
+A new major RevitLookup update with official Revit 2026 support and a lot of enhancements 🎉
+
+This release focuses on performance, a renewed UI, expanded functionality, redesigned application architecture, clearer separation of core components and user flow improvements. Let's move to the details.
+
+##### General
+
+- **Revit 2026** support.
+- **Added shortcuts**. `SS` shortcut opens the Snoop Selection window.
+- **Unlocked Ribbon buttons** for document-independent actions. Some dialogs can be opened without opening a document.
+- **Improved context actions**. Now `Delete` command shows the number of deleted Elements from the document.
+- **Improved exception handling**. Now shows more informational messages, added more supported error types. Fixed some application crashes.
+- **Fixed dependency conflicts** for .NET Framework versions of RevitLookup, according to tests, you should no longer encounter startup issues.
+- **Added AppBundle**, that can be installed with all available versions in the release.
+- **Added user manuals**, visit the [Wiki](https://github.com/lookup-foundation/RevitLookup/wiki) for RevitLookup features.
+- **Added digital signature**. Thanks [Kinship](https://kinship.io/) for providing cloud services!
+
+##### Dashboard Page
+
+The Dashboard has been significantly redesigned to make it easier to understand for users unfamiliar with the Revit API.
+
+- **Added description** of all actions, navigation became more intuitive and clear.
+- **Added UiControlledApplication** action to analyze properties and methods available when running the add-in.
+- **Actions now grouped** according to the window size.
+
+
+<center>
+<img src="img/rvtlookup2026_01.png" alt="RevitLookup 2026" title="RevitLookup 2026" width="600"/>
+</center>
+
+##### Summary Page
+
+Updated and improved Summary page components.
+
+- **Improved responsiveness** of the whole page. RevitLookup now supports displaying large amounts of data, 100k rows will not cause freezes and glitches.
+- **Improved shortcuts**, now the **F5** key works in all cases, previously it was required to focus on an element.
+- **Improved filter menu**. Now applying **Show/hide** filters does not close the menu.
+- **Improved tooltips**. Tooltips now display more useful information, number of elements contained in the type, full type name.
+- **Improved search**. It is now more intuitive and faster. Priority is given to the members table, the table is filtered first, then if nothing is found, the list of items is filtered. When searching the table of members, the elements with the same type will be filtered as well.
+- **Show Extension** filter is now enabled by default.
+- **Patched WPF** issues causing non-obvious member's table behavior.
+
+<center>
+<img src="img/rvtlookup2026_02.png" alt="RevitLookup 2026" title="RevitLookup 2026" width="600"/>
+</center>
+
+##### Settings Page
+
+- **Added description** of all settings, navigation became more intuitive and clear.
+
+
+<center>
+<img src="img/rvtlookup2026_03.png" alt="RevitLookup 2026" title="RevitLookup 2026" width="600"/>
+</center>
+
+##### Unit Dialogue
+
+- **Improved context menu**, Copy commands are grouped into sub-menu.
+
+##### Modules Dialogue
+
+- **Added new context menu** action. Added navigation to the module directory or directly to the module file.
+- **Added column sorting**. Click on the column header to sort.
+- **Improved context menu**, Copy commands are grouped into sub-menu.
+
+
+<center>
+<img src="img/rvtlookup2026_04.png" alt="RevitLookup 2026" title="RevitLookup 2026" width="600"/>
+</center>
+
+##### Application
+
+- **Adjusted default window sizes** for better display due to changes in Win.UI components.
+- **Synchronised UI library** and styles with Wpf.UI.
+- **Improved theme synchronization** with Windows.
+- **Added a new high contrast** theme.
+
+##### LookupEngine
+
+RevitLookup now runs on its own [engine](https://github.com/lookup-foundation/LookupEngine).
+The engine can run outside Revit, and can be reused across the entire family of Autodesk products.
+This is a pledge for the future for products like **AutocadLookup**, **InventorLookup** and others.
+
+Isolating the engine also brings many new improvements:
+
+- **The engine is much faster** than the integrated version, it allocates less memory, and supports more features.
+- **Added context support**, now allows additional metadata to be used to resolve members.
+- **Fixed CLR exceptions** for critical .NET Core components when evaluating members.
+- **New Lookup Engine API**. Isolation encouraged independent use of the API in any application.
+- **Improved context detection**, objects now understand what context they are in and provide values specific to their context, not just the active context.
+- **Added navigation stack**, now it will be easier to add support for new unsupported parent-dependent methods.
+
+##### Improvements
+
+- **Revit 2025.4 patch** brings some fixes to the API, now some methods and properties are available again for use in RevitLookup:
+    - `DatumPlane.CanBeVisibleInView`
+    - `DatumPlane.GetPropagationViews`
+    - `IndependentTag.TagText`
+- Added new **View** extensions:
+    - `GetAllPlacedInstances`
+- Added new **Wall** method overloads by @SergeyNefyodov:
+    - `IsWallCrossSectionValid`
+- Added new **CompoundStructure** method overloads by @SergeyNefyodov:
+    - `CanLayerBeStructuralMaterial`
+    - `CanLayerBeVariable`
+    - `CanLayerWidthBeNonZero`
+    - `GetAdjacentRegions`
+    - `GetCoreBoundaryLayerIndex`
+    - `GetDeckEmbeddingType`
+    - `GetDeckProfileId`
+    - `GetLayerAssociatedToRegion`
+    - `GetLayerFunction`
+    - `GetLayerWidth`
+    - `GetMaterialId`
+    - `GetNumberOfShellLayers`
+    - `GetOffsetForLocationLine`
+    - `GetPreviousNonZeroLayerIndex`
+    - `GetRegionEnvelope`
+    - `GetRegionsAssociatedToLayer`
+    - `GetSegmentCoordinate`
+    - `GetSegmentOrientation`
+    - `GetWallSweepsInfo`
+    - `GetWidth`
+    - `IsCoreLayer`
+    - `IsRectangularRegion`
+    - `IsSimpleRegion`
+    - `IsStructuralDeck`
+    - `ParticipatesInWrapping`
+- Visualisation now supports the new [CurveLoop](https://github.com/lookup-foundation/RevitLookup/wiki/Visualization#curveloop-visualization) type, thanks @JieGou for the implementation!
+
+<center>
+<img src="img/rvtlookup2026_05.png" alt="RevitLookup 2026" title="RevitLookup 2026" width="600"/>
+</center>
+
+## Development:
+
+- **Redesigned project structure**:
+    - Standalone [LookupEngine](https://github.com/lookup-foundation/LookupEngine). The LookupEngine is now a separate project, independent of RevitLookup.
+    - Standalone [LookupEngine.UI](https://github.com/lookup-foundation/LookupEngine.UI). The LookupEngine UI is now a separate project, independent of RevitLookup.
+    - UI Playground for development and testing the UI outside the Revit, independently.
+- **Moving to Central Package Management**, all dependencies are now managed in a single file.
+- **Moving to Central Build Management**, common build configurations are now managed in a single file.
+- **Automatic registration of MVVM components** in the service provider, no longer need to register each component manually.
+- **.NET 9 SDK support** for development.
+- **Migrated to SLNX solution format**, to avoid Git merge conflicts.
+- **Changed API for ContextMenu**. Now it provides dependecies and execution context.
+- **Disabled PresentationFramework traces** for the entire domain to address UI performance issues and freezing under an attached debugger, leaving only Critical events enabled.
+- **Updated** [Contribution](https://github.com/lookup-foundation/RevitLookup/blob/dev/Contributing.md) guide.
+
+
+
 ####<a name="4"></a> Design Automation API for Revit 2026
 
-The APS Design Automation API for Revit 2026 has been released, DA4R 2026.
+The [APS](https://aps.autodesk.com/) [Design Automation API](https://aps.autodesk.com/design-automation-apis) for
+Revit 2026 has been released, DA4R 2026.
 
-####<a name="4"></a> Vibe Programming in Revit API Launchpad
+####<a name="4"></a> Vibe Programming Revit Macros
 
-here is a working sample of the Revit API launchpad using vibe programming to generate from scratch and execute Revit API macros: https://www.linkedin.com/posts/michaelkilkelly_revitapi-vibecoding-archsmarter-ugcPost-7311019788833546240-8Fho?utm_source=share&utm_medium=member_desktop&rcm=ACoAAACogiYBX6lBbCXzDJBU_OWT9MYGMYk5X6g
+Michael Kilkelly shared
+an [8-and-a-half minute video on LinkedIn](https://www.linkedin.com/posts/michaelkilkelly_revitapi-vibecoding-archsmarter-ugcPost-7311019788833546240-8Fho?utm_source=share&utm_medium=member_desktop&rcm=ACoAAACogiYBX6lBbCXzDJBU_OWT9MYGMYk5X6g) using
+the Revit API launchpad
+with [vibe coding](https://en.wikipedia.org/wiki/Vibe_coding) to
+generate from scratch and execute Revit API macros.
 
-Michael Kilkelly has been working with the Revit API and macros for a long time, cf. his past contributions here:
-
-* [Getting Started with Revit Macros](https://thebuildingcoder.typepad.com/blog/2015/10/rtc-classes-and-getting-started-with-revit-macros.html#7)
-* [Nina and a VS Revit Add-In Extension](https://thebuildingcoder.typepad.com/blog/2021/08/nina-and-a-vs-revit-add-in-extension.html)
-
+Michael has been working with the Revit API and macros for a long time, cf. his 2015 tutorial
+on [getting started with Revit macros](https://thebuildingcoder.typepad.com/blog/2015/10/rtc-classes-and-getting-started-with-revit-macros.html#7).
 
 ####<a name="4"></a> Direwolf Fast Revit Data Extraction
 
