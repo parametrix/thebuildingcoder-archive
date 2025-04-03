@@ -66,7 +66,7 @@ This transition ensures RevitLookup's continued growth as a community-driven pro
 The Lookup Foundation will ensure the project remains open, sustainable, and driven by its users. Whether you're a developer, a Revit expert, or simply someone who benefits from the tool, you have a role to play in its evolution.
 
 
-####<a name="2"></a> RevitLookup 2026
+####<a name="3"></a> RevitLookup 2026
 
 The Lookup Foundation released [RevitLookup 2026](https://github.com/lookup-foundation/RevitLookup/releases/tag/2026.0.0).
 
@@ -74,7 +74,7 @@ A new major RevitLookup update with official Revit 2026 support and a lot of enh
 
 This release focuses on performance, a renewed UI, expanded functionality, redesigned application architecture, clearer separation of core components and user flow improvements. Let's move to the details.
 
-##### General
+#####<a name="3.1"></a> General
 
 - **Revit 2026** support.
 - **Added shortcuts**. `SS` shortcut opens the Snoop Selection window.
@@ -86,7 +86,7 @@ This release focuses on performance, a renewed UI, expanded functionality, redes
 - **Added user manuals**, visit the [Wiki](https://github.com/lookup-foundation/RevitLookup/wiki) for RevitLookup features.
 - **Added digital signature**. Thanks [Kinship](https://kinship.io/) for providing cloud services!
 
-##### Dashboard Page
+#####<a name="3.2"></a> Dashboard Page
 
 The Dashboard has been significantly redesigned to make it easier to understand for users unfamiliar with the Revit API.
 
@@ -99,7 +99,7 @@ The Dashboard has been significantly redesigned to make it easier to understand 
 <img src="img/rvtlookup2026_01.png" alt="RevitLookup 2026" title="RevitLookup 2026" width="600"/>
 </center>
 
-##### Summary Page
+#####<a name="3.3"></a> Summary Page
 
 Updated and improved Summary page components.
 
@@ -115,7 +115,7 @@ Updated and improved Summary page components.
 <img src="img/rvtlookup2026_02.png" alt="RevitLookup 2026" title="RevitLookup 2026" width="600"/>
 </center>
 
-##### Settings Page
+#####<a name="3.4"></a> Settings Page
 
 - **Added description** of all settings, navigation became more intuitive and clear.
 
@@ -124,11 +124,11 @@ Updated and improved Summary page components.
 <img src="img/rvtlookup2026_03.png" alt="RevitLookup 2026" title="RevitLookup 2026" width="600"/>
 </center>
 
-##### Unit Dialogue
+#####<a name="3.5"></a> Unit Dialogue
 
 - **Improved context menu**, Copy commands are grouped into sub-menu.
 
-##### Modules Dialogue
+#####<a name="3.6"></a> Modules Dialogue
 
 - **Added new context menu** action. Added navigation to the module directory or directly to the module file.
 - **Added column sorting**. Click on the column header to sort.
@@ -139,14 +139,14 @@ Updated and improved Summary page components.
 <img src="img/rvtlookup2026_04.png" alt="RevitLookup 2026" title="RevitLookup 2026" width="600"/>
 </center>
 
-##### Application
+#####<a name="3.7"></a> Application
 
 - **Adjusted default window sizes** for better display due to changes in Win.UI components.
 - **Synchronised UI library** and styles with Wpf.UI.
 - **Improved theme synchronization** with Windows.
 - **Added a new high contrast** theme.
 
-##### LookupEngine
+#####<a name="3.7"></a> LookupEngine
 
 RevitLookup now runs on its own [engine](https://github.com/lookup-foundation/LookupEngine).
 The engine can run outside Revit, and can be reused across the entire family of Autodesk products.
@@ -161,7 +161,7 @@ Isolating the engine also brings many new improvements:
 - **Improved context detection**, objects now understand what context they are in and provide values specific to their context, not just the active context.
 - **Added navigation stack**, now it will be easier to add support for new unsupported parent-dependent methods.
 
-##### Improvements
+#####<a name="3.9"></a> Improvements
 
 - **Revit 2025.4 patch** brings some fixes to the API, now some methods and properties are available again for use in RevitLookup:
     - `DatumPlane.CanBeVisibleInView`
@@ -203,7 +203,7 @@ Isolating the engine also brings many new improvements:
 <img src="img/rvtlookup2026_05.png" alt="RevitLookup 2026" title="RevitLookup 2026" width="600"/>
 </center>
 
-## Development:
+#####<a name="3.10"></a> Development:
 
 - **Redesigned project structure**:
     - Standalone [LookupEngine](https://github.com/lookup-foundation/LookupEngine). The LookupEngine is now a separate project, independent of RevitLookup.
@@ -218,14 +218,12 @@ Isolating the engine also brings many new improvements:
 - **Disabled PresentationFramework traces** for the entire domain to address UI performance issues and freezing under an attached debugger, leaving only Critical events enabled.
 - **Updated** [Contribution](https://github.com/lookup-foundation/RevitLookup/blob/dev/Contributing.md) guide.
 
-
-
 ####<a name="4"></a> Design Automation API for Revit 2026
 
 The [APS](https://aps.autodesk.com/) [Design Automation API](https://aps.autodesk.com/design-automation-apis) for
 Revit 2026 has been released, DA4R 2026.
 
-####<a name="4"></a> Vibe Programming Revit Macros
+####<a name="5"></a> Vibe Programming Revit Macros
 
 Michael Kilkelly shared
 an [8-and-a-half minute video on LinkedIn](https://www.linkedin.com/posts/michaelkilkelly_revitapi-vibecoding-archsmarter-ugcPost-7311019788833546240-8Fho?utm_source=share&utm_medium=member_desktop&rcm=ACoAAACogiYBX6lBbCXzDJBU_OWT9MYGMYk5X6g) using
@@ -236,12 +234,12 @@ generate from scratch and execute Revit API macros.
 Michael has been working with the Revit API and macros for a long time, cf. his 2015 tutorial
 on [getting started with Revit macros](https://thebuildingcoder.typepad.com/blog/2015/10/rtc-classes-and-getting-started-with-revit-macros.html#7).
 
-####<a name="4"></a> Direwolf Fast Revit Data Extraction
+####<a name="6"></a> Direwolf Fast Revit Data Extraction
 
 [Direwolf](https://github.com/Framebuffers/Direwolf) implements a data analysis framework for Autodesk Revit.
 It extracts, serialises, and stores parameters from BIM models in fractions of a second.
 
-####<a name="4"></a> Memory Stick versus Floppies
+####<a name="7"></a> Memory Stick versus Floppies
 
 I bought a 1 TB memory stick, and it got me thinking.
 In the beginning of my programming career, we used [floppy disks](https://en.wikipedia.org/wiki/Floppy_disk).
@@ -254,5 +252,3 @@ tb = 1024 * mb = 1073741824 byte
 tb / floppy = 2912.711111</code></pre>
 
 Assuming a floppy is 3 millimetres thick, this would be a stack about 2900 &middot; 0.003 = 8.7 metres high.
-
-
