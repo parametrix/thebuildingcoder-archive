@@ -19,7 +19,16 @@ twitter:
 
  @AutodeskRevit #RevitAPI @AutodeskAPS #BIM @DynamoBIM
 
-&ndash; ...
+In immediately reaction to the release of Revit 2026, DA4R and RevitLookup follow suite
+&ndash; The Lookup Foundation
+&ndash; RevitLookup 2026
+&ndash; Dashboard, Summary, Settings pages
+&ndash; Unit and Modules dialogues
+&ndash; LookupEngine](
+&ndash; Design Automation API for Revit 2026
+&ndash; Vibe programming Revit macros
+&ndash; Direwolf fast Revit data extraction
+&ndash; From floppies to a memory stick...
 
 linkedin:
 
@@ -35,7 +44,7 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 -->
 
-### Lookup Foundation, Empty Asset, Demoished Room
+### Lookup Foundation, RevitLookup 2026 and DA4R 2026
 
 In immediately reaction to the release of Revit 2026, DA4R and RevitLookup follow suite:
 
@@ -63,7 +72,7 @@ has been heroically maintaining and enhancing RevitLookup for several years now.
 
 He would like to expand and generalise it to implement a whole suite of tools for exploring the .NET objects.
 
-For that purpose, we transferred ownership of the RevitLookup repository from my persnal account to
+For that purpose, we transferred ownership of the RevitLookup repository from my personal account to
 the new [Lookup Foundation](https://github.com/lookup-foundation):
 
 <center>
@@ -108,7 +117,7 @@ This release focuses on performance, a renewed UI, expanded functionality, redes
 
 The Dashboard has been significantly redesigned to make it easier to understand for users unfamiliar with the Revit API.
 
-- **Added description** of all actions, navigation became more intuitive and clear.
+- **Added description** of all actions, navigation became more intuitive and clearer.
 - **Added UiControlledApplication** action to analyze properties and methods available when running the add-in.
 - **Actions now grouped** according to the window size.
 
@@ -135,7 +144,7 @@ Updated and improved Summary page components.
 
 #####<a name="3.4"></a> Settings Page
 
-- **Added description** of all settings, navigation became more intuitive and clear.
+- **Added description** of all settings, navigation became more intuitive and clearer.
 
 
 <center>
@@ -232,7 +241,7 @@ Isolating the engine also brings many new improvements:
 - **Automatic registration of MVVM components** in the service provider, no longer need to register each component manually.
 - **.NET 9 SDK support** for development.
 - **Migrated to SLNX solution format**, to avoid Git merge conflicts.
-- **Changed API for ContextMenu**. Now it provides dependecies and execution context.
+- **Changed API for ContextMenu**. Now it provides dependencies and execution context.
 - **Disabled PresentationFramework traces** for the entire domain to address UI performance issues and freezing under an attached debugger, leaving only Critical events enabled.
 - **Updated** [Contribution](https://github.com/lookup-foundation/RevitLookup/blob/dev/Contributing.md) guide.
 
@@ -263,10 +272,10 @@ I bought a 1 TB memory stick, and it got me thinking.
 In the beginning of my programming career, we used [floppy disks](https://en.wikipedia.org/wiki/Floppy_disk).
 They originally held 360 KB.
 
-<pre><code class="language-py">kb = 1024 byte
-floppy = 360 * kb = 368640 byte
-mb = 1024 * kb = 1048576 byte
-tb = 1024 * mb = 1073741824 byte
-tb / floppy = 2912.711111</code></pre>
+<pre>  kb = 1024 byte
+  floppy = 360 * kb = 368640 byte
+  mb = 1024 * kb = 1048576 byte
+  tb = 1024 * mb = 1073741824 byte
+  tb / floppy = 2912.711111</pre>
 
-Assuming a floppy is 3 millimetres thick, this would be a stack about 2900 &middot; 0.003 = 8.7 metres high.
+Assuming a floppy is 3 millimetres thick, my stick would be able to store that data from a stack of floppies about 2900 &middot; 0.003 = 8.7 metres high.
