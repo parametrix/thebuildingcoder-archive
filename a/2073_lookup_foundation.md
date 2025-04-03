@@ -37,6 +37,25 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 ### Lookup Foundation, Empty Asset, Demoished Room
 
+In immediately reaction to the release of Revit 2026, DA4R and RevitLookup follow suite:
+
+- [The Lookup Foundation](#2)
+- [RevitLookup 2026](#3)
+    - [General](#3.1)
+    - [Dashboard page](#3.2)
+    - [Summary page](#3.3)
+    - [Settings page](#3.4)
+    - [Unit dialogue](#3.5)
+    - [Modules dialogue](#3.6)
+    - [Application](#3.7)
+    - [LookupEngine](#3.7)
+    - [Improvements](#3.9)
+    - [Development:](#3.10)
+- [Design Automation API for Revit 2026](#4)
+- [Vibe programming Revit macros](#5)
+- [Direwolf fast Revit data extraction](#6)
+- [From floppies to a memory stick](#7)
+
 ####<a name="2"></a> The Lookup Foundation
 
 Roman [@Nice3point](https://t.me/nice3point) Karpovich, aka Роман Карпович,
@@ -44,7 +63,7 @@ has been heroically maintaining and enhancing RevitLookup for several years now.
 
 He would like to expand and generalise it to implement a whole suite of tools for exploring the .NET objects.
 
-For that purpose, we transferred ownership of the RevitLookup repository to
+For that purpose, we transferred ownership of the RevitLookup repository from my persnal account to
 the new [Lookup Foundation](https://github.com/lookup-foundation):
 
 <center>
@@ -57,14 +76,13 @@ GitHub redirects from the old URL to the new one, so existing links on the web w
 
 RevitLookup has been actively developed for many years, shaped by the contributions of a dedicated open-source community. Today, we mark an important milestone: the project transitions from its original home under Jeremy Tammik’s leadership to a new organization — the Lookup Foundation — where its development will be guided by the community that relies on it.
 
-The repository has moved to its new address:
-
- https://github.com/lookup-foundation/RevitLookup
-
 This transition ensures RevitLookup's continued growth as a community-driven project . RevitLookup is no longer just one person’s project; it belongs to the community that builds, tests, and improves it every day.
 
 The Lookup Foundation will ensure the project remains open, sustainable, and driven by its users. Whether you're a developer, a Revit expert, or simply someone who benefits from the tool, you have a role to play in its evolution.
 
+Please also refer to [Roman's LinkedIn announcement](https://www.linkedin.com/posts/nice3point_github-lookup-foundationrevitlookup-interactive-activity-7313236257206079488-JxpU?utm_source=share&utm_medium=member_desktop&rcm=ACoAAACogiYBX6lBbCXzDJBU_OWT9MYGMYk5X6g).
+
+Once again, many thanks to Roman for all his hard work setting this up, and for the [numerous enhancements and migration to Revit 2026 discussed below](#3).
 
 ####<a name="3"></a> RevitLookup 2026
 
@@ -239,7 +257,7 @@ on [getting started with Revit macros](https://thebuildingcoder.typepad.com/blog
 [Direwolf](https://github.com/Framebuffers/Direwolf) implements a data analysis framework for Autodesk Revit.
 It extracts, serialises, and stores parameters from BIM models in fractions of a second.
 
-####<a name="7"></a> Memory Stick versus Floppies
+####<a name="7"></a> From Floppies to a Memory Stick
 
 I bought a 1 TB memory stick, and it got me thinking.
 In the beginning of my programming career, we used [floppy disks](https://en.wikipedia.org/wiki/Floppy_disk).
