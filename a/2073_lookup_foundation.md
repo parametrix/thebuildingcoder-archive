@@ -24,7 +24,7 @@ In immediately reaction to the release of Revit 2026, DA4R and RevitLookup follo
 &ndash; RevitLookup 2026
 &ndash; Dashboard, Summary, Settings pages
 &ndash; Unit and Modules dialogues
-&ndash; LookupEngine](
+&ndash; LookupEngine
 &ndash; Design Automation API for Revit 2026
 &ndash; Vibe programming Revit macros
 &ndash; Direwolf fast Revit data extraction
