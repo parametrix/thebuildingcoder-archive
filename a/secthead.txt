@@ -9886,3 +9886,26 @@
 2071:<"#5"> AI Effect on Programming Jobs
 2071:<"#6"> Jupyter Interactive Graphs
 2071:<"#7"> Art is Theft
+2072:Revit 2026, Empty Assets and Demolished Stuff
+2072:<"#2"> What's New in Revit 2026
+2072:<"#3"> Empty Appearance Asset Element
+2072:<"#4"> Retrieving Demolished Room Data
+2072:<"#5"> RST Results Package Creation
+2072:<"#6"> RST ResultsBuilder SDK Sample
+2073:Lookup Foundation, RevitLookup 2026 and DA4R 2026
+2073:<"#2"> The Lookup Foundation
+2073:<"#3"> RevitLookup 2026
+2073:<"#3.1"> General
+2073:<"#3.2"> Dashboard Page
+2073:<"#3.3"> Summary Page
+2073:<"#3.4"> Settings Page
+2073:<"#3.5"> Unit Dialogue
+2073:<"#3.6"> Modules Dialogue
+2073:<"#3.7"> Application
+2073:<"#3.7"> LookupEngine
+2073:<"#3.9"> Improvements
+2073:<"#3.10"> Development:
+2073:<"#4"> Design Automation API for Revit 2026
+2073:<"#5"> Vibe Programming Revit Macros
+2073:<"#6"> Direwolf Fast Revit Data Extraction
+2073:<"#7"> From Floppies to a Memory Stick
