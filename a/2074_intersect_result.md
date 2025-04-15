@@ -68,7 +68,15 @@ twitter:
 
  @AutodeskAPS  @AutodeskRevit  #RevitAPI #BIM @DynamoBIM
 
-&ndash; ...
+Revit API curve intersection, LLMs interaction with AutoCAD and IFC, and more AI-related news
+&ndash; IntersectionResult properties
+&ndash; LLM interaction with AutoCAD and IFC
+&ndash; AI literature and roadmap
+&ndash; Vibe coding parody
+&ndash; Collapse of critical thinking
+&ndash; IDA iterated distillation and amplification training
+&ndash; A2A agent-to-agent protocol
+&ndash; OpenAI GPT 4.1 + mini + nano...
 
 linkedin:
 
@@ -86,7 +94,7 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 -->
 
-### Intersection Result
+### Intersection Result, LLM for IFC and More AI
 
 Today, we highlight one pure Revit API related topic, LLMs interacting with AutoCAD and IFC, and lots more AI-related news snippets:
 
@@ -192,7 +200,7 @@ A standout feature is the use of reflection to provide additional insights about
 <img src="img/dv_scripture.png" alt="Scripture" title="Scripture" width="800"/> <!-- 1200 -->
 </center>
 
-The [IFC AI Agent](https://ifc-ai-agent.dmytro-prototypes.net/login) is
+Further, the [IFC AI Agent](https://ifc-ai-agent.dmytro-prototypes.net/login) is
 an LLM querying and editing data in IFC Files:
 In this project, the chatbot not only retrieves information from IFC files but also generates and executes Python code to interact with them dynamically, tailoring responses in real time based on the data.
 A decades-old concept reimagined for modern AI!
