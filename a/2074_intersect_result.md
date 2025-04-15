@@ -88,6 +88,16 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 ### Intersection Result
 
+Today, we highlight one pure Revit API related topic, LLMs interacting with AutoCAD and IFC, and lots of AI-related news snippets:
+
+- [IntersectionResult properties](#2)
+- [LLM interaction with AutoCAD and IFC](#3)
+- [AI literature and roadmap](#4)
+- [Vibe coding parody](#5)
+- [Collapse of critical thinking](#6)
+- [IDA iterated distillation and amplification training](#7)
+- [A2A agent-to-agent protocol](#8)
+- [OpenAI GPT 4.1 + mini + nano](#9)
 
 ####<a name="2"></a> IntersectionResult Properties
 
@@ -164,9 +174,9 @@ The IntersectionResult `Parameter` and `Distance` properties are both set by the
 IntersectionResult is used to return results for several different geometric methods.
 
 
-####<a name="2"></a> LLM Interaction with AutoCAD and IFC
+####<a name="3"></a> LLM Interaction with AutoCAD and IFC
 
-[Dmytro Vakulenko](https://dmytro-prototypes.net/) shared two of projects that may be of interest here,
+[Dmytro Vakulenko](https://dmytro-prototypes.net/) shared two AI- though not directly Revit-related projects that may be of interest here,
 an [AutoCAD LLM integration](https://www.linkedin.com/posts/dmytro-vakulenko-software_scripture-demo-llm-based-autocad-automation-activity-7248239069292294144-pj2i) and
 an [IFC AI agent](https://www.linkedin.com/posts/dmytro-vakulenko-software_ifc-ai-agent-demo-httpsifcaiagentazurewebsitesnet-activity-7268254935761182721-Gft0?utm_source=share).
 
@@ -187,72 +197,61 @@ an LLM querying and editing data in IFC Files:
 In this project, the chatbot not only retrieves information from IFC files but also generates and executes Python code to interact with them dynamically, tailoring responses in real time based on the data.
 A decades-old concept reimagined for modern AI!
 working with large-scale IFC files &ndash; often gigabytes in size &ndash; poses a challenge: LLMs often can’t fit results into their limited-size context.
-
 The latest innovation in IFC AI Agent addresses this with variables &ndash; a simple yet powerful concept that’s been at the core of software development for decades.
 
 Here’s how it works:
 
 - The AI Agent has a bucket of variables it knows by name.
 - For variables with simple values, it knows their exact content.
-- When variables hold large datasets, it intelligently works with samples to maintain efficiency while keeping calculations precise.
+- When variables holding large datasets, it intelligently works with samples to maintain efficiency while keeping calculations precise.
 
 This approach brings smart data management to AI, enabling seamless interactions with large-scale IFC files.
 
 - [1-minute video](https://youtu.be/fFPVTTtDyTw)
 - [IFC AI Agent to try out yourself](https://ifc-ai-agent.dmytro-prototypes.net/login)
 
-
-Here is an [IFC AI Agent](https://ifc-ai-agent.dmytro-prototypes.net/login). It demonstrates the ability to communicate with IFC files using natural language. Powered by a large language model (LLM), the agent enables users to query and modify their IFC files. For example, ask questions like "List all windows with their dimensions", or ask to modify, e.g., "Move all walls on the ground floor in (1,1,0) direction by 1000 units."  This is an ongoing chat. You can also ask how your data was received, modified, or request further details.
+For example, ask questions like "List all windows with their dimensions", or ask to modify, e.g., "Move all walls on the ground floor in (1,1,0) direction by 1000 units."  This is an ongoing chat. You can also ask how your data was received, modified, or request further details.
 
 Dmytro also [shares](https://www.linkedin.com/posts/dmytro-vakulenko-software_github-dimitrovakulenkosimpleifcaiagentwithgraphrag-activity-7287741565437898752-Aey9)
 the [simple IFC AI agent with GraphRAG](https://github.com/dimitrovakulenko/simpleIfcAIAgentWithGraphRAG) project,
-a minimalistic project designed to showcase a simple AI agent that extracts data from an IFC file stored in a graph database (Neo4j). The project demonstrates the integration of AI, IFC file processing, and graph-based data storage and retrieval using modern tools such as Neo4j, LangGraph, and Azure GPT. Maybe he extracts the IFC data up front into the database, as we discussed in the meeting?
+a minimalistic project designed to showcase a simple AI agent that extracts data from an IFC file stored in a graph database (Neo4j). The project demonstrates the integration of AI, IFC file processing, and graph-based data storage and retrieval using modern tools such as Neo4j, LangGraph, and Azure GPT.
 
+Many thasnks to Dmytro for pointing these out!
 
-####<a name="2"></a> IDA Iterated Distillation and Amplification Training
+####<a name="4"></a> AI Literature and Roadmap
 
-- New training approach? *Iterated Distillation and Amplification (IDA)* - a scalable and efficient alignment strategy for general superintelligence using iterative self-improvement... to surpass the intelligence of whoever is training it, i.e., humans: [Cogito v1 Preview -- Introducing IDA as a path to general superintelligence](https://www.deepcogito.com/research/cogito-v1-preview).
+Looking at the future of AI-driven software architecture, here is a scientific paper
+on [Artificial Intelligence for Software Architecture: Literature Review and the Road Ahead](https://arxiv.org/abs/2504.04334).
 
-####<a name="2"></a> AI Literature and Roadmap
+####<a name="5"></a> Vibe Coding Parody
 
-- A scientific paper on [Artificial Intelligence for Software Architecture: Literature Review and the Road Ahead](https://arxiv.org/abs/2504.04334).
+For an example of how not to approach such a task, you may enjoy
+this [6-minute dystopian parody of vibe coding video](https://youtu.be/JeNS1ZNHQs8).
 
-####<a name="2"></a> vibe coding Parody
+####<a name="6"></a> Collapse of Critical Thinking
 
-- Here is a nice [6-minute dystopian charade of vibe coding video](https://youtu.be/JeNS1ZNHQs8).
+In a more serious vein, one can already start observing
+[the slow collapse of critical thinking in OSINT due to AI](https://www.dutchosintguy.com/post/the-slow-collapse-of-critical-thinking-in-osint-due-to-ai).
+In case you wonder &ndash; as I did &ndash; about the acronym, it stands
+for [open-source intelligence](https://en.wikipedia.org/wiki/Open-source_intelligence).
 
-####<a name="2"></a> Collapse of Critical Thinking
+####<a name="7"></a> IDA Iterated Distillation and Amplification Training
 
-- The Slow Collapse of Critical Thinking in OSINT due to AI
-  https://www.dutchosintguy.com/post/the-slow-collapse-of-critical-thinking-in-osint-due-to-ai
-  Open-source intelligence
-  https://en.wikipedia.org/wiki/Open-source_intelligence
+A new LLM training approach aims to provide a scalable and efficient alignment strategy for general superintelligence using iterative self-improvement in order to surpass the intelligence of whoever is training it, i.e., humans:
+[Cogito v1 preview &ndash; introducing IDA as a path to general superintelligence](https://www.deepcogito.com/research/cogito-v1-preview).
 
-####<a name="2"></a> OpenAI GPT 4.1 + Mini + Nano
+####<a name="8"></a> A2A Agent-to-Agent Protocol
 
-OpenAI GPT 4.1 + mini + nano for developers: https://x.com/OpenAI/status/1911824315194192187 (edited)
+Last week, Google announced the [A2A agent-to-agent protocol](https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/)
+an open protocol for building interoperable AI solutions including support for MCP.
+[A2A is also included in Visual Studio](https://code.visualstudio.com/blogs/2025/04/07/agentMode).
+Agent mode is intended for scenarios where:
 
-####<a name="2"></a> A2A Agent-to-Agent Protocol
+- Your task involves multiple steps. The agent edits code, runs terminal commands, monitors for errors, and iterates to resolve any issues that arise.
+- You are unsure about the scope of the changes. The agent automatically determines the relevant files and context.
+- Your task requires interaction with external apps or data. The agent integrates with MCP servers and VS Code extensions.
 
-Google announced the [A2A agent-to-agent protocol](https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/) including support for MCP.
+####<a name="9"></a> OpenAI GPT 4.1 + Mini + Nano
 
-developers.googleblog.comdevelopers.googleblog.com
-Announcing the Agent2Agent Protocol (A2A)- Google Developers Blog
-Explore A2A, Google's new open protocol empowering developers to build interoperable AI solutions. (364 kB)
-https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/
-
-[A2A is also included in Visual Studio](https://code.visualstudio.com/blogs/2025/04/07/agentMode.
-
-Agent mode is great for scenarios where:
-
-Your task involves multiple steps. The agent edits code, runs terminal commands, monitors for errors, and iterates to resolve any issues that arise.
-You are unsure about the scope of the changes. The agent automatically determines the relevant files and context.
-Your task requires interaction with external apps or data. The agent integrates with MCP servers and VS Code extensions.
-
-
-
-
-
-
-
-
+Finally, just yesterday, OpenAI announced
+[GPT 4.1 + mini + nano for developers](https://x.com/OpenAI/status/1911824315194192187).
