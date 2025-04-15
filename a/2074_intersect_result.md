@@ -102,7 +102,7 @@ Today, we highlight one pure Revit API related topic, LLMs interacting with Auto
 ####<a name="2"></a> IntersectionResult Properties
 
 The Revit API  [Curve Intersect method](https://www.revitapidocs.com/2026/570fb842-cac3-83f5-1ab9-621e55186ead.htm) sports
-some quirks that promted explanations in the past.
+some quirks that prompted explanations in the past.
 Another one is discussed in the explanation
 why [IntersectionResult parameter getter throws an InvalidOperationException](https://forums.autodesk.com/t5/revit-api-forum/intersectionresult-parameter-getter-throws-an/m-p/13400449#M84547):
 
