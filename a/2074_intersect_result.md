@@ -51,21 +51,18 @@ https://prismjs.com
   Best regards,
   Dmytro
 
-Google announced the [A2A agent-to-agent protocol](https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/) including support for MCP.
+- A2A
+  Google announced the [A2A agent-to-agent protocol](https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/) including support for MCP.
 
-developers.googleblog.comdevelopers.googleblog.com
-Announcing the Agent2Agent Protocol (A2A)- Google Developers Blog
-Explore A2A, Google's new open protocol empowering developers to build interoperable AI solutions. (364 kB)
-https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/
-
-[A2A is also included in Visual Studio](https://code.visualstudio.com/blogs/2025/04/07/agentMode.
-
-Agent mode is great for scenarios where:
-
-Your task involves multiple steps. The agent edits code, runs terminal commands, monitors for errors, and iterates to resolve any issues that arise.
-You are unsure about the scope of the changes. The agent automatically determines the relevant files and context.
-Your task requires interaction with external apps or data. The agent integrates with MCP servers and VS Code extensions.
-
+  developers.googleblog.comdevelopers.googleblog.com
+  Announcing the Agent2Agent Protocol (A2A)- Google Developers Blog
+  Explore A2A, Google's new open protocol empowering developers to build interoperable AI solutions. (364 kB)
+  https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/
+  [A2A is also included in Visual Studio](https://code.visualstudio.com/blogs/2025/04/07/agentMode.
+  Agent mode is great for scenarios where:
+  Your task involves multiple steps. The agent edits code, runs terminal commands, monitors for errors, and iterates to resolve any issues that arise.
+  You are unsure about the scope of the changes. The agent automatically determines the relevant files and context.
+  Your task requires interaction with external apps or data. The agent integrates with MCP servers and VS Code extensions.
 
 twitter:
 
@@ -167,48 +164,50 @@ The IntersectionResult `Parameter` and `Distance` properties are both set by the
 IntersectionResult is used to return results for several different geometric methods.
 
 
-####<a name="2"></a> LLMs for AutoCAD and IFC
+####<a name="2"></a> LLM Interaction with AutoCAD and IFC
 
-[Dmytro Vakulenko](https://dmytro-prototypes.net/) shared two of projects that may be of interest here:
+[Dmytro Vakulenko](https://dmytro-prototypes.net/) shared two of projects that may be of interest here,
+an [AutoCAD LLM integration](https://www.linkedin.com/posts/dmytro-vakulenko-software_scripture-demo-llm-based-autocad-automation-activity-7248239069292294144-pj2i) and
+an [IFC AI agent](https://www.linkedin.com/posts/dmytro-vakulenko-software_ifc-ai-agent-demo-httpsifcaiagentazurewebsitesnet-activity-7268254935761182721-Gft0?utm_source=share).
 
-One is [Scripture](https://github.com/dimitrovakulenko/Scripture),
+The first is [Scripture](https://github.com/dimitrovakulenko/Scripture),
 an open-source LLM Integration for AutoCAD:
-This project focuses on generating AutoCAD scripts through an iterative process that continues looping until the script is fully compilable and all errors fixed.
-A standout feature is the use of reflection to provide additional insights about classes and methods—truly the “cherry on the top of the cake.”
+It generates AutoCAD scripts on the fly in an iterative process that continues looping until the script is fully compiled and all errors fixed.
+A standout feature is the use of reflection to provide additional insights about classes and methods &ndash; truly the “cherry on the top of the cake.”
 
 - [1-minute demo video](https://youtu.be/7I88PcwZQQk)
 - [Scripture GitHub repository](https://github.com/dimitrovakulenko/Scripture)
 
-Next, 2) LLM Querying (and Editing) Data in IFC Files:
+<center>
+<img src="img/dv_scripture.png" alt="Scripture" title="Scripture" width="800"/> <!-- 1200 -->
+</center>
+
+The [IFC AI Agent](https://ifc-ai-agent.dmytro-prototypes.net/login) is
+an LLM querying and editing data in IFC Files:
 In this project, the chatbot not only retrieves information from IFC files but also generates and executes Python code to interact with them dynamically, tailoring responses in real time based on the data.
-https://www.linkedin.com/posts/dmytro-vakulenko-software_innovation-ifc-ai-agent-variables-activity-7285951367746080768-DIlr
-(and my other posts)
-I would be honored if you could take a look and share your thoughts.
-Your perspective would be invaluable, and I’m excited about the potential to contribute to the ongoing discussion surrounding LLM integrations in the CAD/CAE space.
-Thank you very much for your time and consideration.
-Best regards,
-Dmytro
-
 A decades-old concept reimagined for modern AI!
+working with large-scale IFC files &ndash; often gigabytes in size &ndash; poses a challenge: LLMs often can’t fit results into their limited-size context.
 
-Working with large-scale IFC files — often gigabytes in size — poses a challenge: LLMs often can’t fit results into their limited-size context.
-
-The latest innovation in IFC AI Agent addresses this with variables — a simple yet powerful concept that’s been at the core of software development for decades.
+The latest innovation in IFC AI Agent addresses this with variables &ndash; a simple yet powerful concept that’s been at the core of software development for decades.
 
 Here’s how it works:
-✅ The AI Agent has a bucket of variables it knows by name.
-✅ For variables with simple values, it knows their exact content.
-✅ When variables hold large datasets, it intelligently works with samples to maintain efficiency while keeping calculations precise.
+
+- The AI Agent has a bucket of variables it knows by name.
+- For variables with simple values, it knows their exact content.
+- When variables hold large datasets, it intelligently works with samples to maintain efficiency while keeping calculations precise.
 
 This approach brings smart data management to AI, enabling seamless interactions with large-scale IFC files.
 
-📽️ Learn more in this 1-minute video: https://lnkd.in/ezv89JFX
+- [1-minute video](https://youtu.be/fFPVTTtDyTw)
+- [IFC AI Agent to try out yourself](https://ifc-ai-agent.dmytro-prototypes.net/login)
 
-🔗 Try it out yourself: https://lnkd.in/ew-9T9jH
 
-This is AI embracing the basics to solve modern challenges!
+Here is an [IFC AI Agent](https://ifc-ai-agent.dmytro-prototypes.net/login). It demonstrates the ability to communicate with IFC files using natural language. Powered by a large language model (LLM), the agent enables users to query and modify their IFC files. For example, ask questions like "List all windows with their dimensions", or ask to modify, e.g., "Move all walls on the ground floor in (1,1,0) direction by 1000 units."  This is an ongoing chat. You can also ask how your data was received, modified, or request further details.
 
-Built using ifcopenshell and That Open Company engine
+Dmytro also [shares](https://www.linkedin.com/posts/dmytro-vakulenko-software_github-dimitrovakulenkosimpleifcaiagentwithgraphrag-activity-7287741565437898752-Aey9)
+the [simple IFC AI agent with GraphRAG](https://github.com/dimitrovakulenko/simpleIfcAIAgentWithGraphRAG) project,
+a minimalistic project designed to showcase a simple AI agent that extracts data from an IFC file stored in a graph database (Neo4j). The project demonstrates the integration of AI, IFC file processing, and graph-based data storage and retrieval using modern tools such as Neo4j, LangGraph, and Azure GPT. Maybe he extracts the IFC data up front into the database, as we discussed in the meeting?
+
 
 ####<a name="2"></a> IDA Iterated Distillation and Amplification Training
 
@@ -255,8 +254,5 @@ Your task requires interaction with external apps or data. The agent integrates 
 
 
 
-<center>
-<img src="img/.png" alt="" title="" width="100"/> <!--  -->
-</center>
 
 
