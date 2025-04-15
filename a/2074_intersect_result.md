@@ -92,7 +92,7 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 ### Intersection Result
 
 
-####<a name="7"></a>
+####<a name="2"></a> IntersectionResult Properties
 
 The Revit API  [Curve Intersect method](https://www.revitapidocs.com/2026/570fb842-cac3-83f5-1ab9-621e55186ead.htm) sports
 some quirks that promted explanation in the past.
@@ -167,9 +167,93 @@ The IntersectionResult `Parameter` and `Distance` properties are both set by the
 IntersectionResult is used to return results for several different geometric methods.
 
 
+####<a name="2"></a> LLMs for AutoCAD and IFC
+
+[Dmytro Vakulenko](https://dmytro-prototypes.net/) shared two of projects that may be of interest here:
+
+One is [Scripture](https://github.com/dimitrovakulenko/Scripture),
+an open-source LLM Integration for AutoCAD:
+This project focuses on generating AutoCAD scripts through an iterative process that continues looping until the script is fully compilable and all errors fixed.
+A standout feature is the use of reflection to provide additional insights about classes and methods—truly the “cherry on the top of the cake.”
+
+- [1-minute demo video](https://youtu.be/7I88PcwZQQk)
+- [Scripture GitHub repository](https://github.com/dimitrovakulenko/Scripture)
+
+Next, 2) LLM Querying (and Editing) Data in IFC Files:
+In this project, the chatbot not only retrieves information from IFC files but also generates and executes Python code to interact with them dynamically, tailoring responses in real time based on the data.
+https://www.linkedin.com/posts/dmytro-vakulenko-software_innovation-ifc-ai-agent-variables-activity-7285951367746080768-DIlr
+(and my other posts)
+I would be honored if you could take a look and share your thoughts.
+Your perspective would be invaluable, and I’m excited about the potential to contribute to the ongoing discussion surrounding LLM integrations in the CAD/CAE space.
+Thank you very much for your time and consideration.
+Best regards,
+Dmytro
+
+A decades-old concept reimagined for modern AI!
+
+Working with large-scale IFC files — often gigabytes in size — poses a challenge: LLMs often can’t fit results into their limited-size context.
+
+The latest innovation in IFC AI Agent addresses this with variables — a simple yet powerful concept that’s been at the core of software development for decades.
+
+Here’s how it works:
+✅ The AI Agent has a bucket of variables it knows by name.
+✅ For variables with simple values, it knows their exact content.
+✅ When variables hold large datasets, it intelligently works with samples to maintain efficiency while keeping calculations precise.
+
+This approach brings smart data management to AI, enabling seamless interactions with large-scale IFC files.
+
+📽️ Learn more in this 1-minute video: https://lnkd.in/ezv89JFX
+
+🔗 Try it out yourself: https://lnkd.in/ew-9T9jH
+
+This is AI embracing the basics to solve modern challenges!
+
+Built using ifcopenshell and That Open Company engine
+
+####<a name="2"></a> IDA Iterated Distillation and Amplification Training
+
+- New training approach? *Iterated Distillation and Amplification (IDA)* - a scalable and efficient alignment strategy for general superintelligence using iterative self-improvement... to surpass the intelligence of whoever is training it, i.e., humans: [Cogito v1 Preview -- Introducing IDA as a path to general superintelligence](https://www.deepcogito.com/research/cogito-v1-preview).
+
+####<a name="2"></a> AI Literature and Roadmap
+
+- A scientific paper on [Artificial Intelligence for Software Architecture: Literature Review and the Road Ahead](https://arxiv.org/abs/2504.04334).
+
+####<a name="2"></a> vibe coding Parody
+
+- Here is a nice [6-minute dystopian charade of vibe coding video](https://youtu.be/JeNS1ZNHQs8).
+
+####<a name="2"></a> Collapse of Critical Thinking
+
+- The Slow Collapse of Critical Thinking in OSINT due to AI
+  https://www.dutchosintguy.com/post/the-slow-collapse-of-critical-thinking-in-osint-due-to-ai
+  Open-source intelligence
+  https://en.wikipedia.org/wiki/Open-source_intelligence
+
+####<a name="2"></a> OpenAI GPT 4.1 + Mini + Nano
+
+OpenAI GPT 4.1 + mini + nano for developers: https://x.com/OpenAI/status/1911824315194192187 (edited)
+
+####<a name="2"></a> A2A Agent-to-Agent Protocol
+
+Google announced the [A2A agent-to-agent protocol](https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/) including support for MCP.
+
+developers.googleblog.comdevelopers.googleblog.com
+Announcing the Agent2Agent Protocol (A2A)- Google Developers Blog
+Explore A2A, Google's new open protocol empowering developers to build interoperable AI solutions. (364 kB)
+https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/
+
+[A2A is also included in Visual Studio](https://code.visualstudio.com/blogs/2025/04/07/agentMode.
+
+Agent mode is great for scenarios where:
+
+Your task involves multiple steps. The agent edits code, runs terminal commands, monitors for errors, and iterates to resolve any issues that arise.
+You are unsure about the scope of the changes. The agent automatically determines the relevant files and context.
+Your task requires interaction with external apps or data. The agent integrates with MCP servers and VS Code extensions.
 
 
-####<a name="2"></a>
+
+
+
 
 <center>
 <img src="img/.png" alt="" title="" width="100"/> <!--  -->
