@@ -29,6 +29,8 @@ https://prismjs.com
   Open-source intelligence
   https://en.wikipedia.org/wiki/Open-source_intelligence
 
+- OpenAI GPT 4.1 + mini + nano for developers: https://x.com/OpenAI/status/1911824315194192187 (edited)
+
 - Dmytro Vakulenko
   https://dmytro-prototypes.net/
   Freelance Software Developer | Azure, .NET, Python, Typescript, AI | Transforming ideas into innovative and evolutionary solutions
@@ -65,7 +67,6 @@ You are unsure about the scope of the changes. The agent automatically determine
 Your task requires interaction with external apps or data. The agent integrates with MCP servers and VS Code extensions.
 
 
-
 twitter:
 
  @AutodeskAPS  @AutodeskRevit  #RevitAPI #BIM @DynamoBIM
@@ -91,20 +92,31 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 ### Intersection Result
 
 
-####<a name="7"></a> IntersectionResult parameter getter throws an InvalidOperationException
-https://forums.autodesk.com/t5/revit-api-forum/intersectionresult-parameter-getter-throws-an/m-p/13400449#M84547
+####<a name="7"></a>
 
+The Revit API  [Curve Intersect method](https://www.revitapidocs.com/2026/570fb842-cac3-83f5-1ab9-621e55186ead.htm) sports
+some quirks that promted explanation in the past.
+One more is discussed in the explanation
+why [IntersectionResult parameter getter throws an InvalidOperationException](https://forums.autodesk.com/t5/revit-api-forum/intersectionresult-parameter-getter-throws-an/m-p/13400449#M84547):
 
- matyas.csanady3GW48
-03-25-2025 02:20 AM
-Hey everybody! As the title mentions I'm having some surprising difficulties with the IntersectionResult class. Long story short I check the intersection of 2 line elements (i know for a fact that these 2 lines intersect) with (link)
-SetComparisonResult result = line1.Intersect(line2, out resultArray);
-It's all nice and fine at this point since the result and resultArray are not null. I can get the IntersectionResult out of the IntersectionResultArray for example by:
-IntersectionResult intResult = resultArray.get_Item(0);
-But I'm intersected in IntersectionResult.Parameter property (link), and when i try to get the value of this parameter an InvalidOperationException is thrown. Checking the Parameter property documentation again it claims that it happens when it has not been set yet "Thrown in the getter when this property has not been set by the method providing the result. ".
-Checking this Parameter property in debug reveals that it's not the only one failing. As you can see on the picture the "Distance", "EdgeObject", "EdgeParameter" and "Parameter" all fail with InvalidOperationException.
-Kép.png
-This issue occurred to me in a C# addin in all current version versions (22->25). For testing purposes I've created a python script that you can paste into RevitPytonShell and it results is the same error across all versions.
+**Question:** I check the intersection of 2 line elements.
+I know for a fact that these 2 lines intersect:
+
+<pre><code class="language-cs">SetComparisonResult result = line1.Intersect(line2, out resultArray);</code></pre>
+
+It's all nice and fine at this point, since the result and resultArray are not null.
+I can get the IntersectionResult out of the IntersectionResultArray for example by:
+
+<pre><code class="language-cs">IntersectionResult intResult = resultArray.get_Item(0);</code></pre>
+
+I'm intersected in the [IntersectionResult.Parameter property](https://apidocs.co/apps/revit/2024/5ca02b0e-289a-f1ef-7ce2-8b3f175fe402.htm#).
+When I try to read the value of this parameter, an InvalidOperationException is thrown.
+Checking the Parameter property documentation, it claims that it happens when it has not been set yet "Thrown in the getter when this property has not been set by the method providing the result."
+Checking this Parameter property in the debugger reveals that it's not the only one failing.
+`Distance`, `EdgeObject`, `EdgeParameter` and `Parameter` all fail with `InvalidOperationException`.
+This issue occurred to me in a C# addin in all current version versions (22-25).
+For testing purposes, I created the following Python script that you can paste into RevitPytonShell.
+It results is the same error across all versions.
 
 <pre><code class="language-py">results = clr.Reference[DB.IntersectionResultArray]()
 
@@ -128,10 +140,11 @@ print("EdgeObject: {}".format(intResult.EdgeObject))
 print("EdgeParameter: {}".format(intResult.EdgeParameter))
 print("Parameter: {}".format(intResult.Parameter))
 
-t.Commit()
+t.Commit()</code></pre>
 
-Even if it's outside of a Transaction (since Line creation and Line.Intersect does not require that), the results are the same.
-results = clr.Reference[DB.IntersectionResultArray]()
+Even outside of a Transaction (since Line creation and Line.Intersect does not require that), the results are the same:
+
+<pre><code class="language-py">results = clr.Reference[DB.IntersectionResultArray]()
 
 lineV = DB.Line.CreateBound(DB.XYZ(0,0,0), DB.XYZ(0,10,0))
 lineH = DB.Line.CreateBound(DB.XYZ(-5,5,0), DB.XYZ(5,5,0))
@@ -146,60 +159,12 @@ print("EdgeObject: {}".format(intResult.EdgeObject))
 print("EdgeParameter: {}".format(intResult.EdgeParameter))
 print("Parameter: {}".format(intResult.Parameter))</code></pre>
 
-Would appreciate any help with this problem!
-
-
- jeremy_tammik
-Autodesk jeremy_tammik
-2025-03-25 08:03 AM
-I would like to pass this on to the development team for analysis, including a complete minimal sample in order for them to be able to reproduce the issue with a single click, if possible. Could you create a simple RVT (that can be empty) including a C# macro to execute to reproduce the problem, please? Thank you!
-
-https://thebuildingcoder.typepad.com/blog/about-the-author.html#1b
-
-Jeremy Tammik  Developer Advocacy and Support + The Building Coder + Autodesk Developer Network + ADN Open
-Report
- matyas.csanady3GW48
-Explorer matyas.csanady3GW48
-in reply to jeremy_tammik
-2025-03-26 03:16 AM
-Hi Jeremy!
-
-Thank you for your quick reply and for the fact that you forward this issue to the DEV team. As you asked for I've created a macro that is able reproduce the same exception with a single click. I've attached an empty Revit project file that contains this macro, as expected running the macro throws the same exception.
-
-IntersectionResult_InvalidOperationException_Macro_R22.rvt
-
-Report
- jeremy_tammik
-Autodesk jeremy_tammik
-in reply to matyas.csanady3GW48
-2025-03-26 04:09 AM
-Thank you for creating the macro. I see that the RVT filename ends in R22. Does that stand for Revit 2022? Could you please try it out in a more recent version? I believe that the next major release is being expected soon, and the development team (and all of Autodesk) refuse to support more than three major versions back, so Revit 2022 is out of scope. Thank you!
-
-Jeremy Tammik  Developer Advocacy and Support + The Building Coder + Autodesk Developer Network + ADN Open
-Report
- matyas.csanady3GW48
-Explorer matyas.csanady3GW48
-2025-03-26 04:27 AM
-I've updated it to Revit2025 and attached it.
-
-IntersectionResult_InvalidOperationException_Macro_R25.rvt
-
-Report
- mhannonQ65N2
-Advocate mhannonQ65N2
-2025-03-28 12:13 PM
-The Curve.Intersect method does not set the IntersectionResult's Parameter property. Look at the documentation for Curve.Intersect to see which properties are set and what they mean.
-Report
- tamas.deri
-Advocate tamas.deri
-2025-03-31 03:01 AM
-Whoever designed this part of the API deserves a raise. /s
-It seems that the Parameter and Distance properties of the IntersectResult object will never get set by any of the methods creating it. So what was the intent?
-Report
- mhannonQ65N2
-Advocate mhannonQ65N2
-2025-03-31 01:07 PM
-IntersectionResult's Parameter and Distance properties are both set by the Curve.Project method. The problem with IntersectionResult is that it is used to return results for several different geometric methods.
+**Answer:**
+The `Curve.Intersect` method does not set the IntersectionResult Parameter property.
+Look at the [Curve.Intersect documentation](https://apidocs.co/apps/revit/2026/51961478-fb36-e00b-2d1b-7db27b0a09e6.htm#) to
+see which properties are set and what they mean.
+The IntersectionResult `Parameter` and `Distance` properties are both set by the `Curve.Project` method.
+IntersectionResult is used to return results for several different geometric methods.
 
 
 
