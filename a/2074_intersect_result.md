@@ -66,7 +66,7 @@ https://prismjs.com
 
 twitter:
 
- @AutodeskAPS  @AutodeskRevit  #RevitAPI #BIM @DynamoBIM
+@AutodeskRevit #RevitAPI curve intersection, LLM interaction with AutoCAD and IFC, GPT 4.1, mini, nano and more AI-related news @AutodeskAPS #BIM @DynamoBIM https://thebuildingcoder.typepad.com/blog/2025/04/intersection-result-llm-for-ifc-and-more-ai.html
 
 Revit API curve intersection, LLMs interaction with AutoCAD and IFC, and more AI-related news
 &ndash; IntersectionResult properties
