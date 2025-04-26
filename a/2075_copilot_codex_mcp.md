@@ -70,9 +70,13 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 ### Revit API with Copilot and Codex
 
-I have used GitHub Copilot in VS Code for Revit API add-in coding for a few days, and installed OpenAI Codex this morning.
+Exciting times are approaching, as AI is entering the AEC, BIM and even Revit API arena.
+
+I have used GitHub Copilot in VS Code for Revit API add-in coding and installed OpenAI Codex myself.
 
 Exciting times, moving fast:
+
+####<a name="2"></a> OpenAI o3 and o4-mini
 
 - [OpenAI o3 and o4-mini](https://youtu.be/sq8GBPUb3rk) impress coders and scientists.
   Open AI Codex coding agent runs locally: [tweet](https://x.com/sama/status/1912558495997784441).
@@ -85,9 +89,15 @@ Exciting times, moving fast:
   Basically, it makes ChatGPT way more useful.
   - It's not as socially awkward as 01, and it's not a try-hard like 3.7 Sonnet. I found myself coding with it a lot this weekend, and I really liked it. It understands what you mean and does what it's told to at high quality. It doesn't plow ahead and try to build the Taj Mahal when you tell it to fix a bug, like Sonnet does. It also seems a little more vibe-y than other o-series models. It's more fun to talk to; not as good a writer as GPT 4.5 (RIP) or Sonnet 3.5, but still good.
 
+####<a name="2"></a> Global AI Statistics and Charts
+
 - Super interesting statistical news on global AI development: [AI Index 2025: State of AI in 10 Charts](https://hai.stanford.edu/news/ai-index-2025-state-of-ai-in-10-charts)
 
+####<a name="2"></a> AI Challenges for Complex App Coding
+
 - An interesting short article explaining how to handle challenges using AI for complex app coding: [Vibe coding considered harmful, Lego code instead](https://sundaylettersfromsam.substack.com/p/vibe-coding-considered-harmful-lego).
+
+####<a name="2"></a> GPT Prompting Guide
 
 - A [prompting guide for GPT-4.1 models](https://platform.openai.com/docs/guides/text?api-mode=responses#prompting-gpt-4-1-models).
   While the cookbook has the best and most comprehensive guidance for prompting this model, here are a few best practices to keep in mind.
@@ -96,8 +106,12 @@ Exciting times, moving fast:
   - Prompting for chain of thought
   - Instruction following
 
+####<a name="2"></a> Demystifying Shebang
+
 - Demystifying the #! (shebang): Kernel Adventures
   https://crocidb.com/post/kernel-adventures/demystifying-the-shebang/
+
+####<a name="2"></a> Wall AddAttachment for Top/Base
 
 - Wall: attach top/base, no API?
   https://forums.autodesk.com/t5/revit-api-forum/wall-attach-top-base-no-api/m-p/13427160#M84749
@@ -188,4 +202,52 @@ Beyond pure duplication, there are also commands to:
 - Compute and insert a two‑pipe rolling offset (CmdRollingOffset), optionally with real fittings or just a model line.
 
 All of this is built on small data classes &ndash; NodeData, ConnectorData, ParamData &ndash; to snapshot each element’s geometry, connectivity and parameters, plus a few utility routines (in Util.cs) to find connectors, compare points, and manage the various Revit API quirks.
+
+
+
+####<a name="2"></a> MCP server for Fusion
+
+
+A Fusion user has implemented an MCP server for Fusion using the M$ Semantic Workbench:
+
+- [Semantic Workbench](https://github.com/microsoft/semanticworkbench)
+- [MCP servers](https://github.com/microsoft/semanticworkbench/tree/main/mcp-servers)
+- [Fusion MCP server](https://github.com/microsoft/semanticworkbench/tree/main/mcp-servers/mcp-server-fusion)
+
+Semantic Workbench is a versatile tool designed to help prototype intelligent assistants quickly. It supports the creation of new assistants or the integration of existing ones, all within a cohesive interface. The workbench provides a user-friendly UI for creating conversations with one or more assistants, configuring settings, and exposing various behaviors.
+
+The Semantic Workbench is composed of three main components:
+
+- Workbench Service (Python): The backend service that handles core functionalities.
+- Workbench App (React/Typescript): The frontend web user interface for interacting with workbench and assistants.
+- Assistant Services (Python, C#, etc.): any number of assistant services that implement the service protocols/APIs, developed using any framework and programming language of your choice.
+
+Designed to be agnostic of any agent framework, language, or platform, the Semantic Workbench facilitates experimentation, development, testing, and measurement of agent behaviors and workflows. Assistants integrate with the workbench via a RESTful API, allowing for flexibility and broad applicability in various development environments.  The Fusion MCP server can work seamlessly with the Claude MCP client.  We can simply ask Claude to generate 3D models, and it does so automatically in Fusion by utilizing these MCP tools.  The MCP client can utilise basic tools to create 3D models. Its capabilities can be expanded by developing additional tools and providing comprehensive Python API documentation as a resource for the MCP server. The fusion server available is open source and can be simply setup on the machine.  The different MCPs are implemented by different independent engineers, e.g., the Fusion one is by a Fusion user! Great to see the potential power of MCP for such a complex UI as Fusion. MCP achieves things that otherwise would have taken months of learning for a newbie. This may remove the learning curve for using any of the design software in this space and thus anyone can move to any other software as well. Looks like one of the reasons for sticking to one software is taken away for good. This essentially commoditises all CAD software. Given the goal of MCP of becoming something of a "natural language USB for software", the need for traditional UX diminishes for a large proportion of users. Will this also hold true for power users?
+
+
+Wait, what is agentic AI?
+
+https://stackoverflow.blog/2025/04/17/wait-what-is-agentic-ai/?utm_source=braze&utm_medium=email&utm_campaign=the-overflow-newsletter&lid=1saaj6iiq6rt
+
+Simply put: Generative AI creates content; agentic AI solves problems on a user’s behalf.
+
+- Agentic AI is focused on making decisions, not generating content.
+- Rather than responding to human prompts like generative AI systems do, agentic AI systems are set to work toward specific goals like maximizing efficiency, boosting customer satisfaction, or increasing sales.
+- AI agents can carry out complex sequences of tasks in furtherance of their goals.
+
+####<a name="2"></a> postmortem of a Startup
+
+[A postmortem of a startup](https://buildwithtract.com/?lid=hqbe3uwdig4y)
+
+####<a name="2"></a> Revit MCP
+
+The [revit-mcp GitHub organisation](https://github.com/revit-mcp) provides
+a framework that implements the MCP protocol based on Autodesk Revit software.
+It enables AI conversation clients compatible with the MCP protocol to drive Revit.
+Example and the three main project components:
+
+- [ColorSplash](https://youtu.be/mUJGSjQHBm8) example
+- [revit-mcp](https://github.com/revit-mcp/revit-mcp): Connects with AI conversation clients. Responsible for providing executable functions to the AI conversation client and communicating with Revit.
+- [revit-mcp-plugin](https://github.com/revit-mcp/revit-mcp-plugin): This is a Revit plugin used to receive AI commands, load command sets, and execute specific functions.
+- [revit-mcp-commandset](https://github.com/revit-mcp/revit-mcp-commandset): Command sets are actual executable commands wrapped based on Revit external events. Developers can add functionality to the command set or customize their own work sets.
 
