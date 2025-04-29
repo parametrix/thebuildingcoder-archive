@@ -51,7 +51,23 @@ twitter:
 
 @AutodeskRevit #RevitAPI @AutodeskAPS #BIM @DynamoBIM
 
-&ndash; ...
+AI is growing more widespread and useful in the AEC, BIM and even Revit API arena
+&ndash; Global AI statistics and charts
+&ndash; AI challenges for complex app coding
+&ndash; What is agentic AI?
+&ndash; MCP gaining traction
+&ndash; MCP server for Fusion
+&ndash; Revit MCP
+&ndash; GPT prompting guide
+&ndash; OpenAI o3, o4-mini and Codex
+&ndash; M$ AI packages, VS Code and Codex
+&ndash; Codex analyses Revit add-in
+&ndash; Gemini ranks high
+&ndash; Chef generates and launches full stack
+&ndash; DeepWiki analyses all GitHub repos
+&ndash; MarkItDown converts anything to MD
+&ndash; Postmortem of a startup
+&ndash; Demystifying shebang...
 
 linkedin:
 
@@ -68,7 +84,7 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 -->
 
-### Revit API with Copilot and Codex
+### Revit API Agents, MCP, Copilot and Codex
 
 We live in exciting times, and AI is growing more widespread and useful in the AEC, BIM and even Revit API arena.
 
@@ -92,8 +108,6 @@ A long list of topics, many of them just short pointers, ranging through trends 
 - [MarkItDown converts anything to MD](#15)
 - [Postmortem of a startup](#16)
 - [Demystifying shebang](#17)
-
-
 
 ####<a name="2"></a> Global AI Statistics and Charts
 
@@ -119,7 +133,7 @@ A nice comparison of generative versus agentic AI is presented answering
 
 ####<a name="5"></a> MCP Gaining Traction
 
-The MCP (Model Context Protocol) adoption is gaining significant traction, and it’s increasingly being integrated with A2A (Agent-to-Agent) communication, cf., MCP measured in GitHub stars:
+The MCP (Model Context Protocol) adoption is gaining significant traction, and it’s increasingly being integrated with A2A (Agent-to-Agent) communication, cf., MCP measured in GitHub stars and A2A interaction:
 
 <center>
 <img src="img/2025-04-22_mcp_github_stars.png" alt="MCP GitHub stars" title="MCP GitHub stars" width="600"/> <!-- 1922 -->
@@ -204,7 +218,7 @@ Microsoft has already prepared great packages for AI, and they can already be us
 
 In the past weeks, I installed Visual Studio Code on MacOS, with GitHub Copilot integrated, and used that for some Revit API work with impressive results.
 
-This morning, I installed OpenAI Codex and asked it to explain the purpose of my current Revit API code WIP.
+I installed OpenAI Codex and asked it to explain the purpose of my current Revit API code WIP.
 I provided one single prompt, six words:
 
 - "please explain what this application does"
