@@ -224,20 +224,22 @@ The Semantic Workbench is composed of three main components:
 
 Designed to be agnostic of any agent framework, language, or platform, the Semantic Workbench facilitates experimentation, development, testing, and measurement of agent behaviors and workflows. Assistants integrate with the workbench via a RESTful API, allowing for flexibility and broad applicability in various development environments.  The Fusion MCP server can work seamlessly with the Claude MCP client.  We can simply ask Claude to generate 3D models, and it does so automatically in Fusion by utilizing these MCP tools.  The MCP client can utilise basic tools to create 3D models. Its capabilities can be expanded by developing additional tools and providing comprehensive Python API documentation as a resource for the MCP server. The fusion server available is open source and can be simply setup on the machine.  The different MCPs are implemented by different independent engineers, e.g., the Fusion one is by a Fusion user! Great to see the potential power of MCP for such a complex UI as Fusion. MCP achieves things that otherwise would have taken months of learning for a newbie. This may remove the learning curve for using any of the design software in this space and thus anyone can move to any other software as well. Looks like one of the reasons for sticking to one software is taken away for good. This essentially commoditises all CAD software. Given the goal of MCP of becoming something of a "natural language USB for software", the need for traditional UX diminishes for a large proportion of users. Will this also hold true for power users?
 
+####<a name="2"></a> What is Agentic AI?
 
-Wait, what is agentic AI?
+A nice comparison of generative versus agentic AI is presented answering
+[Wait, what is agentic AI?](https://stackoverflow.blog/2025/04/17/wait-what-is-agentic-ai/?utm_source=braze&utm_medium=email&utm_campaign=the-overflow-newsletter&lid=1saaj6iiq6rt):
 
-https://stackoverflow.blog/2025/04/17/wait-what-is-agentic-ai/?utm_source=braze&utm_medium=email&utm_campaign=the-overflow-newsletter&lid=1saaj6iiq6rt
-
-Simply put: Generative AI creates content; agentic AI solves problems on a user’s behalf.
+> Simply put: Generative AI creates content; agentic AI solves problems on a user’s behalf.
 
 - Agentic AI is focused on making decisions, not generating content.
 - Rather than responding to human prompts like generative AI systems do, agentic AI systems are set to work toward specific goals like maximizing efficiency, boosting customer satisfaction, or increasing sales.
 - AI agents can carry out complex sequences of tasks in furtherance of their goals.
 
-####<a name="2"></a> postmortem of a Startup
+####<a name="2"></a> Postmortem of a Startup
 
-[A postmortem of a startup](https://buildwithtract.com/?lid=hqbe3uwdig4y)
+Are you starting somerthing up?
+Well, maybe you can find some useful lessons up front in
+[a postmortem of a startup](https://buildwithtract.com/?lid=hqbe3uwdig4y).
 
 ####<a name="2"></a> Revit MCP
 
