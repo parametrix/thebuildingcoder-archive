@@ -99,7 +99,7 @@ A long list of topics, many of them just short pointers, ranging through trends 
 
 I found
 the [AI Index 2025: State of AI in 10 Charts](https://hai.stanford.edu/news/ai-index-2025-state-of-ai-in-10-charts) presents
-some very interesdting statistical news on global AI development and trends.
+some very interesting statistical news on global AI development and trends.
 
 ####<a name="3"></a> AI Challenges for Complex App Coding
 
@@ -137,7 +137,9 @@ A Fusion user has implemented an MCP server for Fusion using the M$ Semantic Wor
 - [MCP servers](https://github.com/microsoft/semanticworkbench/tree/main/mcp-servers)
 - [Fusion MCP server](https://github.com/microsoft/semanticworkbench/tree/main/mcp-servers/mcp-server-fusion)
 
-Semantic Workbench is a versatile tool designed to help prototype intelligent assistants quickly. It supports the creation of new assistants or the integration of existing ones, all within a cohesive interface. The workbench provides a user-friendly UI for creating conversations with one or more assistants, configuring settings, and exposing various behaviors.
+Semantic Workbench is a versatile tool designed to help prototype intelligent assistants quickly.
+It supports the creation of new assistants or the integration of existing ones, all within a cohesive interface.
+The workbench provides a user-friendly UI for creating conversations with one or more assistants, configuring settings, and exposing various behaviours.
 
 The Semantic Workbench is composed of three main components:
 
@@ -256,7 +258,7 @@ Currently Gemini is ahead as "best AI", even in the [OpenAI listing](https://x.c
 [DeepWiki](https://deepwiki.com/) indexes
 and documents all GitHub repos:
 Cognition, maker of [Devin](https://devin.ai/),
-recently announced DeepWiki as a free encyclopedia of all GitHub repos.
+recently announced DeepWiki as a free encyclopeadia of all GitHub repos.
 You can replace any public GitHub repo url with:
 
 - [https://deepwiki.com/org/repo](#14)
