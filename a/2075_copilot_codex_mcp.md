@@ -70,11 +70,11 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 ### Revit API with Copilot and Codex
 
-Exciting times are approaching, as AI is growing more widespread and useful in the AEC, BIM and even Revit API arena.
+We live in exciting times, and AI is growing more widespread and useful in the AEC, BIM and even Revit API arena.
 
 I have used GitHub Copilot in VS Code for Revit API add-in coding and installed OpenAI Codex myself.
 
-A long list of topics, many of them just short pointers, ranging through trends and statistics, new models and technologies, agentic AI, MCP
+A long list of topics, many of them just short pointers, ranging through trends and statistics, agentic AI, MCP, new models and technologies,
 
 - [Global AI statistics and charts](#2)
 - [AI challenges for complex app coding](#3)
@@ -122,11 +122,11 @@ A nice comparison of generative versus agentic AI is presented answering
 The MCP (Model Context Protocol) adoption is gaining significant traction, and it’s increasingly being integrated with A2A (Agent-to-Agent) communication, cf., MCP measured in GitHub stars:
 
 <center>
-<img src="img/2025-04-22_mcp_github_stars.png" alt="MCP GitHub stars" title="MCP GitHub stars" width="800"/> <!-- 1922 -->
+<img src="img/2025-04-22_mcp_github_stars.png" alt="MCP GitHub stars" title="MCP GitHub stars" width="600"/> <!-- 1922 -->
 </center>
 
 <center>
-<img src="img/2025-04-2025-04-22_a2a_interaction.png" alt="A2A interaction" title="A2A interaction" width="800"/> <!-- 1832 -->
+<img src="img/2025-04-2025-04-22_a2a_interaction.png" alt="A2A interaction" title="A2A interaction" width="600"/> <!-- 1832 -->
 </center>
 
 ####<a name="6"></a> MCP Server for Fusion
