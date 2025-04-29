@@ -126,7 +126,7 @@ The MCP (Model Context Protocol) adoption is gaining significant traction, and i
 </center>
 
 <center>
-<img src="img/2025-04-2025-04-22_a2a_interaction.png" alt="A2A interaction" title="A2A interaction" width="600"/> <!-- 1832 -->
+<img src="img/2025-04-22_a2a_interaction.png" alt="A2A interaction" title="A2A interaction" width="600"/> <!-- 1832 -->
 </center>
 
 ####<a name="6"></a> MCP Server for Fusion
@@ -259,7 +259,7 @@ Cognition, maker of [Devin](https://devin.ai/),
 recently announced DeepWiki as a free encyclopedia of all GitHub repos.
 You can replace any public GitHub repo url with:
 
-- [https://deepwiki.com/org/repo]()
+- [https://deepwiki.com/org/repo](#14)
 
 That will produce a remarkably accurate Wikipedia-like description of the library as well as a Devin-backed chatbot on how to use it.
 
@@ -277,6 +277,6 @@ In that case, you might discover some useful hints up front in
 
 ####<a name="17"></a> Demystifying Shebang
 
-Finally, for Unix aficionados, this artice discussed an interesting topic that is completely unrelated to AI,
+Finally, for Unix aficionados, this article discussed an interesting topic that is completely unrelated to AI,
 [demystifying the \#\! (shebang)](https://crocidb.com/post/kernel-adventures/demystifying-the-shebang/)
 
