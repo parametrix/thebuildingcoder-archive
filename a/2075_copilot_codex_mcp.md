@@ -71,6 +71,26 @@ AI is growing more widespread and useful in the AEC, BIM and even Revit API aren
 
 linkedin:
 
+AEC, BIM and even Revit API AI usage growing widespread and useful, trends, challenges, agentic, MCP, VS Code and Codex for #RevitAPI
+
+https://thebuildingcoder.typepad.com/blog/2025/04/revit-api-agents-mcp-copilot-and-codex.html
+
+- Global AI statistics and charts
+- AI challenges for complex app coding
+- What is agentic AI?
+- MCP gaining traction
+- MCP server for Fusion
+- Revit MCP
+- GPT prompting guide
+- OpenAI o3, o4-mini and Codex
+- M$ AI packages, VS Code and Codex
+- Codex analyses Revit add-in
+- Gemini ranks high
+- Chef generates and launches full stack
+- DeepWiki analyses all GitHub repos
+- MarkItDown converts anything to MD
+- Postmortem of a startup
+- Demystifying shebang...
 
 #BIM #DynamoBIM #AutodeskAPS #Revit #API #IFC #SDK #Autodesk #AEC #adsk
 
