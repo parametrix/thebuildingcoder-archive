@@ -36,9 +36,58 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 -->
 
-### DevCon 2025
+### DevCon 2025 Farewell
 
-[DevCon Europe 2025 in Amsterdam - Days 1 & 2](https://www.keanw.com/2025/05/devcon-europe-2025-in-amsterdam-days-1-2.html)
+####<a name="2"></a> Kean's Event Overview
+
+Kean Walmsley present an overview and summary oin his article
+on [DevCon Europe 2025 in Amsterdam &ndash; Days 1 and 2](https://www.keanw.com/2025/05/devcon-europe-2025-in-amsterdam-days-1-2.html).
+
+####<a name="2"></a> Main Topic: Agents Using Data
+
+Amir Dezfouli, CEO at BIMLOGIQ, succinctly summarised the main technical topics
+[on LinkedIn](https://www.linkedin.com/posts/amir-dezfouli-55a79b32_i-just-wrapped-up-autodesk-devcon-2025-in-ugcPost-7330996207936344064-kfqX):
+
+> Raji Arasu shared a forward-looking vision: replacing traditional add-ins with intelligent agents. These agents would have well-defined skill sets, automating tasks across platforms and shifting us beyond point-and-click interfaces to more complex workflow automation. This aligns well with the broader movement in AI toward agent-based systems and enabling platforms.
+
+> Low-code and no-code tools powered by LLMs were a major focus. Anthony Sertorio gave a compelling presentation on how these systems can close skill gaps and automate complex workflows. In a related session, Gregory Fina and Petr Broz demonstrated how chatbots can be used for data access and calculations.
+
+> Another clear direction was breaking down data silos. Many tools are now built for cloud-native environments—particularly Autodesk Platform Services. The new Autodesk Assistant reflects this shift, allowing users to access data through natural language.
+
+> A personal highlight was meeting Jeremy Tammik, whose work on the Revit API has been a long-standing source of inspiration. Some of the ideas he’s shared over the years have been particularly helpful in how we approach no-code automation in tools like BIMLOGIQ Copilot.
+
+> In one session, a poll asked: “If you could fix one issue in drawings, what would it be?” The top responses—cross-disciplinary mismatches, incorrect dimensions, and annotation clutter—highlight persistent pain points in the industry. These are exactly the kinds of challenges we’ve been tackling with AI-driven tools like Smart Annotation and vertically integrated automation solutions.
+
+> While general-purpose foundation models are driving progress, there’s still a gap when it comes to models tailored specifically for AEC. Vertical AI—deeply embedded in domain workflows—feels like the next frontier.
+
+I'd like to add that Raji also specifically highlighted that the importance of API documentation and end user interfaces may shrink, while the importance of <u>clearly defined and completely self-documenting functionality and components</u>. might grow substantially.
+
+Why?
+
+Given clearly defined self-contained functionality with self-documenting interfaces, AIs can figure out for themselves which one might be most useful to effective address a given step in a complex task and automatically build or cnfigure appropriate agents and workflows to make use of them with very little human intervention, or none at all.
+
+Another view of this development is discussed and explained in depth by ... -minute video on ... death of SaaS ...
+
+####<a name="2"></a> Shaking Hands and Selfies
+
+My main occupation was shaking hands and posing for selfies.
+
+A team picture of the Autodesk participants was spontaneously gate-crashed by my crazy genius colleague Michael Beale for this super monster selfie:
+
+<center>
+<img src="img/.png" alt="" title="" width="480"/> <!-- 800 -->
+</center>
+
+That animated all of us to liberate the common pent-up energy of these inspiring days and meetings:
+
+<center>
+<img src="img/.png" alt="" title="" width="480"/> <!-- 800 -->
+</center>
+
+
+Thank you for all the kind mentions and appreciation on LinkedIn and elsewhere:
+
+
 
 /Users/jta/Pictures/2025/2025-05-21_devcon/
 
@@ -49,25 +98,6 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 <img src="img/.png" alt="" title="" width="480"/> <!-- 800 -->
 </center>
 
-
-https://www.linkedin.com/posts/amir-dezfouli-55a79b32_i-just-wrapped-up-autodesk-devcon-2025-in-ugcPost-7330996207936344064-kfqX
-
-Amir Dezfouli
-CEO at BIMLOGIQ
-
-I just wrapped up Autodesk DevCon 2025 in Amsterdam, the leading conference for developers and innovators building on Autodesk’s platform.
-
-Raji Arasu shared a forward-looking vision: replacing traditional add-ins with intelligent agents. These agents would have well-defined skill sets, automating tasks across platforms and shifting us beyond point-and-click interfaces to more complex workflow automation. This aligns well with the broader movement in AI toward agent-based systems and enabling platforms.
-
-Low-code and no-code tools powered by LLMs were a major focus. Anthony Sertorio gave a compelling presentation on how these systems can close skill gaps and automate complex workflows. In a related session, Gregory Fina and Petr Broz demonstrated how chatbots can be used for data access and calculations.
-
-Another clear direction was breaking down data silos. Many tools are now built for cloud-native environments—particularly Autodesk Platform Services. The new Autodesk Assistant reflects this shift, allowing users to access data through natural language.
-
-A personal highlight was meeting Jeremy Tammik, whose work on the Revit API has been a long-standing source of inspiration. Some of the ideas he’s shared over the years have been particularly helpful in how we approach no-code automation in tools like BIMLOGIQ Copilot.
-
-In one session, a poll asked: “If you could fix one issue in drawings, what would it be?” The top responses—cross-disciplinary mismatches, incorrect dimensions, and annotation clutter—highlight persistent pain points in the industry. These are exactly the kinds of challenges we’ve been tackling with AI-driven tools like Smart Annotation and vertically integrated automation solutions.
-
-While general-purpose foundation models are driving progress, there’s still a gap when it comes to models tailored specifically for AEC. Vertical AI—deeply embedded in domain workflows—feels like the next frontier.
 
 
 https://www.linkedin.com/posts/deyan-nenov_autodesk-devcon-revitapi-ugcPost-7330677357378170880-uST2
@@ -291,3 +321,61 @@ Great to meet the legend - Jeremy Tammik! It was a pleasure to finally meet in p
 1d
 
 
+------
+jeremytammik2
+
+ Alex Dodonov
+Unread notification.
+Alex Dodonov and 94 others reacted to Deyan Nenov’s post that mentioned you.
+
+🎤 #Autodesk #DevCon Day 1 Meeting the legendary Jeremy Tammik — seen here casually chatting with Lejla Secerbegovic — was a personal highlight. 🙏 I finally had the chance to thank him for jump-starting my career (and no doubt many others’) in coding against the Revit API. 💡 If you've ever dabbled in #RevitAPI, you probably owe a nod to #TheBuildingCoder.
+95 reactions  6 comments
+1h
+
+ Kean WalmsleyStatus is reachable
+Unread notification.
+Kean Walmsley liked Mustafa Salaheldin Ali Bakr’s comment that mentioned you.
+
+sorry guys, I couldn't make it to Amesterdam, but really loved the pictures and best of luck to Jeremy Tammik
+Blog: DevCon Europe 2025 in Amsterdam - Days 1 & 2 https://lnkd.in/e2eBS3iY
+76 reactions  2 comments
+3h
+
+ Mustafa Salaheldin Ali BakrStatus is online
+Unread notification.
+Mustafa Salaheldin Ali Bakr mentioned you in a comment.
+
+sorry guys, I couldn't make it to Amesterdam, but really loved the pictures and best of luck to Jeremy Tammik
+Blog: DevCon Europe 2025 in Amsterdam - Days 1 & 2 https://lnkd.in/e2eBS3iY
+76 reactions  2 comments
+6h
+
+ Julian Wandzilak
+Unread notification.
+Julian Wandzilak and 5 others commented on Deyan Nenov’s post that mentioned you.
+
+Similar story here! Saying "thanks" to Jaremy was on my todo list for this event!
+🎤 #Autodesk #DevCon Day 1 Meeting the legendary Jeremy Tammik — seen here casually chatting with Lejla Secerbegovic — was a personal highlight. 🙏 I finally had the chance to thank him for jump-starting my career (and no doubt many others’) in coding against the Revit API. 💡 If you've ever dabbled in #RevitAPI, you probably owe a nod to #TheBuildingCoder.
+95 reactions  6 comments
+15h
+
+ Jörg Pipo
+Unread notification.
+Jörg Pipo reacted to Sam Kadra's post: What an experience at #AutodeskDevCon2025 in Amsterdam! The sessions went far beyond expectations, real conversations, hands-on demos, and future-forward ideas around BIM, APS, digital transformation, automation, and data integration. It wasn’t just about learning; it was about reimagining how we build smarter, faster, and more connected. I’ve always found Petr Broz ’s sessions to be among the most insightful and this year was no different. His take on APS and how it’s changing the way we collaborate across platforms really hit home. I walked away with a head full of ideas and practical inspiration to bring back to our BIM IT workflows. Big thanks to the whole Autodesk team for making this event such a success. And a special shoutout to our Autodesk Customer Success Manager Melissa Böck, I really appreciated the thoughtful conversations and your constant support during the event. You brought clarity and practical insight to every topic we discussed and I’ve come away with plenty of ideas to explore! Let’s turn vision into action and build a future we’re proud of together.🚀 #SiemensEnergy #AutodeskDevCon2025 #FutureOfBIM #DigitalTransformation #APS #AI #DesignAutomation #ACC #Revit #DataExchange #Autodesk #Innovation #BIM #TechLeadership
+38 reactions  6 comments
+17h
+
+ View TED Conferences
+Unread notification.
+1625 people are attending an event created by TED Conferences this week. View the event.1625 people are attending an event created by TED Conferences this week. View the event.
+1d
+
+ Deyan NenovStatus is reachable
+Unread notification.
+Deyan Nenov mentioned you in a post.
+
+🎤 #Autodesk #DevCon Day 1 Meeting the legendary Jeremy Tammik — seen here casually chatting with Lejla Secerbegovic — was a personal highlight. 🙏 I finally had the chance to thank him for jump-starting my career (and no doubt many others’) in coding against the Revit API. 💡 If you've ever dabbled in #RevitAPI, you probably owe a nod to #TheBuildingCoder.
+95 reactions  6 comments
+1d
+
+----
