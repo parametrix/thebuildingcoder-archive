@@ -379,3 +379,21 @@ Deyan Nenov mentioned you in a post.
 1d
 
 ----
+
+Olivier MARTIN ARCAS
+BIM software developer
+
+Hi Jeremy,
+
+We quickly met at Devcon this week. I want to thank you again for “The Building Coder”.
+
+In 2012 I decided to make a career change and I joined one of the biggest French construction company as BIM Developer. Thanks to you I quickly increased my skills and I was able to provide efficient processes and related tools in the Autodesk ecosystem. Since, I never stopped coding.
+
+I wish you all the best in your retirement.
+
+Best Regards,
+
+Jeremy Tammik
+
+Dear Olivier, nice of you to drop by and thank you for your kind appreciation. I am glad I was able to make a difference! Best of luck and much success to you! Cheers, Jeremy.
+
