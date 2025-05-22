@@ -20,7 +20,11 @@ twitter:
 
  @AutodeskRevit #RevitAPI @AutodeskAPS #BIM @DynamoBIM
 
-&ndash; ...
+DevCon 2025 Amsterdam was a great success.
+&ndash; Main topic: agents using data
+&ndash; Kean's event overview
+&ndash; Teammate monster selfies
+&ndash; More hellos and normal selfies...
 
 linkedin:
 
@@ -36,7 +40,7 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 -->
 
-### AI and Many Selfies at DevCon 2025
+### AI Agents and Selfies at DevCon 2025
 
 DevCon 2025 Amsterdam was a great success.
 I am recuperating today and heading home by train tomorrow.
@@ -73,7 +77,7 @@ Why?
 Given clearly defined self-contained functionality with self-documenting interfaces, AIs can figure out for themselves the most effective ways to address a given step in a complex task and automatically build or configure appropriate agents and workflows to make use of such components with very little human intervention, or none at all.
 
 Another vision of this trend and possible outcomes is discussed in depth by Rob Walling in his great nine-minute video
-on [AI Agents vs SaaS - Who Wins the Future of Software?](https://youtu.be/JGqvd10ZG8U).
+on [AI agents vs SaaS &ndash; who wins the future of software?](https://youtu.be/JGqvd10ZG8U).
 
 ####<a name="3"></a> Kean's Event Overview
 
@@ -84,7 +88,7 @@ on [DevCon Europe 2025 in Amsterdam &ndash; Days 1 and 2](https://www.keanw.com/
 
 My main occupation was shaking hands and posing for selfies, cf., [below](#5).
 
-After closing, the team picture of the entire Autodesk DevCon team was spontaneously gate-crashed by my crazy genius colleague Michael Beale for this super monster selfie:
+After closing, the team picture of the entire Autodesk DevCon team was spontaneously gate-crashed by my crazy genius colleague Michael Beale for this super monster selfie &ndash; with me grinning my head off in the brownish-orange shirt in the midlle:
 
 <center>
 <img src="img/adskteam1.jpg" alt="Autodesk DevCon team" title="Autodesk DevCon team" width="500"/> <!-- 2048 -->
@@ -127,13 +131,11 @@ Thank you for all the kind mentions and appreciation on LinkedIn and elsewhere:
 - [Ilia Ivanov](https://www.linkedin.com/posts/ilia-ivanov-298997161_autodeskdevcon-jeremytammik-autodeskplatform-activity-7330627797788323841-gsjp)
 - [Sandip Jadhav](https://www.linkedin.com/posts/ugcPost-7331091576963702785-wLYd?utm_source=share&utm_medium=member_desktop&rcm=ACoAAACogiYBX6lBbCXzDJBU_OWT9MYGMYk5X6g)
 
-... and many more!
+... and ever so many more!
 
 Thank you!
 
 Keep in touch!
-
-https://www.linkedin.com/posts/bert-van-der-hoeven-6b51b124_devon-revit-api-activity-7330849280678633472-iYFC?utm_source=share&utm_medium=member_desktop&rcm=ACoAAACogiYBX6lBbCXzDJBU_OWT9MYGMYk5X6g
 
 <!--
 LinkedIn notifications
