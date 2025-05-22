@@ -36,7 +36,10 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 -->
 
-### DevCon 2025 Farewell
+### AI and Many Selfies at DevCon 2025
+
+
+####<a name="2"></a> DevCon 2025 Amsterdam
 
 ####<a name="2"></a> Kean's Event Overview
 
@@ -72,89 +75,57 @@ Another view of this development is discussed and explained in depth by ... -min
 
 My main occupation was shaking hands and posing for selfies.
 
-A team picture of the Autodesk participants was spontaneously gate-crashed by my crazy genius colleague Michael Beale for this super monster selfie:
+We had a celebration with some of the closest and most long-standing development partners and made a group picture with some of the closest European colleagues:
 
 <center>
-<img src="img/.png" alt="" title="" width="480"/> <!-- 800 -->
+<img src="img/adn_team3.jpg" alt="ADN team" title="ADN team" width="500"/> <!-- 1000 -->
 </center>
 
-That animated all of us to liberate the common pent-up energy of these inspiring days and meetings:
+Unfortunately, my AEC-focused team mates in Nairobi and Mikako in the US were unable to make it.
+
+A team picture of the entire Autodesk DevCon team was spontaneously gate-crashed by my crazy genius colleague Michael Beale for this super monster selfie:
 
 <center>
-<img src="img/.png" alt="" title="" width="480"/> <!-- 800 -->
+<img src="img/adskteam1.jpg" alt="Autodesk DevCon team" title="Autodesk DevCon team" width="500"/> <!-- 2048 -->
 </center>
 
-
-Thank you for all the kind mentions and appreciation on LinkedIn and elsewhere:
-
-
-
-/Users/jta/Pictures/2025/2025-05-21_devcon/
-
-####<a name="2"></a> DevCon 2025 Amsterdam
-
+That animated all of us and liberate a lot of pent-up energy from these inspiring days and meetings:
 
 <center>
-<img src="img/.png" alt="" title="" width="480"/> <!-- 800 -->
+<img src="img/adskteam2.jpg" alt="Enthusiastic energy" title="Enthusiastic energy" width="500"/> <!-- 2048 -->
 </center>
 
+####<a name="2"></a> Mentions and Appreciation
 
-
-https://www.linkedin.com/posts/deyan-nenov_autodesk-devcon-revitapi-ugcPost-7330677357378170880-uST2
-
-Deyan Nenov
-BIM Management, Revit Add-ons Development, Revit Training
-
-Meeting the legendary Jeremy Tammik — seen here casually chatting with Lejla Secerbegovic — was a personal highlight.
-
-🙏 I finally had the chance to thank him for jump-starting my career (and no doubt many others’) in coding against the Revit API.
-
-💡 If you've ever dabbled in hashtag#RevitAPI, you probably owe a nod to hashtag#TheBuildingCoder.
-
+<!--
 
 Jose Fandos: auto-generation of revit api code, mcp, storage of all working code snippets for future reuse,...
 
 BimLogiq: AI-supported automatic taggin and labelling with collision and overlap avoidance
 
+/Users/jta/Pictures/2025/2025-05-21_devcon/
 
 Miroslav Schonauer
 Dear Jeremy, sorry that I missed to sign the kudos-board re your retirement (I was off for a bit and also have a new job/role in AEC data team, now working from Croatia), so pls accept the warmest wishes for the happy and most deserved period which I'm sure you'll be a master of enjoying :wink: It was such a pleasure working with you and knowing your enthusiasm and passion you put into the blog and generally helping our 3rd party developers! Hopefully, our paths may cross again (visiting Croatia soon :blush:?), let's try to stay in touch (miro5@btinternet.com, +44 7921 492 808) and all the best once again.
 
+-->
 
-https://www.linkedin.com/posts/ugcPost-7331091576963702785-wLYd?utm_source=share&utm_medium=member_desktop&rcm=ACoAAACogiYBX6lBbCXzDJBU_OWT9MYGMYk5X6g
-
-Sandip Jadhav
-CEO, Pragmatic Digital Transformation Leader | AI Agents, Autodesk Platform Top System Integration Partner, Geometry Kernel, CAD, AEC, Manufacturing, Oil, data | AI apps in Valve, HVAC, Building Energy Performance🥇CEO, Pragmatic Digital Transformation Leader | AI Agents, Autodesk Platform Top System Integration Partner, Geometry Kernel, CAD, AEC, Manufacturing, Oil, data | AI apps in Valve, HVAC, Building Energy Performance🥇
-
-hashtag#DevCon2025 by Autodesk Platform Services was a great opportunity to meeting old friends and making the new friends from worlds largest software development community in the CAD, BIM and data space.
-
-Michelangelo Capraro, GAURAV B. Mayank Mridul, Vijaya Adigopula, Associate Director, Lejla Secerbegovic, Torsten Kohl, Jeremy Tammik, Rahul, Amit Kumar Aman, Mike Engel, Pawan Kumar and many more. It was a great pleasure to meet all of you at the 10th DevCon and I hope we meet again next year.
+Thank you for all the kind mentions and appreciation on LinkedIn and elsewhere:
 
 
-https://www.linkedin.com/posts/ilia-ivanov-298997161_autodeskdevcon-jeremytammik-autodeskplatform-activity-7330627797788323841-gsjp?utm_source=share&utm_medium=member_desktop&rcm=ACoAAACogiYBX6lBbCXzDJBU_OWT9MYGMYk5X6g
+- [Amir Dezfouli](https://www.linkedin.com/posts/amir-dezfouli-55a79b32_i-just-wrapped-up-autodesk-devcon-2025-in-ugcPost-7330996207936344064-kfqX)
+- [Deyan Nenov](https://www.linkedin.com/posts/deyan-nenov_autodesk-devcon-revitapi-ugcPost-7330677357378170880-uST2)
+- [Sandip Jadhav](https://www.linkedin.com/posts/ugcPost-7331091576963702785-wLYd?utm_source=share&utm_medium=member_desktop&rcm=ACoAAACogiYBX6lBbCXzDJBU_OWT9MYGMYk5X6g)
+- [Ilia Ivanov](https://www.linkedin.com/posts/ilia-ivanov-298997161_autodeskdevcon-jeremytammik-autodeskplatform-activity-7330627797788323841-gsjp)
+- [Bert van der Hoeven](https://www.linkedin.com/posts/bert-van-der-hoeven-6b51b124_devon-revit-api-activity-7330849280678633472-iYFC)
 
-Ilia Ivanov
-CEO & Co-Founder at atomatiq | BIM Developer | AEC Software DeveloperCEO & Co-Founder at atomatiq | BIM Developer | AEC Software Developer
-
-Great to meet the legend - Jeremy Tammik!
-
-It was a pleasure to finally meet in person someone whose work has supported and inspired developers worldwide for years.
-
-Jeremy is not just an expert - he’s a true bridge between the Autodesk platform and the developer community.
-Thank you for everything you do!
+... and many more!
+Thank you!
+Keep in touch!
 
 https://www.linkedin.com/posts/bert-van-der-hoeven-6b51b124_devon-revit-api-activity-7330849280678633472-iYFC?utm_source=share&utm_medium=member_desktop&rcm=ACoAAACogiYBX6lBbCXzDJBU_OWT9MYGMYk5X6g
 
-
-Bert van der Hoeven
-Consultant Building Solutions bij Cadix | Revit specialist | Dynamo specialist | Python specialist |Consultant Building Solutions bij Cadix | Revit specialist | Dynamo specialist | Python specialist |
-
-Meeting Jeremy Tammik on hashtag#Devon hashtag#revit hashtag#api in Amsterdam. Nice to see you.
-
-
-
-
-------
+<!--
 LinkedIn notifications
 
 João Paulo Ornelas MartinsStatus is online
@@ -397,9 +368,5 @@ Jeremy Tammik
 
 Dear Olivier, nice of you to drop by and thank you for your kind appreciation. I am glad I was able to make a difference! Best of luck and much success to you! Cheers, Jeremy.
 
-
-https://www.google.com/maps/dir/B%C3%A2ton+bar,+Herengracht+82,+1015+BS+Amsterdam/Jordaan,+Amsterdam/De+Wallen,+Amsterdam/De+Pijp,+Amsterdam/Vondelpark,+Amsterdam/Westerpark,+Amsterdam/NDSM-Werf,+NDSM-Plein,+Amsterdam/@52.3780756,4.8431678,13z/data=!3m1!4b1!4m44!4m43!1m5!1m1!1s0x47c60900030e0e5f:0xa113684bbf105843!2m2!1d4.889492!2d52.3769211!1m5!1m1!1s0x47c609dae894e17f:0x8632faa4e5a4ea1c!2m2!1d4.8808759!2d52.3739315!1m5!1m1!1s0x47c609b884575367:0x3509f467a8d39c68!2m2!1d4.895861!2d52.3718604!1m5!1m1!1s0x47c6098b96c28d93:0x45b59a8f129459ba!2m2!1d4.8990829!2d52.3541725!1m5!1m1!1s0x47c609e2c5b47ccf:0x6cd478550520ca35!2m2!1d4.8686484!2d52.3579946!1m5!1m1!1s0x47c5e2767a165481:0x3e05c9d6cae9805!2m2!1d4.8747368!2d52.3861916!1m5!1m1!1s0x47c60839a130b683:0x882051e1a7c91c75!2m2!1d4.8958329!2d52.4005238!3e1?entry=ttu&g_ep=EgoyMDI1MDUxNS4xIKXMDSoASAFQAw%3D%3D
-
-
-https://www.google.com/maps/dir/Baton+bar+Herengracht+82+1015+BS+Amsterdam/Jordaan+Amsterdam/De+Wallen+Amsterdam/De+Pijp+Amsterdam/Vondelpark+Amsterdam/Westerpark+Amsterdam/NDSM-Werf+NDSM-Plein+Amsterdam
+-->
 
