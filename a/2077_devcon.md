@@ -397,3 +397,9 @@ Jeremy Tammik
 
 Dear Olivier, nice of you to drop by and thank you for your kind appreciation. I am glad I was able to make a difference! Best of luck and much success to you! Cheers, Jeremy.
 
+
+https://www.google.com/maps/dir/B%C3%A2ton+bar,+Herengracht+82,+1015+BS+Amsterdam/Jordaan,+Amsterdam/De+Wallen,+Amsterdam/De+Pijp,+Amsterdam/Vondelpark,+Amsterdam/Westerpark,+Amsterdam/NDSM-Werf,+NDSM-Plein,+Amsterdam/@52.3780756,4.8431678,13z/data=!3m1!4b1!4m44!4m43!1m5!1m1!1s0x47c60900030e0e5f:0xa113684bbf105843!2m2!1d4.889492!2d52.3769211!1m5!1m1!1s0x47c609dae894e17f:0x8632faa4e5a4ea1c!2m2!1d4.8808759!2d52.3739315!1m5!1m1!1s0x47c609b884575367:0x3509f467a8d39c68!2m2!1d4.895861!2d52.3718604!1m5!1m1!1s0x47c6098b96c28d93:0x45b59a8f129459ba!2m2!1d4.8990829!2d52.3541725!1m5!1m1!1s0x47c609e2c5b47ccf:0x6cd478550520ca35!2m2!1d4.8686484!2d52.3579946!1m5!1m1!1s0x47c5e2767a165481:0x3e05c9d6cae9805!2m2!1d4.8747368!2d52.3861916!1m5!1m1!1s0x47c60839a130b683:0x882051e1a7c91c75!2m2!1d4.8958329!2d52.4005238!3e1?entry=ttu&g_ep=EgoyMDI1MDUxNS4xIKXMDSoASAFQAw%3D%3D
+
+
+https://www.google.com/maps/dir/Baton+bar+Herengracht+82+1015+BS+Amsterdam/Jordaan+Amsterdam/De+Wallen+Amsterdam/De+Pijp+Amsterdam/Vondelpark+Amsterdam/Westerpark+Amsterdam/NDSM-Werf+NDSM-Plein+Amsterdam
+
