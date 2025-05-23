@@ -56,6 +56,7 @@ It was my last Autodesk event, and my time with Autodesk is nearing its end.
 It was wonderful to see some many longstanding partners and hear about all your wonderful projects and visionary plans.
 
 - [Main topic: agents using data](#2)
+- [Cyrille's Summary of Day Two](#2.1)
 - [Kean's event overview](#3)
 - [Teammate monster selfies](#4)
 - [More hellos and normal selfies](#5)
@@ -86,6 +87,34 @@ Given clearly defined self-contained functionality with self-documenting interfa
 
 Another vision of this trend and possible outcomes is discussed in depth by Rob Walling in his great nine-minute video
 on [AI agents vs SaaS &ndash; who wins the future of software?](https://youtu.be/JGqvd10ZG8U).
+
+####<a name="2.1"></a> Cyrille's Summary of Day Two
+
+Cyrille Fauvel also shared
+a [blurb summarising day two](https://www.linkedin.com/posts/cyrillefauvel_autodeskdevcon-ai-sustainability-activity-7330861930187739136-mn3_) underlining
+the above &ndash; although, I must admit, it looks and sounds rather AI-generated to me
+&ndash; bar the personal note at the end &nbsp; :-)
+
+The second day of **Autodesk DevCon Europe 2025** was nothing short of inspiring!
+The keynote focused on how **AI is revolutionizing industries** while driving **sustainability** &ndash; and at the heart of it all? **Data**.
+
+AI is no longer just a tool for automation; it's a **game-changer** for industries looking to optimize workflows, reduce waste, and make smarter decisions.
+From **predictive insights** in manufacturing to **energy-efficient designs** in architecture, AI is helping businesses stay ahead of industry demands while **bolstering sustainability efforts**.
+
+But AI is only as powerful as the **data** it learns from.
+The ability to **leverage design and make data** is what enables AI to **automate tedious tasks**, **augment creative exploration**, and **analyze project data** for better outcomes.
+Companies that effectively harness their data are **leading the charge** in sustainability, using AI to **reduce carbon footprints**, **optimize material usage**, and **assess environmental impact**.
+
+As AI continues to evolve, the **importance of data** will only grow.
+Organizations that invest in **data-driven strategies** today will be the ones shaping a **more sustainable, efficient, and innovative future** tomorrow.
+
+On a personal note, **sustainability has always been a priority for me**.
+Fifteen years ago, I invested time and effort into making my home more environmentally friendly, and the journey is far from over.
+Whether it's improving energy efficiency, reducing waste, or integrating smarter solutions, I'm constantly working on ways to make my living space more sustainable.
+Marie, my partner in life, keep telling me that our house is not a research laboratory 😇
+This keynote reinforced just how vital it is to **keep pushing forward**, leveraging both technology and data to build a better future.
+
+What are your thoughts on AI’s role in sustainability? Let’s discuss!
 
 ####<a name="3"></a> Kean's Event Overview
 
