@@ -15,12 +15,11 @@ https://prismjs.com
 
 <!--
 
-
 twitter:
 
- @AutodeskRevit #RevitAPI @AutodeskAPS #BIM @DynamoBIM
+DevCon 2025 Amsterdam was a great success with main topic AI agents data access API components and meetings with longstanding partners, teammates, selfies and appreciation @AutodeskRevit #RevitAPI @AutodeskAPS #BIM @DynamoBIM https://thebuildingcoder.typepad.com/blog/2025/05/ai-agents-and-selfies-at-devcon-2025.html
 
-DevCon 2025 Amsterdam was a great success.
+DevCon 2025 Amsterdam was a great success
 &ndash; Main topic: agents using data
 &ndash; Kean's event overview
 &ndash; Teammate monster selfies
