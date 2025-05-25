@@ -169,6 +169,7 @@ Thank you for all the kind mentions and appreciation on LinkedIn and elsewhere:
 - [Deyan Nenov and Lejla Secerbegovic](https://www.linkedin.com/posts/deyan-nenov_autodesk-devcon-revitapi-ugcPost-7330677357378170880-uST2)
 - [Ilia Ivanov](https://www.linkedin.com/posts/ilia-ivanov-298997161_autodeskdevcon-jeremytammik-autodeskplatform-activity-7330627797788323841-gsjp)
 - [Julio Polo](https://www.linkedin.com/posts/juliopoloarq_autodeskdevcon-revitapi-thebuildingcoder-activity-7331619721622007808-DXJx?utm_source=share)
+- [Otsu Kazuki](https://www.linkedin.com/posts/otsu-kazuki-0bb32527a_devcon-activity-7331972233231327232-CrgN?utm_source=share)
 - [Sandip Jadhav](https://www.linkedin.com/posts/ugcPost-7331091576963702785-wLYd?utm_source=share&utm_medium=member_desktop&rcm=ACoAAACogiYBX6lBbCXzDJBU_OWT9MYGMYk5X6g)
 
 ... and ever so many more!
