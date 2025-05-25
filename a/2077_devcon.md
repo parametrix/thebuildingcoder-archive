@@ -158,6 +158,8 @@ BimLogiq: AI-supported automatic taggin and labelling with collision and overlap
 Miroslav Schonauer
 Dear Jeremy, sorry that I missed to sign the kudos-board re your retirement (I was off for a bit and also have a new job/role in AEC data team, now working from Croatia), so pls accept the warmest wishes for the happy and most deserved period which I'm sure you'll be a master of enjoying :wink: It was such a pleasure working with you and knowing your enthusiasm and passion you put into the blog and generally helping our 3rd party developers! Hopefully, our paths may cross again (visiting Croatia soon :blush:?), let's try to stay in touch (miro5@btinternet.com, +44 7921 492 808) and all the best once again.
 
+- []()
+
 -->
 
 Thank you for all the kind mentions and appreciation on LinkedIn and elsewhere:
@@ -166,6 +168,7 @@ Thank you for all the kind mentions and appreciation on LinkedIn and elsewhere:
 - [Bert van der Hoeven](https://www.linkedin.com/posts/bert-van-der-hoeven-6b51b124_devon-revit-api-activity-7330849280678633472-iYFC)
 - [Deyan Nenov and Lejla Secerbegovic](https://www.linkedin.com/posts/deyan-nenov_autodesk-devcon-revitapi-ugcPost-7330677357378170880-uST2)
 - [Ilia Ivanov](https://www.linkedin.com/posts/ilia-ivanov-298997161_autodeskdevcon-jeremytammik-autodeskplatform-activity-7330627797788323841-gsjp)
+- [Julio Polo](https://www.linkedin.com/posts/juliopoloarq_autodeskdevcon-revitapi-thebuildingcoder-activity-7331619721622007808-DXJx?utm_source=share)
 - [Sandip Jadhav](https://www.linkedin.com/posts/ugcPost-7331091576963702785-wLYd?utm_source=share&utm_medium=member_desktop&rcm=ACoAAACogiYBX6lBbCXzDJBU_OWT9MYGMYk5X6g)
 
 ... and ever so many more!
