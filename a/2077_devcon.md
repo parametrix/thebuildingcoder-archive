@@ -118,7 +118,7 @@ What are your thoughts on AI’s role in sustainability? Let’s discuss!
 
 ####<a name="3"></a> Kean's Event Overview
 
-Kean Walmsley presents an overview of the event in his article
+Kean Walmsley presents an overview of the entire event in his article
 on [DevCon Europe 2025 in Amsterdam &ndash; Days 1 and 2](https://www.keanw.com/2025/05/devcon-europe-2025-in-amsterdam-days-1-2.html).
 
 ####<a name="4"></a> Teammate Monster Selfies
@@ -172,6 +172,16 @@ Thank you for all the kind mentions and appreciation on LinkedIn and elsewhere:
 - [Julio Polo](https://www.linkedin.com/posts/juliopoloarq_autodeskdevcon-revitapi-thebuildingcoder-activity-7331619721622007808-DXJx?utm_source=share)
 - [Otsu Kazuki](https://www.linkedin.com/posts/otsu-kazuki-0bb32527a_devcon-activity-7331972233231327232-CrgN?utm_source=share)
 - [Sandip Jadhav](https://www.linkedin.com/posts/ugcPost-7331091576963702785-wLYd?utm_source=share&utm_medium=member_desktop&rcm=ACoAAACogiYBX6lBbCXzDJBU_OWT9MYGMYk5X6g)
+
+
+- [Amir Dezfouli](https://www.linkedin.com/posts/amir-dezfouli-55a79b32_i-just-wrapped-up-autodesk-devcon-2025-in-ugcPost-7330996207936344064-kfqX)
+- [Bert van der Hoeven](https://www.linkedin.com/posts/bert-van-der-hoeven-6b51b124_devon-revit-api-activity-7330849280678633472-iYFC)
+- [Canberk Kocaoglu](https://www.linkedin.com/posts/canberk-kocao%C4%9Flu-15a38423a_autodesk-devcon-2025-it-was-a-great-pleasure-activity-7331679578664448000-aaIw)
+- [Deyan Nenov and Lejla Secerbegovic](https://www.linkedin.com/posts/deyan-nenov_autodesk-devcon-revitapi-ugcPost-7330677357378170880-uST2)
+- [Ilia Ivanov](https://www.linkedin.com/posts/ilia-ivanov-298997161_autodeskdevcon-jeremytammik-autodeskplatform-activity-7330627797788323841-gsjp)
+- [Julio Polo](https://www.linkedin.com/posts/juliopoloarq_autodeskdevcon-revitapi-thebuildingcoder-activity-7331619721622007808-DXJx)
+- [Otsu Kazuki](https://www.linkedin.com/posts/otsu-kazuki-0bb32527a_devcon-activity-7331972233231327232-CrgN)
+- [Sandip Jadhav](https://www.linkedin.com/posts/ugcPost-7331091576963702785-wLYd)
 
 ... and ever so many more!
 
