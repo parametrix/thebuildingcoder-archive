@@ -166,6 +166,7 @@ Thank you for all the kind mentions and appreciation on LinkedIn and elsewhere:
 
 - [Amir Dezfouli](https://www.linkedin.com/posts/amir-dezfouli-55a79b32_i-just-wrapped-up-autodesk-devcon-2025-in-ugcPost-7330996207936344064-kfqX)
 - [Bert van der Hoeven](https://www.linkedin.com/posts/bert-van-der-hoeven-6b51b124_devon-revit-api-activity-7330849280678633472-iYFC)
+- [Canberk Kocaoglu](https://www.linkedin.com/posts/canberk-kocao%C4%9Flu-15a38423a_autodesk-devcon-2025-it-was-a-great-pleasure-activity-7331679578664448000-aaIw)
 - [Deyan Nenov and Lejla Secerbegovic](https://www.linkedin.com/posts/deyan-nenov_autodesk-devcon-revitapi-ugcPost-7330677357378170880-uST2)
 - [Ilia Ivanov](https://www.linkedin.com/posts/ilia-ivanov-298997161_autodeskdevcon-jeremytammik-autodeskplatform-activity-7330627797788323841-gsjp)
 - [Julio Polo](https://www.linkedin.com/posts/juliopoloarq_autodeskdevcon-revitapi-thebuildingcoder-activity-7331619721622007808-DXJx?utm_source=share)
