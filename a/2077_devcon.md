@@ -173,16 +173,6 @@ Thank you for all the kind mentions and appreciation on LinkedIn and elsewhere:
 - [Otsu Kazuki](https://www.linkedin.com/posts/otsu-kazuki-0bb32527a_devcon-activity-7331972233231327232-CrgN?utm_source=share)
 - [Sandip Jadhav](https://www.linkedin.com/posts/ugcPost-7331091576963702785-wLYd?utm_source=share&utm_medium=member_desktop&rcm=ACoAAACogiYBX6lBbCXzDJBU_OWT9MYGMYk5X6g)
 
-
-- [Amir Dezfouli](https://www.linkedin.com/posts/amir-dezfouli-55a79b32_i-just-wrapped-up-autodesk-devcon-2025-in-ugcPost-7330996207936344064-kfqX)
-- [Bert van der Hoeven](https://www.linkedin.com/posts/bert-van-der-hoeven-6b51b124_devon-revit-api-activity-7330849280678633472-iYFC)
-- [Canberk Kocaoglu](https://www.linkedin.com/posts/canberk-kocao%C4%9Flu-15a38423a_autodesk-devcon-2025-it-was-a-great-pleasure-activity-7331679578664448000-aaIw)
-- [Deyan Nenov and Lejla Secerbegovic](https://www.linkedin.com/posts/deyan-nenov_autodesk-devcon-revitapi-ugcPost-7330677357378170880-uST2)
-- [Ilia Ivanov](https://www.linkedin.com/posts/ilia-ivanov-298997161_autodeskdevcon-jeremytammik-autodeskplatform-activity-7330627797788323841-gsjp)
-- [Julio Polo](https://www.linkedin.com/posts/juliopoloarq_autodeskdevcon-revitapi-thebuildingcoder-activity-7331619721622007808-DXJx)
-- [Otsu Kazuki](https://www.linkedin.com/posts/otsu-kazuki-0bb32527a_devcon-activity-7331972233231327232-CrgN)
-- [Sandip Jadhav](https://www.linkedin.com/posts/ugcPost-7331091576963702785-wLYd)
-
 ... and ever so many more!
 
 Thank you!
@@ -431,6 +421,85 @@ Best Regards,
 Jeremy Tammik
 
 Dear Olivier, nice of you to drop by and thank you for your kind appreciation. I am glad I was able to make a difference! Best of luck and much success to you! Cheers, Jeremy.
+
+
+https://autodesk.slack.com/archives/C0SR6NAP8/p1748326801143219
+
+hreads
+abi-building-guild-api
+Richard (Xuan) Chen, Shengxi Zhang and 8 others
+
+
+Jeremy Tammik
+  Yesterday at 08:20
+HI building guild, my retirement is nearing, really close now. I'll disappear end of this week. Just so you know. Had a big farewell celebration at the APS DevCon in Amsterdam, and thought I would let you guys know a few days ahead of time before nirvana...
+adskteam1.jpg
+ 
+adskteam1.jpg
+
+
+👍
+11
+:celebrate:
+5
+
+
+
+Richard (Xuan) Chen
+  Yesterday at 08:30
+First of all, Congratulations on your great moment!
+Your dedication and influence have made a significant impact on  the product and the dev community, and you will be greatly missed.
+Wishing you all the best as you embark on this new chapter of life. Enjoy your well-deserved rest and relaxation.
+
+
+Shengxi Zhang
+  Yesterday at 08:53
+Happy retirement! Wish you all the best！:heart:
+
+
+Surya Balasubramaniyan
+  Yesterday at 11:28
+Happy retirement Jeremy, All the best for your future endeavors! :celebrate:
+
+
+Andrew Bushnell
+  Yesterday at 14:22
+Happy retirement 
+@Jeremy Tammik
+!!! All the best in your next adventures.
+
+
+Stephen Faust
+  Yesterday at 16:27
+You will be missed! Congratulations!
+
+
+Ivan Dobrianov
+  Yesterday at 19:28
+So, who's going to file all these weird problem reports from here on then? :slightly_smiling_face:
+All the best in whatever is next for you!
+
+
+Rahul Bhobe
+  Yesterday at 19:50
+Happy retirement 
+@Jeremy Tammik
+! All the best for your future.
+
+
+Michael Morris
+  Yesterday at 19:53
+Thanks 
+@Jeremy Tammik
+!  Good luck on whatever is next!
+
+
+Ivy(Ruoqian) Lu
+  Yesterday at 20:09
+We will miss you 
+@Jeremy Tammik
+! Thank you for your great support to our customers and internal teams. Best wishes to your next journey!
+
 
 -->
 
