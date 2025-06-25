@@ -189,14 +189,14 @@ João Paulo Ornelas Martins and 27 others reacted to Sandip Jadhav’s post that
 28 reactions
 5m
 
- Magnus Nilsen ✨Status is reachable
+Magnus Nilsen ✨Status is reachable
 Magnus Nilsen ✨ and 57 others reacted to Amir Dezfouli’s post that mentioned you.
 
 I just wrapped up Autodesk DevCon 2025 in Amsterdam, the leading conference for developers and innovators building on Autodesk’s platform. Raji Arasu shared a forward-looking vision: replacing traditional add-ins with intelligent agents. These agents would have well-defined skill sets, automating tasks across platforms and shifting us beyond point-and-click interfaces to more complex workflow automation. This aligns well with the broader movement in AI toward agent-based systems and enabling platforms. Low-code and no-code tools powered by LLMs were a major focus. Anthony Sertorio gave a compelling presentation on how these systems can close skill gaps and automate complex workflows. In a related session, Gregory Fina and Petr Broz demonstrated how chatbots can be used for data access and calculations. Another clear direction was breaking down data silos. Many tools are now built for cloud-native environments—particularly Autodesk Platform Services. The new Autodesk Assistant reflects this shift, allowing users to access data through natural language. A personal highlight was meeting Jeremy Tammik, whose work on the Revit API has been a long-standing source of inspiration. Some of the ideas he’s shared over the years have been particularly helpful in how we approach no-code automation in tools like BIMLOGIQ Copilot. In one session, a poll asked: “If you could fix one issue in drawings, what would it be?” The top responses—cross-disciplinary mismatches, incorrect dimensions, and annotation clutter—highlight persistent pain points in the industry. These are exactly the kinds of challenges we’ve been tackling with AI-driven tools like Smart Annotation and vertically integrated automation solutions. While general-purpose foundation models are driving progress, there’s still a gap when it comes to models tailored specifically for AEC. Vertical AI—deeply embedded in domain workflows—feels like the next frontier.
 58 reactions  2 comments
 1h
 
- Deyan Nenov
+Deyan Nenov
 Deyan Nenov and 1 other liked Lejla Secerbegovic’s comment that mentioned you.
 
 Thanks so much for the great shot, Deyan Nenov! Meeting Jeremy Tammik is always a highlight - and it was a great pleasure to meet you as well at this DevCon! 🙂
@@ -204,39 +204,39 @@ Thanks so much for the great shot, Deyan Nenov! Meeting Jeremy Tammik is always 
 92 reactions  6 comments
 5h
 
- Sandip Jadhav is hiring
+Sandip Jadhav is hiring
 Sandip Jadhav mentioned you in a post.
 
 #DevCon2025 by Autodesk Platform Services was a great opportunity to meeting old friends and making the new friends from worlds largest software development community in the CAD, BIM and data space. Michelangelo Capraro, GAURAV B. Mayank Mridul, Vijaya Adigopula, Associate Director, Lejla Secerbegovic, Torsten Kohl, Jeremy Tammik, Rahul, Amit Kumar Aman, Mike Engel, Pawan Kumar and many more. It was a great pleasure to meet all of you at the 10th DevCon and I hope we meet again next year. #autodesk #cctech #APS #API #digitaltransformation #software #connectingtheminds #CAD #BIM #data #developerconferance
 28 reactions
 6h
 
- Jan SmolíkStatus is reachable
+Jan SmolíkStatus is reachable
 Jan Smolík and 3 others reacted to Václav Smolík’s post that mentioned you.
 
 𝐖𝐡𝐞𝐫𝐞 𝐢𝐬 𝐁𝐈𝐌 𝐡𝐞𝐚𝐝𝐢𝐧𝐠 𝐭𝐡𝐞𝐬𝐞 𝐝𝐚𝐲𝐬? 🤔 Despite often facing the demanding nature of BIM implementation and the reluctance of designers to fully embrace project digitalization, it's crucial to recognize the significant progress civil engineering has already made and that we've entered a new era. Our BIMtwin team recently attended Autodesk DEVCON, which broadened our horizons, provided valuable inspiration, and allowed us to establish key contacts on a global scale. At this event, Autodesk clearly outlined the main development directions for this year: 𝐒𝐔𝐒𝐓𝐀𝐈𝐍𝐀𝐁𝐈𝐋𝐈𝐓𝐘, 𝐃𝐈𝐆𝐈𝐓𝐀𝐋 𝐓𝐑𝐀𝐍𝐒𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍, and 𝐀𝐑𝐓𝐈𝐅𝐈𝐂𝐈𝐀𝐋 𝐈𝐍𝐓𝐄𝐋𝐋𝐈𝐆𝐄𝐍𝐂𝐄. These pillars also resonate with BIMtwin's vision and our commitment to innovative digital tools. I personally greatly appreciate the opportunity to meet the Revit API legend, Jeremy Tammik, in person. I'm also pleased that we weren't the only representatives from the Czech Republic, and that companies like VECTORAMA, Atelier 99 s.r.o. or STRABAG are actively exploring the potential for further BIM development in our region. #BIM #Construction #Digitalization #Sustainability #ArtificialIntelligence #AutodeskDEVCON #BIMtwin
 4 reactions
 6h
 
- View BIM Coordinators Summit
+View BIM Coordinators Summit
 BIM Coordinators Summit posted an article: Beyond Instant Answers.
 8h
 
- Thomas Dizeldorf
+Thomas Dizeldorf
 Thomas Dizeldorf and 6 others reacted to Bo Hu’s post that mentioned you.
 
 Meet “The building coder” auther Mr Jeremy Tammik in Autodesk DevCon!
 7 reactions
 10h
 
- Václav SmolíkStatus is reachable
+Václav SmolíkStatus is reachable
 Václav Smolík mentioned you in a post.
 
 𝐖𝐡𝐞𝐫𝐞 𝐢𝐬 𝐁𝐈𝐌 𝐡𝐞𝐚𝐝𝐢𝐧𝐠 𝐭𝐡𝐞𝐬𝐞 𝐝𝐚𝐲𝐬? 🤔 Despite often facing the demanding nature of BIM implementation and the reluctance of designers to fully embrace project digitalization, it's crucial to recognize the significant progress civil engineering has already made and that we've entered a new era. Our BIMtwin team recently attended Autodesk DEVCON, which broadened our horizons, provided valuable inspiration, and allowed us to establish key contacts on a global scale. At this event, Autodesk clearly outlined the main development directions for this year: 𝐒𝐔𝐒𝐓𝐀𝐈𝐍𝐀𝐁𝐈𝐋𝐈𝐓𝐘, 𝐃𝐈𝐆𝐈𝐓𝐀𝐋 𝐓𝐑𝐀𝐍𝐒𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍, and 𝐀𝐑𝐓𝐈𝐅𝐈𝐂𝐈𝐀𝐋 𝐈𝐍𝐓𝐄𝐋𝐋𝐈𝐆𝐄𝐍𝐂𝐄. These pillars also resonate with BIMtwin's vision and our commitment to innovative digital tools. I personally greatly appreciate the opportunity to meet the Revit API legend, Jeremy Tammik, in person. I'm also pleased that we weren't the only representatives from the Czech Republic, and that companies like VECTORAMA, Atelier 99 s.r.o. or STRABAG are actively exploring the potential for further BIM development in our region. #BIM #Construction #Digitalization #Sustainability #ArtificialIntelligence #AutodeskDEVCON #BIMtwin
 4 reactions
 10h
 
- Saidah Naimi
+Saidah Naimi
 Saidah Naimi and 10 others reacted to Bert van der Hoeven’s post that mentioned you.
 
 
@@ -244,7 +244,7 @@ Meeting Jeremy Tammik on #Devon #revit #api in Amsterdam. Nice to see you.
 12 reactions  1 comment
 10h
 
- Raji Arasu
+Raji Arasu
 Raji Arasu, Chief Technology Officer, EVP at Autodesk shared a post: Just wrapped an inspiring week at TechX—our internal, employee-driven conference in Las Vegas—where we brought together over 1,000 Autodeskers in person, and many more virtually. TechX is all about investing in ourselves—connecting with peers, learning from experts, and sparking the kinds of conversations that move us forward. When you bring together thousands of product development professionals with intention, amazing things happen: ideas flow, decisions get made, and alignment happens in real-time (not over five days of email or Slack threads). This year, we focused on what matters most: building great technology and empowering the people who build it. I’m coming out of this week energized and committed to creating more of these meaningful, high-impact moments, because the momentum we build here lasts long after the conference ends. #Autodesk #TechX #Innovation #Leadership #Teamwork #ProductDevelopment
 11h
 
@@ -256,7 +256,7 @@ Great to meet the legend - Jeremy Tammik! It was a pleasure to finally meet in p
 23 reactions  1 comment
 11h
 
- Hamidreza Ghader
+Hamidreza Ghader
 Hamidreza Ghader and 1 other commented on Amir Dezfouli’s post that mentioned you.
 
 Great recap Amir! Fascinating to see how agent-based systems and vertical AI are becoming central themes across industries. I'm working on similar ideas in e-commerce. Would love to catch up if you're still around Amsterdam!
@@ -264,25 +264,25 @@ I just wrapped up Autodesk DevCon 2025 in Amsterdam, the leading conference for 
 58 reactions  2 comments
 12h
 
- Amir Dezfouli
+Amir Dezfouli
 Amir Dezfouli mentioned you in a post.
 
 I just wrapped up Autodesk DevCon 2025 in Amsterdam, the leading conference for developers and innovators building on Autodesk’s platform. Raji Arasu shared a forward-looking vision: replacing traditional add-ins with intelligent agents. These agents would have well-defined skill sets, automating tasks across platforms and shifting us beyond point-and-click interfaces to more complex workflow automation. This aligns well with the broader movement in AI toward agent-based systems and enabling platforms. Low-code and no-code tools powered by LLMs were a major focus. Anthony Sertorio gave a compelling presentation on how these systems can close skill gaps and automate complex workflows. In a related session, Gregory Fina and Petr Broz demonstrated how chatbots can be used for data access and calculations. Another clear direction was breaking down data silos. Many tools are now built for cloud-native environments—particularly Autodesk Platform Services. The new Autodesk Assistant reflects this shift, allowing users to access data through natural language. A personal highlight was meeting Jeremy Tammik, whose work on the Revit API has been a long-standing source of inspiration. Some of the ideas he’s shared over the years have been particularly helpful in how we approach no-code automation in tools like BIMLOGIQ Copilot. In one session, a poll asked: “If you could fix one issue in drawings, what would it be?” The top responses—cross-disciplinary mismatches, incorrect dimensions, and annotation clutter—highlight persistent pain points in the industry. These are exactly the kinds of challenges we’ve been tackling with AI-driven tools like Smart Annotation and vertically integrated automation solutions. While general-purpose foundation models are driving progress, there’s still a gap when it comes to models tailored specifically for AEC. Vertical AI—deeply embedded in domain workflows—feels like the next frontier.
 58 reactions  2 comments
 12h
 
- Jaime Cossent HidalgoStatus is reachable
+Jaime Cossent HidalgoStatus is reachable
 Jaime Cossent Hidalgo and 25 others reacted to Kevin Himmelreich’s post that mentioned you.
 
 Hace 4 años tuve el placer de compartir con los compañeros de BIMrras en "Los Cursos de los viernes", y para mí es un placer escuchar este tipo de entrevistas con verdaderos referentes del sector. 🎙️ En esta ocasión, Jeremy Tammik, un gran referente en el mundo BIM, nos ofrece su perspectiva y experiencia. ¡No te la pierdas! 👉 https://lnkd.in/d9bJKqyZ Además, si te interesa profundizar más en el mundo BIM, te animo a seguir "Los cursos de los viernes" (LCDLV) de BIMRRAS. Aquí tienes mi participación por si quieres verla: 👉 https://lnkd.in/dUwfJJyn Es increíble cómo iniciativas como estas siguen inspirando y aportando muchísimo al crecimiento de la comunidad BIM. Gracias Evelio E. Sánchez Juncal , Rogelio Carballo Solla y Rafael Tenorio Aranguren #BIM #Revit #BIMRRAS #Entrevista #Innovación #Tecnología #ConstrucciónDigital #JeremyTammik #ReferentesBIM #FormaciónBIM
 26 reactions  3 comments
 13h
 
- View BIM Coordinators Summit
+View BIM Coordinators Summit
 BIM Coordinators Summit posted: 🚀 New Partner Announcement! We’re thrilled to welcome iAcoustics to the BIM Heroes community! 🎉 Based in Dublin, iAcoustics is a leading acoustic consultancy delivering technology-driven, BIM-integrated solutions across the built environment. With expertise in architectural and environmental acoustics, they’re redefining how acoustic performance is designed, coordinated, and delivered. From acoustic testing to full-scope consultancy, iAcoustics is trusted by architects, developers, and design teams across Ireland and beyond - and now, they’re joining us to share their innovation with the BIM Heroes network. 👉 Check out their work and join their community: https://lnkd.in/extgk4gt #BIMHeroes #Acoustics #OpenBIM #iAcoustics #AEC #Architecture #Innovation #BIMCommunity
 17h
 
- Deyan Nenov
+Deyan Nenov
 Deyan Nenov replied to Lejla Secerbegovic’s comment that mentioned you.
 
 It was a real pleasure meeting you, Lejla Secerbegovic! I'm genuinely impressed by the work your team is doing with Data Exchange—such an exciting space to be in. And now I know exactly who to reach out to when the questions start rolling in 😉
@@ -290,7 +290,7 @@ It was a real pleasure meeting you, Lejla Secerbegovic! I'm genuinely impressed 
 92 reactions  6 comments
 20h
 
- Deyan Nenov
+Deyan Nenov
 Deyan Nenov liked Amitabh Mukherjee’s comment that mentioned you.
 
 Thanks, Jeremy Tammik! Hopefully we will meet face to face some day.
@@ -298,7 +298,7 @@ Thanks, Jeremy Tammik! Hopefully we will meet face to face some day.
 92 reactions  6 comments
 20h
 
- Bert van der HoevenStatus is reachable
+Bert van der HoevenStatus is reachable
 Bert van der Hoeven mentioned you in a post.
 
 
@@ -306,7 +306,7 @@ Meeting Jeremy Tammik on #Devon #revit #api in Amsterdam. Nice to see you.
 12 reactions  1 comment
 22h
 
- Amitabh MukherjeeStatus is online
+Amitabh MukherjeeStatus is online
 Amitabh Mukherjee mentioned you in a comment.
 
 Thanks, Jeremy Tammik! Hopefully we will meet face to face some day.
@@ -314,7 +314,7 @@ Thanks, Jeremy Tammik! Hopefully we will meet face to face some day.
 92 reactions  6 comments
 22h
 
- Victoria Ikede
+Victoria Ikede
 Victoria Ikede and others have added 6 comments on Deyan Nenov’s post.
 
 Fairly certain that a lot of Revit API ‘vibe code’ from A.I. is built off the back of his blog. Such a great moment!
@@ -322,7 +322,7 @@ Fairly certain that a lot of Revit API ‘vibe code’ from A.I. is built off th
 92 reactions  6 comments
 1d
 
- Lejla Secerbegovic
+Lejla Secerbegovic
 Lejla Secerbegovic mentioned you in a comment.
 
 Thanks so much for the great shot, Deyan Nenov! Meeting Jeremy Tammik is always a highlight - and it was a great pleasure to meet you as well at this DevCon! 🙂
@@ -330,14 +330,14 @@ Thanks so much for the great shot, Deyan Nenov! Meeting Jeremy Tammik is always 
 92 reactions  6 comments
 1d
 
- Bo Hu
+Bo Hu
 Bo Hu mentioned you in a post.
 
 Meet “The building coder” auther Mr Jeremy Tammik in Autodesk DevCon!
 7 reactions
 1d
 
- Ilia IvanovStatus is online
+Ilia IvanovStatus is online
 Ilia Ivanov mentioned you in a post.
 
 
@@ -349,7 +349,7 @@ Great to meet the legend - Jeremy Tammik! It was a pleasure to finally meet in p
 ------
 jeremytammik2
 
- Alex Dodonov
+Alex Dodonov
 Unread notification.
 Alex Dodonov and 94 others reacted to Deyan Nenov’s post that mentioned you.
 
@@ -357,7 +357,7 @@ Alex Dodonov and 94 others reacted to Deyan Nenov’s post that mentioned you.
 95 reactions  6 comments
 1h
 
- Kean WalmsleyStatus is reachable
+Kean WalmsleyStatus is reachable
 Unread notification.
 Kean Walmsley liked Mustafa Salaheldin Ali Bakr’s comment that mentioned you.
 
@@ -366,7 +366,7 @@ Blog: DevCon Europe 2025 in Amsterdam - Days 1 & 2 https://lnkd.in/e2eBS3iY
 76 reactions  2 comments
 3h
 
- Mustafa Salaheldin Ali BakrStatus is online
+Mustafa Salaheldin Ali BakrStatus is online
 Unread notification.
 Mustafa Salaheldin Ali Bakr mentioned you in a comment.
 
@@ -375,7 +375,7 @@ Blog: DevCon Europe 2025 in Amsterdam - Days 1 & 2 https://lnkd.in/e2eBS3iY
 76 reactions  2 comments
 6h
 
- Julian Wandzilak
+Julian Wandzilak
 Unread notification.
 Julian Wandzilak and 5 others commented on Deyan Nenov’s post that mentioned you.
 
@@ -384,18 +384,18 @@ Similar story here! Saying "thanks" to Jaremy was on my todo list for this event
 95 reactions  6 comments
 15h
 
- Jörg Pipo
+Jörg Pipo
 Unread notification.
 Jörg Pipo reacted to Sam Kadra's post: What an experience at #AutodeskDevCon2025 in Amsterdam! The sessions went far beyond expectations, real conversations, hands-on demos, and future-forward ideas around BIM, APS, digital transformation, automation, and data integration. It wasn’t just about learning; it was about reimagining how we build smarter, faster, and more connected. I’ve always found Petr Broz ’s sessions to be among the most insightful and this year was no different. His take on APS and how it’s changing the way we collaborate across platforms really hit home. I walked away with a head full of ideas and practical inspiration to bring back to our BIM IT workflows. Big thanks to the whole Autodesk team for making this event such a success. And a special shoutout to our Autodesk Customer Success Manager Melissa Böck, I really appreciated the thoughtful conversations and your constant support during the event. You brought clarity and practical insight to every topic we discussed and I’ve come away with plenty of ideas to explore! Let’s turn vision into action and build a future we’re proud of together.🚀 #SiemensEnergy #AutodeskDevCon2025 #FutureOfBIM #DigitalTransformation #APS #AI #DesignAutomation #ACC #Revit #DataExchange #Autodesk #Innovation #BIM #TechLeadership
 38 reactions  6 comments
 17h
 
- View TED Conferences
+View TED Conferences
 Unread notification.
 1625 people are attending an event created by TED Conferences this week. View the event.1625 people are attending an event created by TED Conferences this week. View the event.
 1d
 
- Deyan NenovStatus is reachable
+Deyan NenovStatus is reachable
 Unread notification.
 Deyan Nenov mentioned you in a post.
 
@@ -431,10 +431,10 @@ Richard (Xuan) Chen, Shengxi Zhang and 8 others
 
 
 Jeremy Tammik
-  Yesterday at 08:20
+Yesterday at 08:20
 HI building guild, my retirement is nearing, really close now. I'll disappear end of this week. Just so you know. Had a big farewell celebration at the APS DevCon in Amsterdam, and thought I would let you guys know a few days ahead of time before nirvana...
 adskteam1.jpg
- 
+
 adskteam1.jpg
 
 
@@ -446,60 +446,98 @@ adskteam1.jpg
 
 
 Richard (Xuan) Chen
-  Yesterday at 08:30
+Yesterday at 08:30
 First of all, Congratulations on your great moment!
 Your dedication and influence have made a significant impact on  the product and the dev community, and you will be greatly missed.
 Wishing you all the best as you embark on this new chapter of life. Enjoy your well-deserved rest and relaxation.
 
 
 Shengxi Zhang
-  Yesterday at 08:53
+Yesterday at 08:53
 Happy retirement! Wish you all the best！:heart:
 
 
 Surya Balasubramaniyan
-  Yesterday at 11:28
+Yesterday at 11:28
 Happy retirement Jeremy, All the best for your future endeavors! :celebrate:
 
 
 Andrew Bushnell
-  Yesterday at 14:22
+Yesterday at 14:22
 Happy retirement 
 @Jeremy Tammik
 !!! All the best in your next adventures.
 
 
 Stephen Faust
-  Yesterday at 16:27
+Yesterday at 16:27
 You will be missed! Congratulations!
 
 
 Ivan Dobrianov
-  Yesterday at 19:28
+Yesterday at 19:28
 So, who's going to file all these weird problem reports from here on then? :slightly_smiling_face:
 All the best in whatever is next for you!
 
 
 Rahul Bhobe
-  Yesterday at 19:50
+Yesterday at 19:50
 Happy retirement 
 @Jeremy Tammik
 ! All the best for your future.
 
 
 Michael Morris
-  Yesterday at 19:53
+Yesterday at 19:53
 Thanks 
 @Jeremy Tammik
 !  Good luck on whatever is next!
 
 
 Ivy(Ruoqian) Lu
-  Yesterday at 20:09
+Yesterday at 20:09
 We will miss you 
 @Jeremy Tammik
 ! Thank you for your great support to our customers and internal teams. Best wishes to your next journey!
 
+
+
+
+
+
+From:
+Mikako Harada <mikako.harada@autodesk.com>
+Date: Wednesday, May 28, 2025 at 05:03
+To: Jeremy Tammik <jeremy.tammik@autodesk.com>, Xiao Dong Liang <Xiaodong.Liang@autodesk.com>
+Subject: Zoom call with Jeremy 
+
+
+Hi Jeremy, 
+ 
+Do you have time to say bye-bye to the team?   I notice that Thursday is holiday in Switzerland. 
+
+ 
+If this time slot does not work, then please let
+
+@Xiao Dong Liang know of better time.  (I’m not able to check email during EMEA time.  So, Xiaodong will help set up with the new time slot.)
+
+ 
+If works,  
+@Xiao Dong Liang please forward to DAS team. 
+
+ 
+Mikako 
+
+From:
+Xiao Dong Liang <Xiaodong.Liang@autodesk.com> on behalf of Mikako Harada <mikako.harada@autodesk.com>
+Date: Wednesday, May 28, 2025 at 08:09
+To: DAS Worldwide <das-worldwide@autodesk.com>
+Subject: FW: Zoom call with Jeremy 
+
+
+Hi team, Please join us for an online farewell gathering to honor Jeremy Tammik and celebrate his incredible years of dedication and contributions to Autodesk and eco-system. We ran the ceremony on DevCon, while most colleagues
+cannot make it onsite. This online ceremony is a wonderful opportunity to share memories and wish Jeremy all the best in the well-deserved retirement. Jeremy just confirmed he can join this party. I am sending to all on behalf of Mikako. If the time slot is
+fine to you and you have time, welcome to join! :) Regards, Xiaodong
 
 -->
 

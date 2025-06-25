@@ -9909,3 +9909,49 @@
 2073:<"#5"> Vibe Programming Revit Macros
 2073:<"#6"> Direwolf Fast Revit Data Extraction
 2073:<"#7"> From Floppies to a Memory Stick
+2074:Intersection Result, LLM for IFC and More AI
+2074:<"#2"> IntersectionResult Properties
+2074:<"#3"> LLM Interaction with AutoCAD and IFC
+2074:<"#4"> AI Literature and Roadmap
+2074:<"#5"> Vibe Coding Parody
+2074:<"#6"> Collapse of Critical Thinking
+2074:<"#7"> IDA Iterated Distillation and Amplification Training
+2074:<"#8"> A2A Agent-to-Agent Protocol
+2074:<"#9"> OpenAI GPT 4.1 + Mini + Nano
+2075:Revit API Agents, MCP, Copilot and Codex
+2075:<"#2"> Global AI Statistics and Charts
+2075:<"#3"> AI Challenges for Complex App Coding
+2075:<"#4"> What is Agentic AI?
+2075:<"#5"> MCP Gaining Traction
+2075:<"#6"> MCP Server for Fusion
+2075:<"#7"> Revit MCP
+2075:<"#8"> GPT Prompting Guide
+2075:<"#9"> OpenAI o3, o4-mini and Codex
+2075:<"#10"> M$ AI Packages, VS Code and Codex
+2075:<"#11"> Codex Analyses Revit Add-In
+2075:<"#12"> Gemini Ranks High
+2075:<"#13"> Chef Generates and Launches Full Stack
+2075:<"#14"> DeepWiki Analyses All GitHub Repos
+2075:<"#15"> MarkItDown Converts Anything to MD
+2075:<"#16"> Postmortem of a Startup
+2075:<"#17"> Demystifying Shebang
+2076:DevCon 2025, Developer Guide, AI, AI, and AI
+2076:<"#2"> DevCon 2025 Amsterdam
+2076:<"#3"> Shared Projects for Multi-Version Add-In
+2076:<"#4"> Revit 2026 Developer Guide
+2076:<"#5"> Revit API and SDK Documentation RAG
+2076:<"#6"> Revit-IFC DeepWiki
+2076:<"#7"> RevitGeminiRAG
+2076:<"#8"> Yet Another Revit MCP
+2076:<"#9"> A2A and MCP Towards Implicit Programming
+2076:<"#10"> AutoGenLib On-The-Fly Coding
+2076:<"#11"> M$ and Google Code 30% AI-Generated
+2076:<"#12"> AI Masters Geoguessing
+2076:<"#13"> Neuronal Biology and AI Algorithms
+2076:<"#14"> Induced Atmospheric Vibration
+2077:AI Agents and Selfies at DevCon 2025
+2077:<"#2"> Main Topic: Agents Using Data
+2077:<"#2.1"> Cyrille's Summary of Day Two
+2077:<"#3"> Kean's Event Overview
+2077:<"#4"> Teammate Monster Selfies
+2077:<"#5"> More Hellos and Normal Selfies
