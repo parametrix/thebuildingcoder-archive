@@ -4853,6 +4853,7 @@
 1312:Revit Add-in Wizard Customisation
 1312:Revit Add-in Wizard Usage
 1312:Download and Installation
+
 1313:Live Rendering of 3D Revit Element Geometry in a Remote WebGL Viewer
 1313:Package Geometry Data into JSON
 1313:Send an HTTP POST Request and Display Result in Browser
@@ -9955,3 +9956,8 @@
 2077:<"#3"> Kean's Event Overview
 2077:<"#4"> Teammate Monster Selfies
 2077:<"#5"> More Hellos and Normal Selfies
+2078:Jeremy's Retirement, Continuation of the Blog, Revit SDK 2026.2
+2078:<"#section1"> Jeremy's Retirement and continuation of the Blog
+2078:<"#section2"> Revit 2026.2 SDK release
+2078:<"#section3"> API additions
+2078:<"#section4"> CefSharp Removal
