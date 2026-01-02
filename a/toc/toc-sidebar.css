@@ -81,6 +81,7 @@ body.tbc-has-sidebar {
 #tbc-content {
   margin-left: var(--tbc-sidebar-width);
   min-height: 100vh;
+  padding: 0 20px 20px 30px; /* Add spacing: top right bottom left */
   transition: margin-left var(--tbc-transition-speed) ease;
 }
 
@@ -573,6 +574,7 @@ body.tbc-resizing * {
   
   #tbc-content {
     margin-left: 0 !important;
+    padding: 0 15px 15px 15px; /* Smaller padding on mobile */
   }
   
   #tbc-mobile-toggle {
