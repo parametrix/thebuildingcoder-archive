@@ -59,7 +59,7 @@ Jeremy Tammik,
 
 ## Offline Hosting Modifications
 
-Modifications for offline hosting by Francis Sebastian, January 2026.
+Modifications for offline hosting by parametrix, January 2026.
 
 ## License
 
