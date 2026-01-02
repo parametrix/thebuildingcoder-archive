@@ -753,3 +753,55 @@ body.tbc-resizing * {
 .tbc-retry-btn:hover {
   background: var(--tbc-sidebar-active);
 }
+/* ================================
+   Code Block Copy Button
+   ================================ */
+.tbc-code-wrapper {
+  position: relative;
+}
+
+.tbc-copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 6px 8px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s, background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  z-index: 10;
+}
+
+.tbc-code-wrapper:hover .tbc-copy-btn {
+  opacity: 1;
+}
+
+.tbc-copy-btn:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.tbc-copy-btn:active {
+  background: #e0e0e0;
+}
+
+.tbc-copy-btn.tbc-copy-success {
+  background: #d4edda;
+  border-color: #28a745;
+  color: #28a745;
+}
+
+.tbc-copy-btn svg {
+  display: block;
+}
+
+/* Ensure pre elements work well with wrapper */
+.tbc-code-wrapper pre {
+  margin: 0 0 1em 0;
+}
