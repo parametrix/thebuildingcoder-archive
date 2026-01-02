@@ -1,0 +1,1785 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-01-02",
+  "totalTopics": 46,
+  "totalPostLinks": 370,
+  "navigation": [
+    {
+      "label": "About Jeremy Tammik",
+      "href": "index.html#0"
+    },
+    {
+      "label": "Contact and Support",
+      "href": "index.html#1"
+    },
+    {
+      "label": "Getting Started",
+      "href": "index.html#2"
+    },
+    {
+      "label": "License",
+      "href": "index.html#3"
+    },
+    {
+      "label": "Disclaimer",
+      "href": "index.html#4"
+    }
+  ],
+  "topics": [
+    {
+      "id": "5.1",
+      "title": "Custom Exporter",
+      "posts": [
+        {
+          "title": "Graphics Pipeline Custom Exporter",
+          "file": "0979_custom_exporter.htm"
+        },
+        {
+          "title": "Texture Bitmap and UV Coordinates",
+          "file": "0980_texture_uv_coord.htm"
+        },
+        {
+          "title": "ADN Mesh Data Custom Exporter to JSON",
+          "file": "0981_custom_exporter_json.htm"
+        },
+        {
+          "title": "Determining Absolutely All Visible and Hidden Elements",
+          "file": "1002_custom_exporter_visib.htm"
+        },
+        {
+          "title": "Access to Individual Elements in Linked Projects",
+          "file": "1016_linked_project_element.htm#5"
+        },
+        {
+          "title": "RvtVa3c – Revit Va3c Generic AEC Viewer JSON Export",
+          "file": "1157_rvtva3c.htm"
+        },
+        {
+          "title": "RvtVa3c Assembly Resolver",
+          "file": "1159_va3c_resolve_assembly.htm"
+        },
+        {
+          "title": "TessellateSolidOrShell – Holes Versus Wholes",
+          "file": "1160_tessellatesolidorshell.htm"
+        },
+        {
+          "title": "Custom Exporter GetCameraInfo",
+          "file": "1203_custom_exporter_camera.htm"
+        },
+        {
+          "title": "Revit Export Precision and Tolerance",
+          "file": "1330_hack_export_tolerance.htm#4"
+        },
+        {
+          "title": "Using a Custom Exporter for 2D",
+          "file": "1379_custom_export_2d.html#2"
+        },
+        {
+          "title": "Controlling the Quality of the Geometry on Custom Export",
+          "file": "1405_quality_custom_export.html#8"
+        }
+      ]
+    },
+    {
+      "id": "5.2",
+      "title": "2D Booleans and Adjacent Areas",
+      "posts": [
+        {
+          "title": "Room and Wall Adjacency",
+          "file": "0076_room_wall_adjacency.htm"
+        },
+        {
+          "title": "Room and Wall Adjacent Area",
+          "file": "0084_room_wall_adjacent_area.htm"
+        },
+        {
+          "title": "Boolean Operations for 2D Polygons",
+          "file": "0098_booleans_on_polygons.htm"
+        },
+        {
+          "title": "Space Adjacency",
+          "file": "0169_space_adjacency.htm"
+        },
+        {
+          "title": "GetPolygon Extension Methods",
+          "file": "0303_extension_methods.htm"
+        },
+        {
+          "title": "Space Adjacency for Heat Load Calculation",
+          "file": "0983_space_adjacency.htm#3"
+        },
+        {
+          "title": "Boolean Operations for 2D Polygons",
+          "file": "1011_booleans_on_polygons.htm"
+        },
+        {
+          "title": "Creating Topography Contours and Building Masses",
+          "file": "1236_data_topo_building.htm"
+        },
+        {
+          "title": "Fire Rating Zone Intersection",
+          "file": "1708_fire_rating_zone_inters.html"
+        },
+        {
+          "title": "2D Boolean Interactive Real-Time Sketch Viewer",
+          "file": "1797_indesign_rvtclipper.html"
+        },
+        {
+          "title": "Extrusion Analyser and 2D Boolean Element Outline",
+          "file": "1809_element_outline.html"
+        }
+      ]
+    },
+    {
+      "id": "5.3",
+      "title": "PostCommand",
+      "posts": [
+        {
+          "title": "Replacing Built-In Commands and Obtaining Their Ids",
+          "file": "0788_command_ids.htm"
+        },
+        {
+          "title": "What's New in the Revit 2014 API",
+          "file": "0938_whats_new_2014.htm"
+        },
+        {
+          "title": "Wishlist Survey Reminder and New SDK Sample Overview",
+          "file": "0963_api_wishlist_survey.htm"
+        },
+        {
+          "title": "Revit 2014 OBJ Exporter and New SDK Samples",
+          "file": "0984_obj_exp_2014_sdk_samp.htm"
+        },
+        {
+          "title": "Revit 2014 Update Release 1",
+          "file": "0995_2014_ur1.htm"
+        },
+        {
+          "title": "Programmatic launching of custom add-in commands",
+          "file": "1040_postcommand.htm"
+        },
+        {
+          "title": "PostCommand Limitations, Rules and Exceptions",
+          "file": "1364_postcommand_rules.html"
+        },
+        {
+          "title": "Purge and PostCommand",
+          "file": "1600_purge_empty_view.html#2"
+        },
+        {
+          "title": "Using PostCommand with the Windows Automation API",
+          "file": "1614_merry_xmas.html#3"
+        },
+        {
+          "title": "Using PostCommand to Close Document",
+          "file": "1741_rvtsamp_zero_close.html#5"
+        },
+        {
+          "title": "PostCommand API context and view focus",
+          "file": "2051_modeless.html#5"
+        }
+      ]
+    },
+    {
+      "id": "5.4",
+      "title": "Dockable Panels",
+      "posts": [
+        {
+          "title": "What's New in the Revit 2014 API",
+          "file": "0938_whats_new_2014.htm"
+        },
+        {
+          "title": "A Simpler Dockable Panel Sample",
+          "file": "0942_dockable_panel.htm"
+        },
+        {
+          "title": "RevitRubyShell for Revit 2014",
+          "file": "0955_revitrubyshell.htm"
+        },
+        {
+          "title": "Revit 2014 Update Release 1",
+          "file": "0995_2014_ur1.htm"
+        },
+        {
+          "title": "Open MEP Connector Warning",
+          "file": "1008_loose_connector.htm"
+        },
+        {
+          "title": "Command Launching from Dockable Panel",
+          "file": "1012_dockable_api_access.htm"
+        },
+        {
+          "title": "Revit 2014 Update Release 2",
+          "file": "1056_2014_ur2.htm"
+        },
+        {
+          "title": "A Dockable Web Browser",
+          "file": "1288_dockable_web_browser.htm"
+        }
+      ]
+    },
+    {
+      "id": "5.6",
+      "title": "Phase",
+      "posts": [
+        {
+          "title": "Create Room on Level in Phase",
+          "file": "0107_room_on_level_in_phase.htm"
+        },
+        {
+          "title": "Filter for View and Phase",
+          "file": "0446_filter_view_phase.htm"
+        },
+        {
+          "title": "Phase Dependent Room Properties",
+          "file": "0530_phase_room_properties.htm"
+        },
+        {
+          "title": "Family Instance Room Phase",
+          "file": "0725_fam_inst_room_phase.htm"
+        }
+      ]
+    },
+    {
+      "id": "5.7",
+      "title": "Preview Control",
+      "posts": [
+        {
+          "title": "Preview control",
+          "file": "0740_revit_2013_api.htm#2"
+        },
+        {
+          "title": "DevCamp session on the Revit 2013 UI API enhancements",
+          "file": "0779_devcamp_day_2.htm#2"
+        },
+        {
+          "title": "PreviewControlSimple",
+          "file": "0779_devcamp_day_2.htm#23"
+        },
+        {
+          "title": "UIAPI Revit SDK sample",
+          "file": "0742_new_sdk_samples.htm#4"
+        },
+        {
+          "title": "Preview control with linked document",
+          "file": "0805_vacation_news.htm#4"
+        },
+        {
+          "title": "Using a preview control in a macro",
+          "file": "1010_preview_control_macro.htm"
+        },
+        {
+          "title": "Zooming in a preview control",
+          "file": "1022_preview_control_zoom.htm#4"
+        }
+      ]
+    },
+    {
+      "id": "5.8",
+      "title": "RstLink",
+      "posts": [
+        {
+          "title": "Utilizing Revit API Resources",
+          "file": "0100_utilizing_resources.htm"
+        },
+        {
+          "title": "Back Again",
+          "file": "0112_back_again.htm"
+        },
+        {
+          "title": "Revit Structure Resources",
+          "file": "0117_rst_resources.htm"
+        },
+        {
+          "title": "Retrieve Structural Elements",
+          "file": "0404_structural_elements.htm"
+        },
+        {
+          "title": "The Revit 2013 Structure API",
+          "file": "0782_rst_2013.htm"
+        }
+      ]
+    },
+    {
+      "id": "5.10",
+      "title": "Filter for Family Symbols",
+      "posts": [
+        {
+          "title": "XML Family Usage Report",
+          "file": "0493_xml_family_usage.htm"
+        },
+        {
+          "title": "Find Intersecting Elements",
+          "file": "0494_find_intersecting.htm"
+        },
+        {
+          "title": "More Kevin Filtering Benchmarks",
+          "file": "0497_more_kevin_samples.htm"
+        },
+        {
+          "title": "Filtered Element Collector Sample Overview",
+          "file": "0499_filter_sample_overview.htm"
+        },
+        {
+          "title": "Timer Code for Benchmarking",
+          "file": "0704_benchmarking.htm"
+        },
+        {
+          "title": "Family Usage Filtered Element Collector Performance",
+          "file": "0770_filt_fam_inst_perf.htm"
+        }
+      ]
+    },
+    {
+      "id": "5.11",
+      "title": "Model Review",
+      "posts": [
+        {
+          "title": "Model Review",
+          "file": "0241_model_review.htm"
+        },
+        {
+          "title": "Product Support Subscription Videos",
+          "file": "0243_ps_subscription_video.htm"
+        },
+        {
+          "title": "Model Review for Standards Compliance",
+          "file": "0458_model_review.htm"
+        },
+        {
+          "title": "Subscription Packs",
+          "file": "0592_subscription_packs.htm"
+        },
+        {
+          "title": "Google for Revit Model Review",
+          "file": "http://lmgtfy.com/?q=revit+model+review"
+        }
+      ]
+    },
+    {
+      "id": "5.13",
+      "title": "GitHub",
+      "posts": [
+        {
+          "title": "The Building Coder samples repository",
+          "file": "1036_tbc_samples_github.htm"
+        },
+        {
+          "title": "Creating a repository on windows",
+          "file": "1036_tbc_samples_github.htm#3"
+        },
+        {
+          "title": "Defining a license",
+          "file": "1036_tbc_samples_github.htm#2"
+        },
+        {
+          "title": "Creating a release",
+          "file": "1036_tbc_samples_github.htm#4"
+        },
+        {
+          "title": "Summary and Mac command line usage",
+          "file": "1037_move_duct_join.htm#6"
+        }
+      ]
+    },
+    {
+      "id": "5.14",
+      "title": "Moving a Cable Tray",
+      "posts": [
+        {
+          "title": "Cable tray placement, orientation and fittings",
+          "file": "0366_cable_tray_fitting.htm"
+        },
+        {
+          "title": "Modifying cable tray shape",
+          "file": "0607_cable_tray_shape.htm"
+        },
+        {
+          "title": "Moving a duct or cable tray join",
+          "file": "1037_move_duct_join.htm"
+        }
+      ]
+    },
+    {
+      "id": "5.15",
+      "title": "Room Boundaries",
+      "posts": [
+        {
+          "title": "Migrating the Building Coder Samples to Revit 2012",
+          "file": "0574_port_bc_2012.htm"
+        },
+        {
+          "title": "Accessing Room Data",
+          "file": "0682_accessing_room_data.htm"
+        },
+        {
+          "title": "Graphically Display Area Boundary Loops",
+          "file": "0808_display_area_boundary.htm"
+        },
+        {
+          "title": "Room in Area Predicate via Point in Polygon Test",
+          "file": "0810_room_in_area.htm"
+        },
+        {
+          "title": "What's New in the Revit 2012 API",
+          "file": "0903_whats_new_2012.htm"
+        },
+        {
+          "title": "What's New in the Revit 2013 API",
+          "file": "0904_whats_new_2013.htm"
+        },
+        {
+          "title": "Revit 2014 API and Room Plan View Boundary Loops",
+          "file": "0916_2014_api_room_loops.htm"
+        },
+        {
+          "title": "Room Neighbours",
+          "file": "1014_room_neighbours.htm"
+        }
+      ]
+    },
+    {
+      "id": "5.16",
+      "title": "Unit Testing",
+      "posts": [
+        {
+          "title": "Unit Testing in Revit",
+          "file": "0473_unit_test.htm"
+        },
+        {
+          "title": "Revit Add-in Unit Testing",
+          "file": "0982_rvtunit.htm"
+        },
+        {
+          "title": "The Dynamo Revit Unit Test Framework",
+          "file": "1041_dynamo_unit_test.htm"
+        },
+        {
+          "title": "Revit Unit Test Framework Improvements",
+          "file": "1674_revittestframework.htmml"
+        },
+        {
+          "title": "TestRunner – Run Unit Tests in Revit",
+          "file": "1788_testrunner.html"
+        },
+        {
+          "title": "AU Class – Automate your Revit Add-In Testing with Unit Testing",
+          "file": "1814_unit_testing.html#2"
+        },
+        {
+          "title": "Unit Test Your Revit Add-In",
+          "file": "1971_unit_test.html#6"
+        },
+        {
+          "title": "speckle xUnitRevit: a test runner for Revit",
+          "file": "https://speckle.systems/blog/xunitrevit"
+        },
+        {
+          "title": "ricaun RevitTest Unit Test framework 24-minute video",
+          "file": "https://youtu.be/ppgASRwTCLQ"
+        }
+      ]
+    },
+    {
+      "id": "5.17",
+      "title": "Wall Layers and Compound Structure",
+      "posts": [
+        {
+          "title": "Wall Compound Layers",
+          "file": "0038_wall_layers.htm"
+        },
+        {
+          "title": "Compound Wall Layer Volumes",
+          "file": "0090_compound_wall_layer_volumes.htm"
+        },
+        {
+          "title": "Retrieving Detailed Wall Layer Geometry",
+          "file": "0666_wall_layer_geom.htm"
+        },
+        {
+          "title": "Interior Side of a Wall",
+          "file": "0690_wall_interior_side.htm"
+        },
+        {
+          "title": "Identifying Wall Compound Layers and Parts",
+          "file": "0701_wall_layers_and_parts.htm"
+        },
+        {
+          "title": "Updating the Wall Compound Layer Structure",
+          "file": "0727_balaji_setcompoundstr.htm"
+        },
+        {
+          "title": "Setting the Compound Structure Core and Shell Layers",
+          "file": "0994_set_core_layer.htm"
+        },
+        {
+          "title": "Creating an Offset Wall",
+          "file": "1018_create_offset_wall.htm"
+        }
+      ]
+    },
+    {
+      "id": "5.18",
+      "title": "Room Properties",
+      "posts": [
+        {
+          "title": "Phase Dependent Room Properties",
+          "file": "0530_phase_room_properties.htm"
+        },
+        {
+          "title": "Unreliable Room Properties",
+          "file": "0548_unreliable_room_props.htm"
+        },
+        {
+          "title": "Family Instance Room Phase",
+          "file": "0725_fam_inst_room_phase.htm"
+        },
+        {
+          "title": "Filter for Family Instances in a Room",
+          "file": "0917_filter_fam_inst_in_room.htm"
+        }
+      ]
+    },
+    {
+      "id": "5.19",
+      "title": "Pick Point",
+      "posts": [
+        {
+          "title": "What's New in the Revit 2011 API",
+          "file": "0902_whats_new_2011.htm"
+        },
+        {
+          "title": "Creating and Inserting an Extrusion Family",
+          "file": "0596_create_extrusion_fam.htm"
+        },
+        {
+          "title": "Point Cloud Snap and Freeze",
+          "file": "0614_point_cloud_snap_freeze.htm"
+        },
+        {
+          "title": "Pick a Point in 3D",
+          "file": "0686_pick_point_3d.htm"
+        },
+        {
+          "title": "Placing a Duct",
+          "file": "0737_melbourne_day_2.htm#1"
+        },
+        {
+          "title": "Picking Two Points Consecutively",
+          "file": "0827_pick_two_points.htm"
+        }
+      ]
+    },
+    {
+      "id": "5.22",
+      "title": "Advanced Revit 2014 API Features and Samples",
+      "posts": [
+        {
+          "title": "Revit 2014 main product features",
+          "file": "0915_2014_supporting_columns.htm"
+        },
+        {
+          "title": "Revit 2014 Update Release 1",
+          "file": "0995_2014_ur1.htm"
+        },
+        {
+          "title": "Revit 2014 Update Release 2",
+          "file": "1056_2014_ur2.htm"
+        },
+        {
+          "title": "Revit 2014 API highlights, DevDays presentation, recording and sample code",
+          "file": "0916_2014_api_room_loops.htm#2"
+        },
+        {
+          "title": "What's New – a detailed overview of all enhancements",
+          "file": "0938_whats_new_2014.htm"
+        },
+        {
+          "title": "List of Revit 2014 SDK samples",
+          "file": "0984_obj_exp_2014_sdk_samp.htm#3"
+        },
+        {
+          "title": "Structural Analysis SDK, code checking and results builder",
+          "file": "0967_rst_code_check.htm"
+        },
+        {
+          "title": "DisplacementElementAnimation",
+          "file": "0991_animation.htm"
+        },
+        {
+          "title": "A Simpler Dockable Panel Sample",
+          "file": "0942_dockable_panel.htm"
+        },
+        {
+          "title": "Copy and paste API usage examples",
+          "file": "0943_duplicate_views.htm"
+        },
+        {
+          "title": "FreeFormElement and saving a solid to SAT",
+          "file": "1026_save_solid_to_file.htm"
+        },
+        {
+          "title": "PostCommand topics and launching custom add-in commands",
+          "file": "#5.3"
+        },
+        {
+          "title": "The Unit API, unit abbreviations and mapping display unit types to unit types",
+          "file": "1051_displayunittype.htm"
+        },
+        {
+          "title": "User MEP Calculation Sample",
+          "file": "0986_mep_calculation.htm"
+        },
+        {
+          "title": "Custom exporter",
+          "file": "0979_custom_exporter.htm"
+        }
+      ]
+    },
+    {
+      "id": "5.23",
+      "title": "Extensible Storage",
+      "posts": [
+        {
+          "title": "Extensible Storage",
+          "file": "0567_extensible_storage.htm"
+        },
+        {
+          "title": "Extensible Storage of a Map",
+          "file": "0587_extensible_storage_map.htm"
+        },
+        {
+          "title": "Extensible Storage Features",
+          "file": "0604_estorage_element_id.htm"
+        },
+        {
+          "title": "Project Wide Data Storage",
+          "file": "0765_estorage_single.htm#4"
+        },
+        {
+          "title": "DataStorage Element",
+          "file": "0765_estorage_single.htm#5"
+        },
+        {
+          "title": "Multi-Version Add-in",
+          "file": "0800_multi_version_addin.htm"
+        },
+        {
+          "title": "Extensible Storage Data Use in Schedules",
+          "file": "0912_cm_estorage_schedule.htm#4"
+        },
+        {
+          "title": "Effortless Extensible Storage",
+          "file": "0950_vc_estore_extension.htm"
+        },
+        {
+          "title": "Deleting and Updating Extensible Storage Schema",
+          "file": "0997_estorage.htm"
+        },
+        {
+          "title": "Erasing Extensible Storage with Linked Files",
+          "file": "1066_erase_estore_link.htm"
+        },
+        {
+          "title": "Accessing Extensible Storage on OwnerFamily in Project",
+          "file": "1198_estorage_owner_family.htm"
+        },
+        {
+          "title": "Add-ins in a Worksharing Environment",
+          "file": "1227_worksharing_dupl_geom.htm#2"
+        },
+        {
+          "title": "Extensible Storage in a Worksharing Environment",
+          "file": "1278_estorage_worksharing.htm"
+        },
+        {
+          "title": "Named Guid Storage for Project Identification",
+          "file": "1422_named_guid_storage.html"
+        },
+        {
+          "title": "Extensible storage – versioning best practices",
+          "file": "1661_rename_family.html#4"
+        },
+        {
+          "title": "EstoreFile GitHub repository",
+          "file": "https://github.com/jeremytammik/EstoreFile"
+        },
+        {
+          "title": "Class",
+          "file": "http://au.autodesk.com/au-online/classes-on-demand/class-catalog/2011/autodesk-revit-architecture/extensible-storage-in-the-autodesk-revit-2012-api"
+        }
+      ]
+    },
+    {
+      "id": "5.24",
+      "title": "Control Element Colour and Material",
+      "posts": [
+        {
+          "title": "Model and Detail Curve Colour",
+          "file": "0282_change_detail_curve_colour.htm"
+        },
+        {
+          "title": "Change Element Colour",
+          "file": "0561_change_element_colour.htm"
+        },
+        {
+          "title": "Determine the Colour of an Element",
+          "file": "0996_attrib_relations.htm#6"
+        },
+        {
+          "title": "View Filter API",
+          "file": "1001_view_filter.htm"
+        },
+        {
+          "title": "Control DirectShape Colour and Material",
+          "file": "1615_directshape.html#7"
+        },
+        {
+          "title": "Assign different colour and material to each DirectShape face",
+          "file": "1963_point_cloud.html#2"
+        }
+      ]
+    },
+    {
+      "id": "5.26",
+      "title": "PushButtonData Usage Examples",
+      "posts": [
+        {
+          "title": "Revit 2010 Ribbon API",
+          "file": "0139_ribbon_api.htm"
+        },
+        {
+          "title": "MEP Sample Ribbon Panel",
+          "file": "0202_mep_ribbon_panel.htm"
+        },
+        {
+          "title": "Ribbon Embed Image",
+          "file": "0244_ribbon_embed_image.htm"
+        },
+        {
+          "title": "Simulating a Ribbon Textbox Label",
+          "file": "0437_ribbon_textbox_label.htm"
+        },
+        {
+          "title": "Enable Ribbon Items in Zero Document State",
+          "file": "0538_zero_doc_ribbon.htm"
+        },
+        {
+          "title": "Multi-Version Add-in",
+          "file": "0800_multi_version_addin.htm"
+        },
+        {
+          "title": "Structural Concrete Setout Point Add-in External Application and CmdData Class",
+          "file": "0806_setout_points.htm#3"
+        },
+        {
+          "title": "Roll Your Own Toggle Button",
+          "file": "0857_toggle_button.htm"
+        },
+        {
+          "title": "A Simpler Dockable Panel Sample",
+          "file": "0942_dockable_panel.htm"
+        },
+        {
+          "title": "Family API sample external application implementation",
+          "file": "0975_family_api_addin.htm#40"
+        },
+        {
+          "title": "Minimal External Application",
+          "file": "0988_news_sydney_train.htm#6"
+        },
+        {
+          "title": "RoomEditorApp External Application",
+          "file": "1049_roomeditorapp.htm#3"
+        }
+      ]
+    },
+    {
+      "id": "5.27",
+      "title": "FamilyElementVisibility",
+      "posts": [
+        {
+          "title": "The Revit Family API",
+          "file": "0199_family_api.htm"
+        },
+        {
+          "title": "Revit Family Creation API Labs",
+          "file": "0237_rfa_labs.htm"
+        },
+        {
+          "title": "Family Element Visibility",
+          "file": "0413_family_element_visibility.htm"
+        },
+        {
+          "title": "Set Detail Curve Visibility",
+          "file": "0879_set_detail_curve_visib.htm"
+        }
+      ]
+    },
+    {
+      "id": "5.28",
+      "title": "Idling and External Events for Modeless Access and Driving Revit from Outside",
+      "posts": [
+        {
+          "title": "Official Autodesk Knowledge Network introduction to External Events",
+          "file": "https://help.autodesk.com/cloudhelp/2018/ENU/Revit-API/Revit_API_Developers_Guide/Advanced_Topics/External_Events.html"
+        },
+        {
+          "title": "Driving Revit from Outside",
+          "file": "0051_driving_revit.htm"
+        },
+        {
+          "title": "Modeless Pressure Drop Tool",
+          "file": "0233_pressure_drop.htm"
+        },
+        {
+          "title": "Modeless Loose Connector Navigator",
+          "file": "0652_modeless_loose_connectors.htm"
+        },
+        {
+          "title": "Revit Webcam",
+          "file": "0718_revitwebcam_2012.htm"
+        },
+        {
+          "title": "Idling Enhancements and External Events",
+          "file": "0743_external_event.htm"
+        },
+        {
+          "title": "Custom Tooltips",
+          "file": "0840_wincoord_tooltip.htm"
+        },
+        {
+          "title": "Drive Revit through a WCF Service",
+          "file": "0853_revit_wcf_service.htm"
+        },
+        {
+          "title": "Revit Ruby Shell",
+          "file": "0955_revitrubyshell.htm"
+        },
+        {
+          "title": "Auto PDF Print",
+          "file": "0957_auto_pdf_print.htm"
+        },
+        {
+          "title": "AutoExport",
+          "file": "0958_auto_export.htm"
+        },
+        {
+          "title": "Command Launching from Dockable Panel",
+          "file": "1012_dockable_api_access.htm"
+        },
+        {
+          "title": "RoomEditorApp",
+          "file": "1062_roomeditorapp.htm"
+        },
+        {
+          "title": "Replacing an Idling Event Handler by an External Event",
+          "file": "1074_roomedit_extern_event.htm"
+        },
+        {
+          "title": "Triggering Immediate External Event Execute",
+          "file": "1075_trigger_extern_event.htm"
+        },
+        {
+          "title": "Driving Revit from Outside",
+          "file": "1305_va3c_guid_driving.htm#3"
+        },
+        {
+          "title": "Revit API Context Summary",
+          "file": "1344_api_context_form_err.htm#2"
+        },
+        {
+          "title": "Batch Processing Revit Documents",
+          "file": "1348_batch_dwf_futureproof.htm#4"
+        },
+        {
+          "title": "PostCommand from Modeless Context or Idling causes Internal Exception",
+          "file": "1364_postcommand_rules.html#2"
+        },
+        {
+          "title": "PickPoint from Modeless WPF Form and No Multithreading",
+          "file": "1377_wpf_thread_pickpoint.html"
+        },
+        {
+          "title": "Use of the Revit API Requires a Valid Context",
+          "file": "1383_external_event_10_year.html#2"
+        },
+        {
+          "title": "Driving Revit from Outside through an External Event",
+          "file": "1383_external_event_10_year.html#3"
+        },
+        {
+          "title": "Extracting all Visible Text from the Revit Model and StringSearch 2016",
+          "file": "1391_string_search_2016.html#3"
+        },
+        {
+          "title": "Idling and external events, DMU and DocumentChanged comparison",
+          "file": "1393_idling_dmu_doc_change.html"
+        },
+        {
+          "title": "Communication between AutoCAD and Revit",
+          "file": "1435_sign_acad_bim_uk.html#4"
+        },
+        {
+          "title": "Setting Active View During Idling",
+          "file": "1526_set_view_idling.html"
+        },
+        {
+          "title": "External Access to the Revit API",
+          "file": "1555_modeless.html"
+        },
+        {
+          "title": "Batch Processing Revit Families and Documents",
+          "file": "1742_asstringvalue_batch.html#2"
+        },
+        {
+          "title": "Async and Await External Event Wrapper",
+          "file": "1817_async_await.html#2"
+        },
+        {
+          "title": "Revit.Async External Event Wrapper Using Task-Based Asynchronous Pattern (TAP)",
+          "file": "1826_rex_2020_async_await.html#3"
+        },
+        {
+          "title": "Modeless add-ins for simultaneous add-in and Revit interaction",
+          "file": "2050_modeless.html#2"
+        },
+        {
+          "title": "Background process and Revit API",
+          "file": "2051_modeless.html#2"
+        },
+        {
+          "title": "Revit API in API context predicate",
+          "file": "2051_modeless.html#4"
+        }
+      ]
+    },
+    {
+      "id": "5.29",
+      "title": "ExtrusionAnalyzer",
+      "posts": [
+        {
+          "title": "Extrusion Analyser and Plan View Boundaries",
+          "file": "0921_extrusion_analyser.htm"
+        },
+        {
+          "title": "Room and Furniture Loops Using Symbols",
+          "file": "0936_room_loops_symbols.htm"
+        },
+        {
+          "title": "Sun Direction, Shadow Calculation and Wizard Update",
+          "file": "0969_sun_direct_shadow.htm"
+        }
+      ]
+    },
+    {
+      "id": "5.31",
+      "title": "Dynamic Model Updater Framework DMU",
+      "posts": [
+        {
+          "title": "Structural Dynamic Model Update Sample",
+          "file": "0418_rst_dmu.htm"
+        },
+        {
+          "title": "Power to the User (and Application)",
+          "file": "0460_prompt_user.htm"
+        },
+        {
+          "title": "Access Deleted Element",
+          "file": "0465_access_deleted_element.htm"
+        },
+        {
+          "title": "Removing a Stored Updater Reference",
+          "file": "0501_vsta_and_updater.htm#2"
+        },
+        {
+          "title": "Associative Section View SDK Sample",
+          "file": "0624_assoc_sect_view.htm#2"
+        },
+        {
+          "title": "Lock the Model, e.g. Prevent Deletion",
+          "file": "0670_lock_model_prevent_delete.htm"
+        },
+        {
+          "title": "Intermediate API Update Releases",
+          "file": "0680_update_release_issues.htm"
+        },
+        {
+          "title": "Avoid Idling",
+          "file": "0702_avoid_idling.htm"
+        },
+        {
+          "title": "The Revit 2013 Structure API and RstAvfDmu Migration",
+          "file": "0782_rst_2013.htm"
+        },
+        {
+          "title": "DocumentChanged versus Dynamic Model Updater",
+          "file": "0783_doc_change_dmu.htm"
+        },
+        {
+          "title": "Updater Queues Multi-Transaction Operation for Idling",
+          "file": "0859_updater_transact.htm"
+        },
+        {
+          "title": "DevLab Munich",
+          "file": "1078_devlab_muc.htm"
+        },
+        {
+          "title": "RevitPythonShell Dynamic Model Updater tutorial",
+          "file": "1448_py_dmu_tutorial.html#3"
+        }
+      ]
+    },
+    {
+      "id": "5.32",
+      "title": "Wood Framing and Huge Numbers of Family Instances",
+      "posts": [
+        {
+          "title": "Performance Profiling",
+          "file": "0332_performance_profiling.htm"
+        },
+        {
+          "title": "Beam Maker Using a Void Extrusion to Cut",
+          "file": "0412_beam_maker.htm"
+        },
+        {
+          "title": "Boolean Operations and InstanceVoidCutUtils",
+          "file": "0600_instance_void_cut.htm"
+        },
+        {
+          "title": "Retrieving Detailed Wall Layer Geometry",
+          "file": "0666_wall_layer_geom.htm"
+        }
+      ]
+    },
+    {
+      "id": "5.33",
+      "title": "Need to Regenerate",
+      "posts": [
+        {
+          "title": "Manual regeneration option danger",
+          "file": "0345_manual_regeneration.htm"
+        },
+        {
+          "title": "Regeneration option best practices",
+          "file": "0348_regen_option_rules.htm"
+        },
+        {
+          "title": "To regenerate or not to regenerate...",
+          "file": "0388_regen_required.htm"
+        },
+        {
+          "title": "Refresh referencing sheet parameter display",
+          "file": "0467_refresh_referencing_sheet.htm"
+        },
+        {
+          "title": "Setting text width requires regen",
+          "file": "0474_set_width_requires_regen.htm"
+        },
+        {
+          "title": "Extra transaction or regeneration required",
+          "file": "0866_extra_transaction.htm"
+        },
+        {
+          "title": "Curve Evaluation and Song of the Gulls",
+          "file": "0905_nurb_spline_eval_gulls.htm"
+        },
+        {
+          "title": "Regenerate between plane and dimension creation",
+          "file": "http://adndevblog.typepad.com/aec/2013/01/it-is-easy-to-miss-this-regenerating-the-model.html"
+        },
+        {
+          "title": "Regenerate to avoid accessing stale data",
+          "file": "1066_erase_estore_link.htm#3"
+        },
+        {
+          "title": "Need for regen in an updater",
+          "file": "1393_idling_dmu_doc_change.html#3"
+        },
+        {
+          "title": "TextNote Bounding Box Requires Regen",
+          "file": "1440_idea_station_txt_bb.html#3"
+        },
+        {
+          "title": "Regeneration Performance Benchmark",
+          "file": "1440_idea_station_txt_bb.html#4"
+        },
+        {
+          "title": "Isolating an Element in a Newly Created View Requires Two Transactions",
+          "file": "1481_commit_twice.html#2"
+        },
+        {
+          "title": "Sub-Transaction Requires Regeneration",
+          "file": "1563_subtrans_regen.html#3"
+        },
+        {
+          "title": "Setting a Parameter to Regenerate the Model",
+          "file": "1605_param_regen_cloud_model.html#3"
+        },
+        {
+          "title": "Sometimes it’s not you",
+          "file": "https://boostyourbim.wordpress.com/2021/01/13/sometimes-its-not-you"
+        },
+        {
+          "title": "UpdateAllOpenViews",
+          "file": "2027_refresh.html#1"
+        }
+      ]
+    },
+    {
+      "id": "5.34",
+      "title": "BipChecker, the Revit Built-in Parameter Checker",
+      "posts": [
+        {
+          "title": "Unofficial Parameters and BipChecker",
+          "file": "0656_unofficial_param.htm"
+        },
+        {
+          "title": "Duplicate Built-in Parameter Values and BipChecker Update",
+          "file": "0888_bip_checker_5.htm"
+        },
+        {
+          "title": "The ADN Xtra Labs Built-in Parameter Checker and BipChecker for Revit 2014",
+          "file": "1024_elem_type_bip_params.htm"
+        },
+        {
+          "title": "BipChecker GitHub Repository and Migration to Revit 2015",
+          "file": "1153_bipchecker_2015_git.htm#3"
+        },
+        {
+          "title": "Built-in Parameter Checker for Revit 2016",
+          "file": "1325_solid_line_intersect.htm#5"
+        },
+        {
+          "title": "Built-in Parameter Checker included in ADN Revit API Training Labs Xtra",
+          "file": "1332_multi_version_xtra.htm#5"
+        }
+      ]
+    },
+    {
+      "id": "5.36",
+      "title": "Source Code Colourizer",
+      "posts": [
+        {
+          "title": "The Building Coder Source Code Colourisation",
+          "file": "0575_updated_sdk.htm#4"
+        },
+        {
+          "title": "Presenting Colour Coded Source Code",
+          "file": "0805_vacation_news.htm#3"
+        },
+        {
+          "title": "Source Code Coloriser",
+          "file": "0868_debug_without_restart.htm#20"
+        },
+        {
+          "title": "Python Mac Pasteboard Access",
+          "file": "0956_pycolorize.htm"
+        },
+        {
+          "title": "RoomEditorApp for Revit 2015 and CopySourceAsHtml for Visual Studio 2012",
+          "file": "1137_roomeditorapp_2015.htm#5"
+        },
+        {
+          "title": "Installing VS 2015 PowerTools Copy HTML Markup",
+          "file": "1741_rvtsamp_zero_close.html#4"
+        }
+      ]
+    },
+    {
+      "id": "5.37",
+      "title": "Creating and Setting Up a 3D View",
+      "posts": [
+        {
+          "title": "Crop 3D View to Room",
+          "file": "0259_crop_view_to_room.htm"
+        },
+        {
+          "title": "What's New in the Revit 2013 API",
+          "file": "0904_whats_new_2013.htm"
+        },
+        {
+          "title": "Setting up your ViewOrientation3D",
+          "file": "0926_vieworientation3d.htm"
+        },
+        {
+          "title": "Exporting Image and Setting a Default 3D View Orientation",
+          "file": "1006_3d_view_orientation.htm"
+        },
+        {
+          "title": "Saving a Solid to a SAT File Implementation",
+          "file": "1026_save_solid_to_file.htm"
+        },
+        {
+          "title": "Setting the View Display Background",
+          "file": "1081_set_view_background.htm"
+        },
+        {
+          "title": "Setting up a 3D View like a Section View",
+          "file": "1206_3d_from_section_view.htm"
+        }
+      ]
+    },
+    {
+      "id": "5.38",
+      "title": "Creating and Setting Up a Section View",
+      "posts": [
+        {
+          "title": "Elevation and Section Views",
+          "file": "0215_elevation_section_view.htm"
+        },
+        {
+          "title": "Section View Creation",
+          "file": "0612_create_section_view.htm"
+        },
+        {
+          "title": "Associative Section View SDK Sample",
+          "file": "0624_assoc_sect_view.htm#2"
+        },
+        {
+          "title": "Section View Geometry",
+          "file": "0632_section_view_geom.htm"
+        },
+        {
+          "title": "Section View Geometry Not Cropped",
+          "file": "0715_section_view_geom_crop.htm"
+        },
+        {
+          "title": "Change Section View Type and Hide Cut Line",
+          "file": "0771_sect_view_type_hide.htm"
+        },
+        {
+          "title": "Create Section View Parallel to Wall",
+          "file": "0784_create_section_view.htm"
+        },
+        {
+          "title": "Set View Section Box to Match Scope Box",
+          "file": "0816_view_section_to_scope.htm"
+        },
+        {
+          "title": "Language Independent Section View Type Id Retrieval",
+          "file": "0998_section_view_type_id.htm"
+        },
+        {
+          "title": "Set View Section Box to Match Scope Box for Revit 2014",
+          "file": "1030_view_section_to_scope.htm"
+        },
+        {
+          "title": "CreateAndPrintSheetsAndViews",
+          "file": "https://github.com/jeremytammik/CreateAndPrintSheetsAndViews/tree/main"
+        },
+        {
+          "title": "Create Section View in Python",
+          "file": "2007_sys_fam_py_section.html#4"
+        }
+      ]
+    },
+    {
+      "id": "5.39",
+      "title": "Splitting an Element into Parts",
+      "posts": [
+        {
+          "title": "Retrieving Detailed Wall Layer Geometry",
+          "file": "0666_wall_layer_geom.htm"
+        },
+        {
+          "title": "Identifying Wall Compound Layers and Parts",
+          "file": "0701_wall_layers_and_parts.htm"
+        },
+        {
+          "title": "Parts, Assemblies, PartUtils and DivideParts",
+          "file": "0821_divide_parts.htm"
+        },
+        {
+          "title": "DivideParts in F# and Line Styles",
+          "file": "0826_divide_parts_fsharp.htm"
+        },
+        {
+          "title": "Export Wall Parts Individually to DXF",
+          "file": "0906_export_wall_part_dxf.htm"
+        },
+        {
+          "title": "ExportCncFab on GitHub",
+          "file": "1044_exportcncfab.htm"
+        },
+        {
+          "title": "Driving CNC Fabrication and Shared Parameters",
+          "file": "1080_exportcncfab.htm"
+        }
+      ]
+    },
+    {
+      "id": "5.40",
+      "title": "The ADN Revit MEP HVAC and Electrical Sample AdnRme",
+      "posts": [
+        {
+          "title": "MEP Sample Code for Revit 2012",
+          "file": "0627_mep_2012_material.htm"
+        },
+        {
+          "title": "The ADN MEP Sample AdnRme for Revit MEP 2013",
+          "file": "0763_adnrme_mep_2013.htm"
+        },
+        {
+          "title": "Simple MEP System Traversal",
+          "file": "0893_mep_system_traversal.htm"
+        },
+        {
+          "title": "ADN Revit API Training Material Update and Vacation",
+          "file": "0900_adn_material.htm"
+        },
+        {
+          "title": "The ADN Sample AdnRme for Revit MEP 2014",
+          "file": "0965_adn_migr_2014_mep.htm"
+        },
+        {
+          "title": "RevitLookup on GitHub and Invitation to Collaborate",
+          "file": "1042_revitlookup_github.htm"
+        },
+        {
+          "title": "AdnRme Progress Bar and Exceptions in Revit 2015",
+          "file": "1149_exception_in_2015.htm"
+        },
+        {
+          "title": "AdnRme Migrated to Revit MEP 2015 on GitHub",
+          "file": "1174_adnrme_2015_git.htm"
+        },
+        {
+          "title": "AdnRme for Revit MEP 2016",
+          "file": "1329_adnrme_2016.htm#4"
+        }
+      ]
+    },
+    {
+      "id": "5.41",
+      "title": "Revit and Its API is Different",
+      "posts": [
+        {
+          "title": "Programming for a Parametric BIM versus Freely Defined Geometry",
+          "file": "0723_spark_learning.htm"
+        },
+        {
+          "title": "Porting an AutoCAD Application",
+          "file": "0842_port_acad_app.htm"
+        },
+        {
+          "title": "Revit API Aspects and Features",
+          "file": "1107_api_features.htm"
+        },
+        {
+          "title": "Reactions on the Revit API Features",
+          "file": "1108_api_features.htm#6"
+        },
+        {
+          "title": "How to Modify Family Instance Geometry",
+          "file": "1211_various.htm#5"
+        }
+      ]
+    },
+    {
+      "id": "5.42",
+      "title": "Texture Bitmap and UV Coordinate Access",
+      "posts": [
+        {
+          "title": "Texture Data UV Coordinates and FBX",
+          "file": "0306_uv_coords_fbx.htm"
+        },
+        {
+          "title": "Material Assets and FBX",
+          "file": "0527_material_assets.htm"
+        },
+        {
+          "title": "OBJ Model Export Considerations",
+          "file": "0791_obj_export_basics.htm"
+        },
+        {
+          "title": "Graphics Pipeline Custom Exporter",
+          "file": "0979_custom_exporter.htm"
+        },
+        {
+          "title": "Texture Bitmap and UV Coordinates",
+          "file": "0980_texture_uv_coord.htm"
+        },
+        {
+          "title": "Revit 2014 OBJ Exporter and New SDK Samples",
+          "file": "0984_obj_exp_2014_sdk_samp.htm"
+        },
+        {
+          "title": "Custom Exporter Framework Feedback",
+          "file": "1016_linked_project_element.htm#5"
+        },
+        {
+          "title": "Material Asset Textures, Forge Webinar Recordings",
+          "file": "1482_material_asset_texture.html"
+        },
+        {
+          "title": "Material Texture Path",
+          "file": "1596_texture_path.html"
+        },
+        {
+          "title": "Setting Material Texture Path in EditScope",
+          "file": "1735_editscope_texture.html"
+        },
+        {
+          "title": "Create New Material with Texture",
+          "file": "1932_symb_inst_ole_journal.html#3"
+        }
+      ]
+    },
+    {
+      "id": "5.43",
+      "title": "Point Clouds",
+      "posts": [
+        {
+          "title": "Point Cloud Snap and Freeze",
+          "file": "0614_point_cloud_snap_freeze.htm"
+        },
+        {
+          "title": "Point Cloud Overview",
+          "file": "0685_au_begins_point_cloud.htm"
+        },
+        {
+          "title": "Point Cloud Unit Conversion",
+          "file": "0708_point_cloud_unit_conv.htm"
+        },
+        {
+          "title": "Point Cloud Feature Extraction",
+          "file": "0709_point_cloud_feat_extr.htm"
+        },
+        {
+          "title": "Point Cloud Request Batching",
+          "file": "0841_point_cloud_batching.htm"
+        }
+      ]
+    },
+    {
+      "id": "5.44",
+      "title": "Creating a Floor",
+      "posts": [
+        {
+          "title": "Editing a Floor Profile",
+          "file": "0037_editing_floor_profile.htm"
+        },
+        {
+          "title": "Hole in a Floor",
+          "file": "0132_hole_in_a_floor.htm"
+        },
+        {
+          "title": "Floor Creation",
+          "file": "0641_floor_creation.htm"
+        },
+        {
+          "title": "Pick Corners and Create Floor",
+          "file": "0672_pick_create_floor.htm"
+        },
+        {
+          "title": "Create a Floor with an Opening or Complex Boundary",
+          "file": "0989_create_floor_opening.htm"
+        },
+        {
+          "title": "Creating a Sloped Floor",
+          "file": "1121_create_sloped_floor.htm"
+        }
+      ]
+    },
+    {
+      "id": "5.45",
+      "title": "Creating Dimensioning",
+      "posts": [
+        {
+          "title": "The Revit Family API Labs",
+          "file": "0199_family_api.htm#4"
+        },
+        {
+          "title": "Family Lab 2 – Create L-Shaped Column",
+          "file": "0237_rfa_labs.htm#2"
+        },
+        {
+          "title": "Creating a Dimension Label",
+          "file": "0297_dimension_label.htm"
+        },
+        {
+          "title": "Dimension Walls by Iterating Faces",
+          "file": "0539_dim_walls_it_face.htm"
+        },
+        {
+          "title": "Dimension Walls using FindReferencesByDirection",
+          "file": "0540_dim_walls_find_refs.htm"
+        },
+        {
+          "title": "Create Dimension between Two Lines",
+          "file": "0834_create_dimension.htm"
+        },
+        {
+          "title": "Dimensioning Family Instance Origin",
+          "file": "1241_dim_fam_inst_orig.htm"
+        }
+      ]
+    },
+    {
+      "id": "5.46",
+      "title": "Autodesk View and Data API",
+      "posts": [
+        {
+          "title": "Sneak Peek at the Autodesk 360 Viewer",
+          "file": "1163_updates_adva_viewer.htm#6"
+        },
+        {
+          "title": "Autodesk View and Data API",
+          "file": "1179_adva.htm"
+        },
+        {
+          "title": "View and Data API Presentation Material",
+          "file": "1188_adva_demo_material.htm"
+        },
+        {
+          "title": "Autodesk View and Data API Webinar",
+          "file": "1207_adva_webinar.htm"
+        },
+        {
+          "title": "ADVA Webinar notes",
+          "file": "1219_adva_free_au.htm#2"
+        }
+      ]
+    },
+    {
+      "id": "5.47",
+      "title": "Exporting Individual Element Geometry",
+      "posts": [
+        {
+          "title": "Export Walls and Floors to SAT",
+          "file": "0698_export_wall_floor_sat.htm"
+        }
+      ]
+    },
+    {
+      "id": "5.49",
+      "title": "Edit and Continue, Debug without Restart, Live Development",
+      "posts": [
+        {
+          "title": "Reload an Add-In to Debug",
+          "file": "0310_reload_addin.htm"
+        },
+        {
+          "title": "Dynamically Load and Debug Plug-ins",
+          "file": "0316_reload_debug.htm"
+        },
+        {
+          "title": "Debugging an Add-in Without Restarting Revit",
+          "file": "0588_debug_without_restart.htm"
+        },
+        {
+          "title": "Reload Add-in for Debug Without Restart",
+          "file": "0868_debug_without_restart.htm"
+        },
+        {
+          "title": "Visual Studio 2013 Supports 64 Bit Edit and Continue",
+          "file": "0973_family_api_addin.htm#03"
+        },
+        {
+          "title": "Debugging Revit 2014 API with Visual Studio 2013",
+          "file": "1065_debug_rvt2014_vs2013.htm"
+        },
+        {
+          "title": "Visual Studio 2013 May Partially Support Edit and Continue",
+          "file": "1079_edit_continue_vc2013.htm"
+        },
+        {
+          "title": "Live Development",
+          "file": "1317_live_development.htm#3"
+        },
+        {
+          "title": "Using AddInManager and Attach to Process to Edit and Continue",
+          "file": "1492_edit_continue.html#2"
+        },
+        {
+          "title": "Debug and Continue in a Revit Add-In",
+          "file": "1732_snoop_appearance_asset.html#3"
+        },
+        {
+          "title": "Apply Code Changes Debugging Revit Add-In",
+          "file": "1920_apply_code_changes.html#4"
+        }
+      ]
+    },
+    {
+      "id": "5.50",
+      "title": "DirectShape Element",
+      "posts": [
+        {
+          "title": "DirectShape Performance and Minimum Size",
+          "file": "1154_directshape_min_size.htm"
+        },
+        {
+          "title": "DirectShape versus Families, Category and Texture",
+          "file": "1239_directshape.htm"
+        },
+        {
+          "title": "From Hack to App – OBJ Mesh Import to DirectShape",
+          "file": "1283_directobjloader.htm"
+        }
+      ]
+    },
+    {
+      "id": "5.51",
+      "title": "Spatial Adjacency and Thermal Energy Analysis Model",
+      "posts": [
+        {
+          "title": "What's New in the Revit 2012 API – Analysis of room and space 3D geometry, Detailed Energy Analysis API, Conceptual Energy Analysis API",
+          "file": "0903_whats_new_2012.htm"
+        },
+        {
+          "title": "What's New in the Revit 2013 API – Thermal properties and gbXML Export",
+          "file": "0904_whats_new_2013.htm"
+        },
+        {
+          "title": "Space Adjacency for Heat Load Calculation",
+          "file": "0983_space_adjacency.htm#3"
+        },
+        {
+          "title": "Calculating Gross and Net Wall Areas",
+          "file": "1296_spatial_calculator.htm"
+        },
+        {
+          "title": "Gross and Net Wall Area Calculation Enhancement",
+          "file": "1309_spatial_calculator.htm"
+        }
+      ]
+    },
+    {
+      "id": "5.52",
+      "title": "The Revit API Util Classes are Often Overlooked",
+      "posts": []
+    },
+    {
+      "id": "5.54",
+      "title": "Structural Extensions, REX and Results Builder",
+      "posts": [
+        {
+          "title": "The REX SDK",
+          "file": "0570_rex.htm"
+        },
+        {
+          "title": "Extensions for Revit 2012",
+          "file": "0601_rex_2012.htm"
+        },
+        {
+          "title": "REX Content Generator",
+          "file": "0691_rex_content_generator.htm"
+        },
+        {
+          "title": "Security, Framing Cross Section Analyser and REX",
+          "file": "1076_framing_xsec_analyse.htm"
+        },
+        {
+          "title": "Framing Cross Section Analyser and REX in Revit 2015",
+          "file": "1294_framing_xsec_analyse.htm"
+        },
+        {
+          "title": "REX Add-In Development and Migration",
+          "file": "1384_rex.html"
+        },
+        {
+          "title": "REX SDK FreezeDrawing Sample",
+          "file": "1493_au_2017_1_sdk_freeze.html#5"
+        },
+        {
+          "title": "REX Extensions versus Revit Add-Ins",
+          "file": "1627_keynote_rex.html#5"
+        },
+        {
+          "title": "RST and the Structural Analysis SDK",
+          "file": "1658_rex.html"
+        },
+        {
+          "title": "REX SDK Templates for Revit Structure 2019",
+          "file": "1665_rex_sdk_vs_2019.html"
+        },
+        {
+          "title": "REX SDK and Structural Analysis SDK 2020",
+          "file": "1826_rex_2020_async_await.html#2"
+        }
+      ]
+    },
+    {
+      "id": "5.55",
+      "title": "DA4R – Design Automation for Revit",
+      "posts": [
+        {
+          "title": "The Field of View Overview of DA4R Resources",
+          "file": "https://fieldofviewblog.wordpress.com/revit"
+        },
+        {
+          "title": "Swallowing StairsAutomation Warnings",
+          "file": "1689_automation_warnings.html"
+        },
+        {
+          "title": "Auto-Run an Add-In for Design Automation",
+          "file": "1690_convert_addin_da4r.html"
+        },
+        {
+          "title": "Forge Design Automation for Revit",
+          "file": "1695_da4r.html"
+        },
+        {
+          "title": "Design Automation for Revit at AU and in Public",
+          "file": "1701_da4r_au.html"
+        },
+        {
+          "title": "IfcSpaceZoneBoundaries add-in",
+          "file": "https://github.com/jeremytammik/IfcSpaceZoneBoundaries"
+        },
+        {
+          "title": "Room Boundaries to CSV and WPF Template",
+          "file": "1713_room_boundary_wpf.html"
+        },
+        {
+          "title": "Preparing a Revit Add-in for Design Automation",
+          "file": "1720_prepare_da4r.html"
+        }
+      ]
+    },
+    {
+      "id": "5.56",
+      "title": "Element Identifiers in RVT, IFC, NW and Forge",
+      "posts": [
+        {
+          "title": "UniqueId, DWF and IFC GUID",
+          "file": "0104_uniqueid_dwf_ifc_guid.htm"
+        },
+        {
+          "title": "Element Id – Export, Unique, Navisworks and Other Ids",
+          "file": "1144_nw_unique_id.htm"
+        },
+        {
+          "title": "Understanding the Use of the UniqueId",
+          "file": "1277_uniqueid.htm"
+        },
+        {
+          "title": "Revit Object Unique ID's & IFC GUID's",
+          "file": "1359_share_learn_book.html#5"
+        },
+        {
+          "title": "Consistency of IFC GUID and UniqueId",
+          "file": "1459_ifc_guid_uniqueid.html"
+        },
+        {
+          "title": "Unique IDs for Forge Viewer Elements",
+          "file": "1577_forge_ids_install.html#4"
+        },
+        {
+          "title": "RevitLookup Search by Element and Unique Id",
+          "file": "1634_lookup_search_snoop.html"
+        },
+        {
+          "title": "Element Identifiers in RVT, IFC, NW and Forge",
+          "file": "1762_forge_rvt_nw_ifc_id.html"
+        },
+        {
+          "title": "Unique Id and IFC GUID Parameter",
+          "file": "1949_unique_ifc_guid.html"
+        }
+      ]
+    }
+  ]
+}
