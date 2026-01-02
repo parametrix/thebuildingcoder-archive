@@ -22,25 +22,25 @@
   --tbc-sidebar-min-width: 180px;
   --tbc-sidebar-max-width: 500px;
   
-  /* GitHub-style clean white theme */
-  --tbc-sidebar-bg: #ffffff;
-  --tbc-sidebar-bg-light: #f6f8fa;
-  --tbc-sidebar-text: #1f2328;
-  --tbc-sidebar-text-muted: #656d76;
-  --tbc-sidebar-hover: #f6f8fa;
-  --tbc-sidebar-active: #0969da;
-  --tbc-sidebar-border: #d1d9e0;
+  /* Soft, soothing light theme matching original blog styling */
+  --tbc-sidebar-bg: #f5f5f5;
+  --tbc-sidebar-bg-light: #ebebeb;
+  --tbc-sidebar-text: #333333;
+  --tbc-sidebar-text-muted: #666666;
+  --tbc-sidebar-hover: #e8e8e8;
+  --tbc-sidebar-active: #0066cc;
+  --tbc-sidebar-border: #dcdcdc;
   
-  /* Accent colors */
-  --tbc-accent-primary: #0969da;
-  --tbc-accent-secondary: #218bff;
-  --tbc-accent-highlight: #54aeff;
+  /* Accent colors - matching original link color */
+  --tbc-accent-primary: #0066cc;
+  --tbc-accent-secondary: #0077dd;
+  --tbc-accent-highlight: #3399ff;
   
   /* Search styling */
-  --tbc-search-bg: #f6f8fa;
-  --tbc-search-border: #d1d9e0;
-  --tbc-search-focus: #0969da;
-  --tbc-search-highlight: #fff8c5;
+  --tbc-search-bg: #ffffff;
+  --tbc-search-border: #cccccc;
+  --tbc-search-focus: #0066cc;
+  --tbc-search-highlight: #fffacd;
   
   /* Layout */
   --tbc-header-height: 50px;
@@ -130,7 +130,7 @@ body.tbc-has-sidebar {
 
 #tbc-resize-handle:hover,
 #tbc-resize-handle.dragging {
-  background: rgba(9, 105, 218, 0.4);
+  background: rgba(0, 102, 204, 0.4);
 }
 
 body.tbc-resizing {
@@ -196,7 +196,7 @@ body.tbc-resizing * {
 
 .tbc-search-wrapper:focus-within {
   border-color: var(--tbc-search-focus);
-  box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.15);
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
 }
 
 .tbc-search-icon {
