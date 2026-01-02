@@ -245,6 +245,59 @@
     return topics.map(topic => generateTopicHTML(topic)).join('');
   }
 
+  function generateArchiveHTML(archive) {
+    if (!archive || !archive.length) {
+      return '';
+    }
+    
+    // Filter out invalid years (like typos e.g., 1020 instead of 2020)
+    const validArchive = archive.filter(year => {
+      const yearNum = parseInt(year.title);
+      return yearNum >= 2000 && yearNum <= 2100;
+    });
+    
+    if (!validArchive.length) return '';
+    
+    const archiveTopics = validArchive.map(year => {
+      const isExpanded = state.expandedTopics.has(year.id);
+      const expandedClass = isExpanded ? ' expanded' : '';
+      
+      const postsHTML = year.posts.map(post => {
+        const isCurrent = isCurrentPost(post.file);
+        const currentClass = isCurrent ? ' current' : '';
+        return `<a href="${escapeHtml(post.file)}" class="tbc-post-link${currentClass}" title="${escapeHtml(post.title)}">${escapeHtml(post.title)}</a>`;
+      }).join('');
+      
+      return `
+        <div class="tbc-topic tbc-archive-year${expandedClass}" data-topic-id="${escapeHtml(year.id)}">
+          <div class="tbc-topic-header" tabindex="0" role="button" aria-expanded="${isExpanded}">
+            <span class="tbc-topic-toggle">▶</span>
+            <span class="tbc-topic-title">
+              <span class="tbc-topic-id">📅</span>
+              ${escapeHtml(year.title)}
+            </span>
+            <span class="tbc-topic-count">(${year.posts.length})</span>
+          </div>
+          <div class="tbc-topic-posts">
+            ${postsHTML}
+          </div>
+        </div>
+      `;
+    }).join('');
+    
+    return `
+      <div class="tbc-archive-section">
+        <div class="tbc-section-header">
+          <span class="tbc-section-icon">📚</span>
+          <span class="tbc-section-title">Chronological Archive</span>
+          <span class="tbc-section-count">(${validArchive.reduce((sum, y) => sum + y.posts.length, 0)} posts)</span>
+          <button class="tbc-toggle-all" title="Toggle all years">±</button>
+        </div>
+        ${archiveTopics}
+      </div>
+    `;
+  }
+
   function generateTopicHTML(topic, isSubTopic = false) {
     const isExpanded = state.expandedTopics.has(topic.id);
     const postCount = topic.posts ? topic.posts.length : 0;
@@ -395,10 +448,30 @@
       navLinksContainer.innerHTML = generateNavLinksHTML(state.tocData.navigation);
     }
     
-    // Render topics
+    // Render topics and archive
     const topicsContainer = document.getElementById('tbc-topics-container');
     if (topicsContainer) {
-      topicsContainer.innerHTML = generateTopicsHTML(state.tocData.topics);
+      let html = '';
+      
+      // Section header for topics
+      html += `
+        <div class="tbc-topics-section">
+          <div class="tbc-section-header">
+            <span class="tbc-section-icon">📑</span>
+            <span class="tbc-section-title">Topic Groups</span>
+            <span class="tbc-section-count">(${state.tocData.totalPostLinks || 0} posts)</span>
+            <button class="tbc-toggle-all" title="Toggle all topics">±</button>
+          </div>
+          ${generateTopicsHTML(state.tocData.topics)}
+        </div>
+      `;
+      
+      // Archive section
+      if (state.tocData.archive && state.tocData.archive.length) {
+        html += generateArchiveHTML(state.tocData.archive);
+      }
+      
+      topicsContainer.innerHTML = html;
     }
     
     // Re-init topic toggles after rendering
@@ -682,6 +755,41 @@
         }
       });
     });
+    
+    // Toggle-all buttons
+    document.querySelectorAll('.tbc-toggle-all').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const section = btn.closest('.tbc-topics-section, .tbc-archive-section');
+        if (section) {
+          toggleAllInSection(section);
+        }
+      });
+    });
+  }
+
+  function toggleAllInSection(section) {
+    const topics = section.querySelectorAll('.tbc-topic');
+    const expandedCount = section.querySelectorAll('.tbc-topic.expanded').length;
+    const shouldExpand = expandedCount < topics.length / 2;
+    
+    topics.forEach(topic => {
+      const topicId = topic.dataset.topicId;
+      if (shouldExpand) {
+        topic.classList.add('expanded');
+        if (topicId) state.expandedTopics.add(topicId);
+      } else {
+        topic.classList.remove('expanded');
+        if (topicId) state.expandedTopics.delete(topicId);
+      }
+      
+      const header = topic.querySelector('.tbc-topic-header');
+      if (header) {
+        header.setAttribute('aria-expanded', shouldExpand);
+      }
+    });
+    
+    saveExpandedTopics();
   }
 
   function toggleTopic(topicElement) {

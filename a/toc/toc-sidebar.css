@@ -283,6 +283,74 @@ body.tbc-resizing * {
 }
 
 /* ================================
+   Section Headers (Topics/Archive)
+   ================================ */
+.tbc-section-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 12px 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--tbc-sidebar-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--tbc-sidebar-border);
+  margin-bottom: 4px;
+  position: sticky;
+  top: 0;
+  background: var(--tbc-sidebar-bg);
+  z-index: 5;
+}
+
+.tbc-section-icon {
+  font-size: 14px;
+}
+
+.tbc-section-title {
+  flex: 1;
+}
+
+.tbc-section-count {
+  font-weight: 400;
+  font-size: 11px;
+  color: var(--tbc-sidebar-text-muted);
+}
+
+.tbc-toggle-all {
+  background: none;
+  border: 1px solid var(--tbc-sidebar-border);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--tbc-sidebar-text-muted);
+  padding: 2px 8px;
+  transition: all var(--tbc-transition-speed);
+}
+
+.tbc-toggle-all:hover {
+  background: var(--tbc-sidebar-hover);
+  color: var(--tbc-sidebar-text);
+}
+
+.tbc-topics-section,
+.tbc-archive-section {
+  margin-bottom: 8px;
+}
+
+.tbc-archive-section .tbc-section-header {
+  border-top: 2px solid var(--tbc-sidebar-border);
+  margin-top: 8px;
+  padding-top: 14px;
+}
+
+/* Archive year styling */
+.tbc-archive-year .tbc-topic-id {
+  font-size: 12px;
+}
+
+/* ================================
    Topic Groups
    ================================ */
 .tbc-topic {
