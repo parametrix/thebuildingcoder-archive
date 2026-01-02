@@ -12,8 +12,7 @@ The hosted site will be accessible at:
 
 ## ✅ Current Status
 
-**The conversion is COMPLETE.** The repository at `C:\Users\fsebastian\source\repos\TheBuildingCoder\tbc` 
-has been fully processed and is ready for GitHub Pages deployment.
+**The conversion is COMPLETE.** The repository has been fully processed and is ready for GitHub Pages deployment.
 
 ### Completed Work
 
