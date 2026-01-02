@@ -21,17 +21,28 @@
   --tbc-sidebar-width: 280px;
   --tbc-sidebar-min-width: 180px;
   --tbc-sidebar-max-width: 500px;
-  --tbc-sidebar-bg: #1a365d;
-  --tbc-sidebar-bg-light: #234876;
-  --tbc-sidebar-text: #e2e8f0;
-  --tbc-sidebar-text-muted: #a0aec0;
-  --tbc-sidebar-hover: #2c5282;
-  --tbc-sidebar-active: #4299e1;
-  --tbc-sidebar-border: #2d4a6f;
-  --tbc-search-bg: #ffffff;
-  --tbc-search-border: #cbd5e0;
-  --tbc-search-focus: #4299e1;
-  --tbc-search-highlight: #fff59d;
+  
+  /* Elegant dark theme - charcoal with warm undertones */
+  --tbc-sidebar-bg: #2d2d2d;
+  --tbc-sidebar-bg-light: #3a3a3a;
+  --tbc-sidebar-text: #f5f5f5;
+  --tbc-sidebar-text-muted: #a8a8a8;
+  --tbc-sidebar-hover: #404040;
+  --tbc-sidebar-active: #6b8cae;
+  --tbc-sidebar-border: #444444;
+  
+  /* Accent colors */
+  --tbc-accent-primary: #6b8cae;
+  --tbc-accent-secondary: #8fa5b8;
+  --tbc-accent-highlight: #a3c1d4;
+  
+  /* Search styling */
+  --tbc-search-bg: #3a3a3a;
+  --tbc-search-border: #555555;
+  --tbc-search-focus: #6b8cae;
+  --tbc-search-highlight: #e8c547;
+  
+  /* Layout */
   --tbc-header-height: 50px;
   --tbc-search-height: 55px;
   --tbc-transition-speed: 0.2s;
@@ -81,6 +92,7 @@ body.tbc-has-sidebar {
 #tbc-content {
   margin-left: var(--tbc-sidebar-width);
   min-height: 100vh;
+  padding: 0 20px 20px 30px; /* Add spacing: top right bottom left */
   transition: margin-left var(--tbc-transition-speed) ease;
 }
 
@@ -171,7 +183,7 @@ body.tbc-resizing * {
 }
 
 .tbc-search-icon {
-  color: #718096;
+  color: var(--tbc-sidebar-text-muted);
   font-size: 14px;
   margin-right: 8px;
   flex-shrink: 0;
@@ -184,12 +196,12 @@ body.tbc-resizing * {
   font-size: 14px;
   padding: 2px 0;
   background: transparent;
-  color: #1a202c;
+  color: var(--tbc-sidebar-text);
   min-width: 0;
 }
 
 #tbc-search-input::placeholder {
-  color: #a0aec0;
+  color: var(--tbc-sidebar-text-muted);
 }
 
 #tbc-search-clear {
@@ -470,9 +482,10 @@ body.tbc-resizing * {
    ================================ */
 .tbc-search-highlight {
   background-color: var(--tbc-search-highlight);
-  color: #1a202c;
+  color: #2d2d2d;
   padding: 0 2px;
   border-radius: 2px;
+  font-weight: 500;
 }
 
 .tbc-search-no-match {
@@ -573,6 +586,7 @@ body.tbc-resizing * {
   
   #tbc-content {
     margin-left: 0 !important;
+    padding: 0 15px 15px 15px; /* Smaller padding on mobile */
   }
   
   #tbc-mobile-toggle {
