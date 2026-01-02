@@ -93,8 +93,24 @@ body.tbc-has-sidebar {
 #tbc-content {
   margin-left: var(--tbc-sidebar-width);
   min-height: 100vh;
-  padding: 0 20px 20px 30px; /* Add spacing: top right bottom left */
+  padding: 20px 40px 20px 40px;
   transition: margin-left var(--tbc-transition-speed) ease;
+}
+
+/* Override the inline body styles when sidebar is present */
+body.tbc-has-sidebar {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Allow article content to use full width while maintaining readability */
+#tbc-content article,
+#tbc-content > .nav,
+#tbc-content > article {
+  max-width: 900px;
+  margin-left: 0;
+  margin-right: auto;
 }
 
 /* ================================
@@ -587,7 +603,13 @@ body.tbc-resizing * {
   
   #tbc-content {
     margin-left: 0 !important;
-    padding: 0 15px 15px 15px; /* Smaller padding on mobile */
+    padding: 60px 15px 15px 15px; /* Top padding for mobile toggle button */
+  }
+  
+  #tbc-content article,
+  #tbc-content > .nav,
+  #tbc-content > article {
+    max-width: none;
   }
   
   #tbc-mobile-toggle {
