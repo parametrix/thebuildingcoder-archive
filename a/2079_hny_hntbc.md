@@ -1,88 +1,64 @@
-Jeremy's Retirement, Continuation of the Blog, Revit SDK 2026.2
-July 25, 2025
+---
+title: "Happy New Year, New TBC"
+date: 2026-01-07
+---
 
-By [Pedro Nadal](https://adndevblog.typepad.com/aec/pedro-nadal.html)
+<!--
 
-* [Jeremy's Retirement and continuation of the Blog](#section1)
-* [Revit 2026.2 SDK release](#section2)
-* [API additions](#section3)
-* [CefSharp Removal](#section4)
+- tbc rejuvenation
+  https://www.linkedin.com/posts/jeremytammik_about-the-author-activity-7413611822068482048-j_Rs
+  Happy New Year, Happy New The Building Coder!
+  Typepad died, and so did The Building Coder incarnation on the typepad.com platform.
+  Evil; web page URLs (should) promise stability.
+  However, The Building Coder blog source has always been available in the tbc repository on GitHUub:
+  https://github.com/jeremytammik/tbc 
+  Based on that, several new incarnations of The Building Coder are now online. 
+  First and foremost, tbc includes its own online rendering using GitHub pages:
+  https://jeremytammik.github.io/tbc/a
+  The Building Coder can also be viewed at:
+  https://tbc.aecwithcode.com/ -- by Tomo Sugeta AecWithCode
+  https://thebuildingcoder.archilabs.ai/ -- by ArchiLabs.ai
 
-**Jeremy's Retirement and continuation of the Blog**
+-->
 
-After almost 17 years at the forefront of the Revit developer community, Jeremy Tammik has officially stepped into retirement.
+### Happy New Year, Happy New TBC
 
-For many in the AEC and developer space, The Building Coder has been more than just a blog — it has been a beacon of clarity, consistency, and generosity. Jeremy’s deep expertise, tireless dedication, and ability to make even the most complex Revit API topics approachable have left a lasting impact on thousands of developers, partners, and colleagues around the world.
+Happy New Year everybody!
 
-Although Jeremy is now enjoying a well-earned retirement, we’re happy to share that he is going to remain as an occasional contributor to the blog. His voice and insights are always welcome, and we look forward to hearing from him again in future posts.
+My first blog post since retiring in June last year.
 
-Going forward, the Developer Advocacy and Support team will join the authorship of The Building Coder. While we all know that no single person can truly fill Jeremy’s shoes, we as a team are committed to continuing the blog in the same spirit of openness, technical excellence, and community support that he so thoughtfully fostered.
+Been pretty busy with other things.
 
-Thank you, Jeremy, for everything you’ve built — not just in terms of code and content, but in community.
+#### The Building Coder is Dead
 
-**Revit 2026.2 SDK release**
+Shortly after my retirement, Typepad was discontinued, and The Building Coder main site disappeared with it.
+That is not nice at all; in theory, publishing something in the web comes with a promise to maintain it and its URL in perpetuity.
+Unfortunately, apparently only nerds keep their promises.
 
-Alongside the [recent release of Revit 2026.2](https://www.autodesk.com/blogs/aec/2025/07/09/whats-new-in-revit-2026-2-residential-content-and-productivity-enhancements/), which introduced enhancements in residential modeling, content usability, and productivity tools, Autodesk has also published the Revit 2026.6 SDK update.
+#### Long Live The Building Coder
 
-You can review the full list of Revit improvements in the [official Revit 2026.2 release notes](https://help.autodesk.com/view/RVT/2026/ENU/?guid=RevitReleaseNotes_2026updates_2026_2_html).
+Luckily, I have started publishing and maintaining 
+all [The Building Coder source code on GitHub](https://jeremytammik.github.io/tbc/a/1036_tbc_samples_github.htm) 
+twelve years ago in
+the [tbc repository](https://github.com/jeremytammik/tbc)
+as well as publishing a rough index of all posts via GitHub pages.
 
-The latest Revit SDK version is available for download at: [aps.autodesk.com/developer/overview/revit](https://aps.autodesk.com/developer/overview/revit)  
-or direct download link: [Revit 2026.2 SDK](https://autodesk-adn-transfer.s3.us-west-2.amazonaws.com/ADN+Extranet/Revit/REVIT_2026_2_SDK.msi)
+Based on that repo, at least two fresh copies were published:
 
-**API Additions**
+- [The Building Coder on AecWithCode.com](https://tbc.aecwithcode.com/) by Tomo Sugeta
+- [The Building Coder on ArchiLabs.ai](https://thebuildingcoder.archilabs.ai/) by ArchiLabs.ai
 
-**Add-In Manager: Grouping Add-ins in the UI**
+#### The Building Coder is Live
 
-A small but useful improvement has been introduced in the **RevitAddInUtility** API to help better organize your tools inside Revit’s Add-In Manager.
+Just in time to celebrate the new year 2026, 
+[Francis Sebastian](https://www.autodesk.com/autodesk-university/profile/wTCDw%2BfYZb2%2ByicQKaYZyQ%3D%3D) 
+of [SOM](https://www.som.com/), 
+aka [@parametrix](https://github.com/parametrix),
+completely reinvigorated The Building Coder.
 
-A new optional flag called:
+He modified it for fully offline local hosting, converting all obsolete internal Typepad links to point to local files, allowing you to browse the entire blog archive without an Internet connection. 
 
-```
-RevitAddInManifestSettings.UnifyInAddInManager
-```
+He also implemented new functionality to view the topic groups and chrnological index online in 
+the [tbc GitHub pages]()
 
-allows developers to **group multiple AddIn entries into a single line** in both the Add-Ins Manager and Admin Add-Ins Manager UI.
-
-If you have several external commands or applications defined in the same manifest file, enabling this flag can simplify the user interface by presenting them as a single item, avoiding clutter and potential confusion.
-
-**Sample manifest with grouping enabled:**
-
-```
-<?xml version="1.0" encoding="utf-8"?>
-<RevitAddIns>
-  <AddIn Type="DBApplication">
-    <Name>SampleApplication</Name>
-    <FullClassName>SampleApplication.Application</FullClassName>
-    <Assembly>SampleApplication.dll</Assembly>
-    <ClientId>C96B32A3-98C6-4B47-99DA-562E64689C6F</ClientId>
-    <VendorId>Autodesk</VendorId>
-  </AddIn>
-  <ManifestSettings>
-    <UnifyInAddInManager>True</UnifyInAddInManager>
-  </ManifestSettings>
-</RevitAddIns>
-```
-
-When this setting is enabled (True), users won’t be able to toggle individual commands on/off; the entire group is managed as a single unit.
-
-**MEP API: Resetting Fabrication Assembly Types**
-
-In Revit 2026.2, a change was made to how **FabricationPart** elements are organized within **assembly types**.
-
-Originally, in Revit 2026 RTM, multiple fabrication parts could share the same assembly type based on the similarity of geometry and transformation. However, based on user feedback, the behavior has been reverted: **each FabricationPart now has its own unique assembly type**, as it was in previous versions.
-
-To support this change, a new method has been introduced:
-
-```
-FabricationPartType.ResetAssemblyTypes(Document doc)
-```
-
-This method allows you to **manually reset all assembly type definitions** for fabrication parts in your model. Use this method during migration workflows or when consistency across fabrication elements is critical.
-
-**CefSharp Removal**
-
-The **CefSharp** dependency has been fully removed from Revit as of the 2026 release. This change was already announced in the initial **Revit 2026 SDK**, but it's worth highlighting again due to its impact on many existing add-ins.
-
-If your add-ins relied on CefSharp to render HTML-based user interfaces within Revit, you may consider migrating to an alternative solution. The recommended approach is to adopt **Microsoft Edge WebView2**, which is actively supported and provides modern capabilities for hosting web content in desktop applications.
-
-Note: Starting with Revit 2026, the required **WebView2 DLLs are already included** in the Revit installation, so no additional runtime installation is needed for end users.
+https://github.com/jeremytammik/tbc?tab=readme-ov-file#offline-local-hosting

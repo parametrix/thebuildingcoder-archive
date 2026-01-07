@@ -8,7 +8,8 @@ It also boasts a complete index of all posts.
 
 ## Offline Local Hosting
 
-This fork has been modified for **fully offline local hosting**. All internal Typepad links have been converted to point to local files, allowing you to browse the entire blog archive without an internet connection.
+Beginning 2026, The Building Coder has been modified for **fully offline local hosting**. 
+All obsolete internal Typepad links have been converted to point to local files, allowing you to browse the entire blog archive without an internet connection.
 
 ### Changes Made
 
@@ -23,6 +24,7 @@ This fork has been modified for **fully offline local hosting**. All internal Ty
 1. Navigate to the local `tbc` repository root/
 
 2. Start a local HTTP server from the repository root:
+
    ```bash
    python -m http.server 9000 --directory .
    ```
@@ -33,13 +35,13 @@ This fork has been modified for **fully offline local hosting**. All internal Ty
 
 ### Original Repository
 
-The original repository is available at: https://github.com/jeremytammik/tbc
+The obsolete Typepad-hosted version is still available in the subdirectory [a_backup/](a_backup/)
 
 Each index entry includes a pointer to both the local source HTML or MD markdown and the official, global, Typepad-hosted blog entry.
 
 You can download this repository to your local system to perform your own global text search or ensure offline access.
 
-Please let me know if you discover any issues with this.
+Please submit an [issue](https://github.com/jeremytammik/tbc/issues) if you discover any problem.
 
 Thank you!
 
