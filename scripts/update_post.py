@@ -232,6 +232,74 @@ def update_chrono(filename, new_title=None, new_date=None, dry_run=False):
     return False
 
 
+def update_all_posts_section(dry_run=False):
+    """
+    Regenerate the complete 'All Posts' table from chrono-data.json.
+    This ensures the section stays synchronized with the chronological data.
+    
+    Args:
+        dry_run: If True, show preview without writing
+        
+    Returns:
+        bool: True if successful, False otherwise
+    """
+    if not CHRONO_FILE.exists():
+        print(f"Warning: Chrono file not found: {CHRONO_FILE}")
+        return False
+    
+    if not INDEX_FILE.exists():
+        print(f"Warning: Index file not found: {INDEX_FILE}")
+        return False
+    
+    try:
+        chrono_data = json.loads(CHRONO_FILE.read_text(encoding='utf-8'))
+    except json.JSONDecodeError as e:
+        print(f"Warning: Could not parse chrono file: {e}")
+        return False
+    
+    posts = chrono_data.get('posts', [])
+    
+    # Generate table rows
+    rows = []
+    for post in posts:
+        post_num = post.get('num', 0)
+        date = post.get('date', '')
+        title = post.get('title', '')
+        filename = post.get('file', '')
+        categories = ''  # Not in chrono-data.json
+        
+        row = (
+            f'<tr><td align="right">{post_num}</td>'
+            f'<td>{date}</td>'
+            f'<td><a href="{filename}">{title}</a>'
+            f'&nbsp;&nbsp;&nbsp;<a href="{filename}">web</a>'
+            f'&nbsp;&nbsp;&nbsp;&nbsp;</td>'
+            f'<td>{categories}</td></tr>'
+        )
+        rows.append(row)
+    
+    table_rows_html = '\n'.join(rows)
+    
+    # Update index.html
+    content = INDEX_FILE.read_text(encoding='utf-8')
+    pattern = r'(<h3>All Posts</h3>.*?<th>Categories</th>\s*</tr>)(.*?)(</table>)'
+    match = re.search(pattern, content, flags=re.DOTALL)
+    
+    if not match:
+        print("Warning: Could not find 'All Posts' table in index.html")
+        return False
+    
+    new_content = content[:match.start(2)] + '\n' + table_rows_html + '\n' + content[match.end(2):]
+    
+    if dry_run:
+        print(f"[DRY RUN] Would update 'All Posts' section with {len(posts)} posts")
+    else:
+        INDEX_FILE.write_text(new_content, encoding='utf-8')
+        print(f"Updated 'All Posts' section with {len(posts)} posts")
+    
+    return True
+
+
 def update_toc(filename, new_title=None, dry_run=False):
     """Update the post title in toc-data.json if it's in a topic."""
     if not TOC_FILE.exists():
@@ -323,6 +391,10 @@ def update_post(filename, title=None, date=None, categories=None,
     # Update toc-data.json (only for title changes)
     if title:
         results['toc'] = update_toc(filename, title, dry_run)
+    
+    # Update "All Posts" section in index.html if chrono was updated
+    if results['chrono']:
+        update_all_posts_section(dry_run)
     
     # Summary
     print()
