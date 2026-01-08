@@ -17,6 +17,7 @@ Date: January 4, 2026
 """
 
 import argparse
+import html
 import json
 import re
 import sys
@@ -208,12 +209,12 @@ def update_all_posts_section(dry_run=False):
         categories = ''  # Not in chrono-data.json
         
         row = (
-            f'<tr><td align="right">{post_num}</td>'
-            f'<td>{date}</td>'
-            f'<td><a href="{filename}">{title}</a>'
-            f'&nbsp;&nbsp;&nbsp;<a href="{filename}">web</a>'
+            f'<tr><td align="right">{html.escape(str(post_num))}</td>'
+            f'<td>{html.escape(str(date))}</td>'
+            f'<td><a href="{html.escape(filename, quote=True)}">{html.escape(title)}</a>'
+            f'&nbsp;&nbsp;&nbsp;<a href="{html.escape(filename, quote=True)}">web</a>'
             f'&nbsp;&nbsp;&nbsp;&nbsp;</td>'
-            f'<td>{categories}</td></tr>'
+            f'<td>{html.escape(categories)}</td></tr>'
         )
         rows.append(row)
     
