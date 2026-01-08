@@ -210,9 +210,9 @@
           <span class="tbc-search-icon">🔍</span>
           <input type="text" 
                  id="tbc-search-input" 
-                 placeholder="Search posts..." 
+                 placeholder="Search post titles..." 
                  autocomplete="off"
-                 aria-label="Search posts">
+                 aria-label="Search post titles">
           <button id="tbc-search-clear" class="hidden" aria-label="Clear search">×</button>
         </div>
         <div id="tbc-search-results"></div>
