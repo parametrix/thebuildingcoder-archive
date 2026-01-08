@@ -210,11 +210,11 @@ def update_all_posts_section(dry_run=False):
         
         row = (
             f'<tr><td align="right">{post_num}</td>'
-            f'<td>{date}</td>'
+            f'<td>{html.escape(date)}</td>'
             f'<td><a href="{html.escape(filename)}">{html.escape(title)}</a>'
             f'&nbsp;&nbsp;&nbsp;<a href="{html.escape(filename)}">web</a>'
             f'&nbsp;&nbsp;&nbsp;&nbsp;</td>'
-            f'<td>{categories}</td></tr>'
+            f'<td>{html.escape(categories)}</td></tr>'
         )
         rows.append(row)
     
