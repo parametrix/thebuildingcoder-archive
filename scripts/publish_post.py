@@ -115,7 +115,6 @@ def convert_markdown_to_html(md_content):
         'fenced_code',
         'tables',
         'toc',
-        'nl2br',
         'sane_lists',
     ])
     html = md.convert(md_content)
