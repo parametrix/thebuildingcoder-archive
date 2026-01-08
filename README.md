@@ -52,6 +52,16 @@ publishing [The Building Coder source and index on GitHub](http://thebuildingcod
 and [hosting The 3D Web Coder source HTML and index on GitHub pages](http://the3dwebcoder.typepad.com/blog/2015/03/hosting-a-node-server-on-heroku-pages-and-3d-web.html#2).
 
 
+## Archive Mirrors
+
+Several arcghive mirrors of The Building Coder were published afte Jerem'y retirement in June 2025.
+Here are three of them:
+
+- [The Building Coder on ArchiLabs.ai](https://thebuildingcoder.archilabs.ai/) by ArchiLabs.ai
+- [The Building Coder on AecWithCode.com](https://tbc.aecwithcode.com/) by Tomo Sugeta, [GitHub tsoumdoa/tbc-mirror-blog](https://github.com/tsoumdoa/tbc-mirror-blog)
+- [The Building Coder &ndash; Modern MDX Mirror](https://github.com/tsoumdoa/tbc-mirror-content-preparation) by Tomo Sugeta
+
+
 ## Author
 
 Jeremy Tammik,
