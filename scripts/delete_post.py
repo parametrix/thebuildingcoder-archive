@@ -209,7 +209,7 @@ def update_all_posts_section(dry_run=False):
         categories = ''  # Not in chrono-data.json
         
         row = (
-            f'<tr><td align="right">{post_num}</td>'
+            f'<tr><td align="right">{html.escape(str(post_num))}</td>'
             f'<td>{html.escape(date)}</td>'
             f'<td><a href="{html.escape(filename)}">{html.escape(title)}</a>'
             f'&nbsp;&nbsp;&nbsp;<a href="{html.escape(filename)}">web</a>'
