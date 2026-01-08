@@ -130,7 +130,7 @@ Your post content starts here...
 
 ### Example Complete Post
 
-```markdown
+~~~markdown
 ---
 title: "Working with Wall Geometry in Revit API"
 date: 2026-01-05
@@ -159,7 +159,11 @@ foreach (GeometryObject geomObj in geomElem)
         ProcessSolid(solid);
     }
 }
+
+// continue the rest of the the c# code here and close the code block...
+
 ```
+~~~
 
 #### Extracting Faces
 
