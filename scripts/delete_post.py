@@ -210,7 +210,7 @@ def update_all_posts_section(dry_run=False):
         
         row = (
             f'<tr><td align="right">{html.escape(str(post_num))}</td>'
-            f'<td>{html.escape(date)}</td>'
+            f'<td>{html.escape(str(date))}</td>'
             f'<td><a href="{html.escape(filename, quote=True)}">{html.escape(title)}</a>'
             f'&nbsp;&nbsp;&nbsp;<a href="{html.escape(filename, quote=True)}">web</a>'
             f'&nbsp;&nbsp;&nbsp;&nbsp;</td>'
