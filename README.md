@@ -73,7 +73,7 @@ Jeremy Tammik,
 
 ## Offline Hosting Modifications
 
-Modifications for offline hosting by parametrix, January 2026.
+Modifications for offline hosting by [@parametrix](https://github.com/parametrix), January 2026.
 
 ## License
 
