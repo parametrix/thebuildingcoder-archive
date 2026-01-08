@@ -55,7 +55,7 @@ and [hosting The 3D Web Coder source HTML and index on GitHub pages](http://the3
 ## Archive Mirrors
 
 Several archive mirrors of The Building Coder were published after Jeremy's retirement in June 2025.
-Here are three of them:
+Here are a few:
 
 - [The Building Coder on ArchiLabs.ai](https://thebuildingcoder.archilabs.ai/) by ArchiLabs.ai
 - [The Building Coder on AecWithCode.com](https://tbc.aecwithcode.com/) by Tomo Sugeta, [GitHub tsoumdoa/tbc-mirror-blog](https://github.com/tsoumdoa/tbc-mirror-blog)
