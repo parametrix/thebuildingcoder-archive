@@ -1016,6 +1016,18 @@ function initSearch() {
 When user clicks a search result, show matching content snippets:
 
 ```javascript
+// Helper function to escape HTML special characters
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+// Helper function to escape special regex characters
+function escapeRegex(text) {
+  return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
 function showSearchResultDetails(postNum) {
   if (!state.searchIndex || !state.searchQuery) return;
   
