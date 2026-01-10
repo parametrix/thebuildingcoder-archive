@@ -656,27 +656,47 @@ async function loadSearchIndex() {
   
   try {
     const url = basePath + CONFIG.searchIndexUrl;
-    const response = await fetch(url);
+    // Add a timeout to prevent the fetch from hanging indefinitely
+    const FETCH_TIMEOUT_MS = 10000; // 10 seconds
+    const controller = new AbortController();
+    const { signal } = controller;
+    let timeoutId;
     
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
-    }
-    
-    const index = await response.json();
-    state.searchIndex = index;
-    state.searchIndexLoaded = true;
-    
-    // Cache it
     try {
-      localStorage.setItem('tbc-search-index', JSON.stringify(index));
-      localStorage.setItem('tbc-search-index-time', Date.now().toString());
-    } catch (e) {
-      console.warn('Failed to cache search index');
+      timeoutId = window.setTimeout(() => {
+        controller.abort();
+      }, FETCH_TIMEOUT_MS);
+      
+      const response = await fetch(url, { signal });
+      
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+      
+      const index = await response.json();
+      state.searchIndex = index;
+      state.searchIndexLoaded = true;
+      
+      // Cache it
+      try {
+        localStorage.setItem('tbc-search-index', JSON.stringify(index));
+        localStorage.setItem('tbc-search-index-time', Date.now().toString());
+      } catch (e) {
+        console.warn('Failed to cache search index');
+      }
+      
+      console.log(`Search index loaded: ${index.totalPosts} posts`);
+    } finally {
+      if (timeoutId !== undefined) {
+        clearTimeout(timeoutId);
+      }
     }
-    
-    console.log(`Search index loaded: ${index.totalPosts} posts`);
   } catch (error) {
-    console.error('Failed to load search index:', error);
+    if (error.name === 'AbortError') {
+      console.error('Failed to load search index: request timed out');
+    } else {
+      console.error('Failed to load search index:', error);
+    }
     state.searchIndexLoaded = false;
     // Content search will be disabled
   }
