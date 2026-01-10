@@ -171,7 +171,7 @@ from typing import Dict, List, Optional
 
 # Third-party (beautifulsoup4 already in requirements.txt)
 from bs4 import BeautifulSoup
-import html
+import html as html_lib
 ```
 
 **Implementation**:
