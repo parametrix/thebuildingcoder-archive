@@ -621,18 +621,21 @@ async function loadSearchIndex() {
     
     if (cached && cacheTime) {
       const cachedData = JSON.parse(cached);
-      const cacheTimeNum = Number.parseInt(cacheTime, 10);
-
-      if (Number.isFinite(cacheTimeNum) && cacheTimeNum >= 0) {
-        const age = Date.now() - cacheTimeNum;
-        
-        // Invalidate if cache expired, age is valid, or version doesn't match expected
-        if (age >= 0 && age < CONFIG.searchCacheTime && cachedData.version === '1.0') {
-          console.log('Using cached search index');
-          state.searchIndex = cachedData;
-          state.searchIndexLoaded = true;
-          return;
-        }
+      const age = Date.now() - parseInt(cacheTime, 10);
+      
+      // Validate cache structure
+      const isValid = cachedData && 
+                      typeof cachedData === 'object' &&
+                      typeof cachedData.version === 'string' &&
+                      typeof cachedData.totalPosts === 'number' &&
+                      Array.isArray(cachedData.posts);
+      
+      // Invalidate if cache expired, version doesn't match, or structure is invalid
+      if (isValid && age >= 0 && age < CONFIG.searchCacheTime && cachedData.version === '1.0') {
+        console.log('Using cached search index');
+        state.searchIndex = cachedData;
+        state.searchIndexLoaded = true;
+        return;
       }
     }
   } catch (e) {
