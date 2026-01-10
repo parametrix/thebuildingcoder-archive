@@ -403,7 +403,7 @@ if __name__ == '__main__':
 **Error Handling**:
 - Missing HTML files: Log warning, include post with empty content
 - Parse errors: Log warning, skip content extraction
-- Encoding errors: Try multiple encodings (utf-8, latin-1, cp1252)
+- Encoding errors: Decode using UTF-8; on failure, log a warning and skip or record empty content
 - File system errors: Fail gracefully with informative error
 
 **Testing**:
