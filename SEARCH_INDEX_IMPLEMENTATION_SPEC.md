@@ -1047,8 +1047,15 @@ function rankSearchResults(posts, query) {
     // Content contains query: low score
     else if (post.contentPreview.includes(lowerQuery)) score += 10;
     
-    // Boost recent posts slightly
-    score += (post.num / 10000);
+    // Boost recent posts slightly based on post date (more robust than post number)
+    const now = Date.now();
+    const postTime = new Date(post.date).getTime();
+    if (!Number.isNaN(postTime)) {
+      const daysOld = (now - postTime) / (1000 * 60 * 60 * 24);
+      // Posts newer than 1 year get a boost between 1 (new) and 0 (1 year old)
+      const recencyBoost = Math.max(0, 1 - Math.min(daysOld, 365) / 365);
+      score += recencyBoost;
+    }
     
     return { ...post, score };
   }).sort((a, b) => b.score - a.score);
