@@ -621,7 +621,7 @@ async function loadSearchIndex() {
     
     if (cached && cacheTime) {
       const cachedData = JSON.parse(cached);
-      const age = Date.now() - parseInt(cacheTime);
+      const age = Date.now() - parseInt(cacheTime, 10);
       
       // Validate cache structure
       const isValid = cachedData && 
@@ -631,7 +631,7 @@ async function loadSearchIndex() {
                       Array.isArray(cachedData.posts);
       
       // Invalidate if cache expired, version doesn't match, or structure is invalid
-      if (isValid && age < CONFIG.searchCacheTime && cachedData.version === '1.0') {
+      if (isValid && age >= 0 && age < CONFIG.searchCacheTime && cachedData.version === '1.0') {
         console.log('Using cached search index');
         state.searchIndex = cachedData;
         state.searchIndexLoaded = true;
