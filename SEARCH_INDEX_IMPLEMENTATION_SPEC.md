@@ -622,17 +622,26 @@ async function loadSearchIndex() {
     if (cached && cacheTime) {
       const cachedData = JSON.parse(cached);
       const cacheTimeNum = Number.parseInt(cacheTime, 10);
-
+      
       if (Number.isFinite(cacheTimeNum) && cacheTimeNum >= 0) {
         const age = Date.now() - cacheTimeNum;
+
+        // Validate cache structure
+        const isValid = cachedData && 
+                        typeof cachedData === 'object' &&
+                        typeof cachedData.version === 'string' &&
+                        typeof cachedData.totalPosts === 'number' &&
+                        Array.isArray(cachedData.posts);
         
-        // Invalidate if cache expired, age is valid, or version doesn't match expected
-        if (age >= 0 && age < CONFIG.searchCacheTime && cachedData.version === '1.0') {
+        // Invalidate if cache expired, version doesn't match, or structure is invalid
+        if (isValid && age >= 0 && age < CONFIG.searchCacheTime && cachedData.version === '1.0') {
           console.log('Using cached search index');
           state.searchIndex = cachedData;
           state.searchIndexLoaded = true;
           return;
         }
+      } else {
+        console.warn('Ignoring search index cache due to invalid cache time value:', cacheTime);
       }
     }
   } catch (e) {
@@ -1013,6 +1022,18 @@ function initSearch() {
 When user clicks a search result, show matching content snippets:
 
 ```javascript
+// Helper function to escape HTML special characters
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+// Helper function to escape special regex characters
+function escapeRegex(text) {
+  return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
 function showSearchResultDetails(postNum) {
   if (!state.searchIndex || !state.searchQuery) return;
   
