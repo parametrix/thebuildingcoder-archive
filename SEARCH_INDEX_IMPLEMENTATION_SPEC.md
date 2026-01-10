@@ -262,7 +262,8 @@ class SearchIndexBuilder:
         # Remove large code blocks
         for code in content_element.find_all('code', class_=True):
             # Keep inline code (no class or simple highlighting)
-            if any(cls in code.get('class', []) for cls in ['prettyprint', 'code-block']):
+            classes = code.get('class') or []
+            if any(cls in classes for cls in ['prettyprint', 'code-block']):
                 code.decompose()
         
         # Extract text
