@@ -171,7 +171,7 @@ from typing import Dict, List, Optional
 
 # Third-party (beautifulsoup4 already in requirements.txt)
 from bs4 import BeautifulSoup
-import html
+import html as html_lib
 ```
 
 **Implementation**:
@@ -403,7 +403,7 @@ if __name__ == '__main__':
 **Error Handling**:
 - Missing HTML files: Log warning, include post with empty content
 - Parse errors: Log warning, skip content extraction
-- Encoding errors: Try multiple encodings (utf-8, latin-1, cp1252)
+- Encoding errors: Decode using UTF-8; on failure, log a warning and skip or record empty content
 - File system errors: Fail gracefully with informative error
 
 **Testing**:
@@ -659,27 +659,47 @@ async function loadSearchIndex() {
   
   try {
     const url = basePath + CONFIG.searchIndexUrl;
-    const response = await fetch(url);
+    // Add a timeout to prevent the fetch from hanging indefinitely
+    const FETCH_TIMEOUT_MS = 10000; // 10 seconds
+    const controller = new AbortController();
+    const { signal } = controller;
+    let timeoutId;
     
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
-    }
-    
-    const index = await response.json();
-    state.searchIndex = index;
-    state.searchIndexLoaded = true;
-    
-    // Cache it
     try {
-      localStorage.setItem('tbc-search-index', JSON.stringify(index));
-      localStorage.setItem('tbc-search-index-time', Date.now().toString());
-    } catch (e) {
-      console.warn('Failed to cache search index');
+      timeoutId = window.setTimeout(() => {
+        controller.abort();
+      }, FETCH_TIMEOUT_MS);
+      
+      const response = await fetch(url, { signal });
+      
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+      
+      const index = await response.json();
+      state.searchIndex = index;
+      state.searchIndexLoaded = true;
+      
+      // Cache it
+      try {
+        localStorage.setItem('tbc-search-index', JSON.stringify(index));
+        localStorage.setItem('tbc-search-index-time', Date.now().toString());
+      } catch (e) {
+        console.warn('Failed to cache search index');
+      }
+      
+      console.log(`Search index loaded: ${index.totalPosts} posts`);
+    } finally {
+      if (timeoutId !== undefined) {
+        clearTimeout(timeoutId);
+      }
     }
-    
-    console.log(`Search index loaded: ${index.totalPosts} posts`);
   } catch (error) {
-    console.error('Failed to load search index:', error);
+    if (error.name === 'AbortError') {
+      console.error('Failed to load search index: request timed out');
+    } else {
+      console.error('Failed to load search index:', error);
+    }
     state.searchIndexLoaded = false;
     // Content search will be disabled
   }
@@ -1050,8 +1070,15 @@ function rankSearchResults(posts, query) {
     // Content contains query: low score
     else if (post.contentPreview.includes(lowerQuery)) score += 10;
     
-    // Boost recent posts slightly
-    score += (post.num / 10000);
+    // Boost recent posts slightly based on post date (more robust than post number)
+    const now = Date.now();
+    const postTime = new Date(post.date).getTime();
+    if (!Number.isNaN(postTime)) {
+      const daysOld = (now - postTime) / (1000 * 60 * 60 * 24);
+      // Posts newer than 1 year get a boost between 1 (new) and 0 (1 year old)
+      const recencyBoost = Math.max(0, 1 - Math.min(daysOld, 365) / 365);
+      score += recencyBoost;
+    }
     
     return { ...post, score };
   }).sort((a, b) => b.score - a.score);
